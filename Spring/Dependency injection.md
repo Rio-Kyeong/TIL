@@ -180,6 +180,10 @@ public class StudentServiceImpl implements Service{
 		<property name="grade" value="3"></property>
 	</bean>
 ```
+```text
+property의 name은 해당하는 setter method의 이름에서 set을 제외하고 첫 번째 글자를 소문자로 바꿔서 표현한다.
+property의 value는 파라미터로 들어온 값을 적는다.
+```
 메인 클래스에서 호출(Spring Container)
 ```java
 public class MainSpringApp{
