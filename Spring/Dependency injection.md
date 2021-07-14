@@ -232,7 +232,7 @@ number : 4 name : 왕건
 ## 4. Collection wiring - bean property가 JCF인 경우
 ### List
 * 의존성 주입받는 setter method 선언(Service)
-* set타입은 중복된 값 제거하고 전달
+* Set타입은 중복된 값 제거하고 전달
 ```java
 public class EMSInformationService {
 
