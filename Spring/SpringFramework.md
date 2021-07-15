@@ -64,3 +64,4 @@ IoC는 제어의 역전이라고 말하며, 간단히 말해 "제어의 흐름�
 ```text
 스프링에서 객체를 생성하고 관리하는 컨테이너(Container)로, 컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다.
 ```
+![Container](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/img/Spring%20Container.PNG)
