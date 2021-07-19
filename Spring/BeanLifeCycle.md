@@ -9,13 +9,15 @@
 ## InitializingBean, DisposableBean 
 ### InitializingBean Interface
 <pre>
-<b>InitializingBean Interface</b>는 BeanFactory에 의해 해당 Bean 객체의 프로퍼티가 모두 설정된 후 단 한 번만 반응(react), 즉 <b>afterPropertiesSet()</b> 콜백 메서드를 호출한다.
+<b>InitializingBean Interface</b>는 BeanFactory에 의해 해당 Bean 객체의 프로퍼티가 모두 설정된 후 단 한 번만 반응(react) 
+즉 <b>afterPropertiesSet()</b> 콜백 메서드를 호출한다.
 
 객체에 특별한 프로퍼티를 추가적으로 설정하거나 필수적으로 요구되는 사항들이 모두 충족되었는지 검사하는 등 목적으로 사용된다.
 </pre>
 ### DisposableBean Interface
 <pre>
-<b>DisposableBean Interface</b>는 BeanFactory에 의해 객체 소멸 시  <b>destroy()</b> 콜백 메서드를 호출한다. 어떤 자원을 해제할 필요가 있는 Bean 객체들이 구현하는 인터페이스다.
+<b>DisposableBean Interface</b>는 BeanFactory에 의해 객체 소멸 시  <b>destroy()</b> 콜백 메서드를 호출한다. 
+어떤 자원을 해제할 필요가 있는 Bean 객체들이 구현하는 인터페이스다.
 
 스프링 컨테이너는 종료 시 애플리케이션 생명주기에 의해 모든 싱글턴 Bean들을 폐기(dispose)할 때 사용한다.
 </pre>
