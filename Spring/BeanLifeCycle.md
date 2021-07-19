@@ -1,11 +1,10 @@
 # Spring Bean LifeCycle
 
 ## 스프링 컨테이너 생명주기(Life Cycle)
-(사진)
-
+![cycle](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/img/SpringLifeCycle.PNG)
 ## 빈(Bean)객체 생명주기(Life Cycle)
 스프링 컨테이너에 의해 객체가 생성되고 초기화와 소멸의 과정을 거친다.<br/>
-(사진)
+![cycle2](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/img/SpringLifeCycle2.PNG)
 
 ## InitializingBean, DisposableBean 
 ### InitializingBean Interface
