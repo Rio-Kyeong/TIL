@@ -37,7 +37,7 @@ public class MemberConfig {
 * bean의 `id속성 값`은 `method명`이 된다.
 * bean의 `class속성 값`은 `반환형`이 된다.
 
-### StudentRegisterService 의존성 주입
+### StudentRegisterService Bean설정
  ```java
     /*
 	 * <bean id="registerService" class="ems.member.service.StudentRegisterService">
