@@ -3,7 +3,7 @@
 Today I Learned :100:
 
 ## Spring
-* [SpringFramework](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringFramework.md)
+* [Spring Framework](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringFramework.md)
 * [Dependency Injection - xml](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/DependencyInjection.md)
 * [XML Separation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/XMLSeparation.md)
 * [Dependency Injection - annotation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/DependencyInjection2.md)
@@ -13,3 +13,4 @@ Today I Learned :100:
 * [Spring Web Programming Rescue](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringWebProgrammingDesignModel.md)
 ## JavaScript
 ## Java
+## Git
