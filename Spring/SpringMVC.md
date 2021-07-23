@@ -30,11 +30,11 @@ WEB-INF폴더 하위에 존재하는 <b>Web Application 설정</b>을 위한 <b>
             <beans:property name="suffix" value=".jsp" />
       </beans:bean> - ViewResolver로 jsp와 name 을 매핑
       
-      <context:component-scan base-package="com.hee.heechart" /> 
+      <context:component-scan base-package="com.bs.lec16" /> 
       - 베이스 패키지 하위 모든 어노테이션을 스캔해서 빈으로 등록하겠다는 것.
 </beans:beans>
 ```
-* servlet에서 보듯이 `요청과 관련된 객체를 정의`(주로 View 지원 bean을 설정)
+* `요청과 관련된 객체를 정의`(주로 View 지원 bean을 설정)
 * url과 관련된 **controller**나, **@(어노테이션), ViewResolver, Interceptor, MultipartResolver** 등의 설정
 ## resources
 ![resources](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/img/resources.PNG)
