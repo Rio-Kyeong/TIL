@@ -12,7 +12,7 @@ Today I Learned :100:
 * [Java Separation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JavaSeparation.md)
 * [Spring Web Programming Rescue](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringWebProgrammingDesignModel.md)
 * [Spring MVC](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringMVC.md)
-* [Service&Dao](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Service%26Dao.md)
+* [Service&Dao object implementation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Service%26Dao.md)
 ## JavaScript
 ## Java
 ## Git
