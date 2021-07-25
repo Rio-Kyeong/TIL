@@ -76,7 +76,7 @@ public String memLogout(Member member, HttpSession session) {
     return "/member/logoutOk";
 }
 ```
-### 세션 주요 메소드
+### 세션 주요 메소드 및 플로어
 ![session](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/img/session.PNG)
 
 ## Cookie
