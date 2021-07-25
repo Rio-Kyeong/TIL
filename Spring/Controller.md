@@ -20,9 +20,9 @@ public class MemberController {
 * ex memJoin() 메소드는 "/member/memJoin"이라는 요청URL을 받는다.
 
 ## 요청 파라미터
-## `HttpServletRequest` 객체를 이용한 HTTP 전송 정보 얻기
+### - `HttpServletRequest` 객체를 이용한 HTTP 전송 정보 얻기
 ![HttpServletRequest](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/img/httpservletrequest.png)<br/>
-* `HTML Form Control의 name속성 값`과 `request.getParameter 값`은 반드시 같아야 한다.
+`HTML Form Control의 name속성 값`과 `request.getParameter 값`은 반드시 같아야 한다.
 ```java
 	@RequestMapping(value="/memJoin", method=RequestMethod.POST)
 	public String memJoin(Model model, HttpServletRequest request) {
@@ -39,9 +39,9 @@ public class MemberController {
 	}
 ```
 
-## `@RequestParam` 어노테이션을 이용한 HTTP 전송 정보 얻기 - 단일 데이터형 받기
+### - `@RequestParam` 어노테이션을 이용한 HTTP 전송 정보 얻기 - 단일 데이터형 받기
 ![RequestParam](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/img/requestparam.png)<br/>
-* `HTML Form Control의 name속성 값`과 `method의 Parameter명`이 반드시 같아야 한다.
+`HTML Form Control의 name속성 값`과 `method의 Parameter명`이 반드시 같아야 한다.
 ```java
 @RequestMapping(value="/memLogin", method=RequestMethod.POST)
 	public String memLogin(Model model, String memId, 
@@ -59,9 +59,9 @@ public class MemberController {
 * `defaultValue = "0"` : 값이 넘어오지 않았을 경우에 사용할 기본 값 설정
 * 보통 javascript에서 유효성 검증을 하고 값을 받기 때문에 잘 쓰지 않는다.
 
-## `커멘드 객체`를 이용한 HTTP전송 정보 얻기 - VO(Value Object)로 받기
+### - `커멘드 객체`를 이용한 HTTP전송 정보 얻기 - VO(Value Object)로 받기
 ![VO](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/img/vo.png)<br/>
-* `HTML Form Control의 name속성 값`과 `VO의 인스턴스 변수명`이 반드시 같아야 한다.<br/>
+`HTML Form Control의 name속성 값`과 `VO의 인스턴스 변수명`이 반드시 같아야 한다.<br/>
 
 **Controller**
 ```java
