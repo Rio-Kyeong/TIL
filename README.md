@@ -12,9 +12,9 @@ Today I Learned :100:
 * [Java Separation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JavaSeparation.md)
 * [Spring Web Programming Rescue](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringWebProgrammingDesignModel.md)
 * [Spring MVC](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringMVC.md)
-* [Service&Dao Object Implementation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Service%26Dao.md)
-* [Controller Object Implementation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Controller.md)
-* [Session And Cookie](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Session%26Cookie.md)
+* [Service&Dao Implementing Objects](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Service%26Dao.md)
+* [Controller Implementing Objects](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Controller.md)
+* [Session and Cookie](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Session%26Cookie.md)
 ## JavaScript
 ## Java
 ## Git
