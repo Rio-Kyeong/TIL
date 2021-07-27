@@ -17,9 +17,10 @@ Today I Learned :100:
 * [Session and Cookie](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Session%26Cookie.md)
 * [redirect and foward](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/redirect%26foward.md)
 * [JdbcTemplate](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JdbcTemplate.md)
-## JavaScript
-## Java
+## Spring Boot(RESTful)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitMechanism.md)
 * [Git Branch](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitBranch.md)
+## Java
+## JavaScript
