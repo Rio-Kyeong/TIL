@@ -62,10 +62,10 @@ HAED가 해당 [commit]을 가리키며, 해당 [commit]은 최신 커밋으로 
 ![reset](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/reset.PNG)
 ### reset option
 ```
-repository의 commit 내용만 이 전 내용으로 초기화한다.
+repository의 commit 내용만 이전 내용으로 초기화한다.
 $ git reset --soft
 
-repositroy의 commit 내용과 index의 add 내용만 이 전 내용으로 초기화한다.
+repositroy의 commit 내용과 index의 add 내용만 이전 내용으로 초기화한다.
 $ git reset --mixed
 
 repositroy와 index와 working directory의 작업 내용 모두 초기화한다.
