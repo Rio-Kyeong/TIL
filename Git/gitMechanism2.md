@@ -27,10 +27,10 @@ HEAD는 branch의 이름을 가리킨다.(HEAD -> master)
 ### 충돌이 일어났을 때(conflict)
 
 - 충돌이 일어난 경우 아래와 같은 메시지가 뜬다.</br>
-![conflict](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/conflict.png)</br>
+![conflict](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/text.PNG)</br>
 
 - git status를 통해 충돌이 일어난 파일을 찾을 수 있다. 이런 경우 충돌한 파일을 수정해야 한다.</br>
-![file](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/file.png)</br>
+![file](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/conflict.PNG)</br>
     ```
     '<<<<<<< HEAD' 부터 '======='(구분자) 사이의 구간이 현재 체크 아웃된 master 브랜치 코드의 내용이다.
     '======='(구분자) 부터 '>>>>>>> exp' 사시의 구간이 병합하려는 대상인 exp 브랜치의 코드 내용이다.
