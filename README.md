@@ -22,5 +22,6 @@ Today I Learned :100:
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitMechanism.md)
 * [Git Branch](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitBranch.md)
+* [Git Mechanism2](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitMechanism2.md)
 ## Java
 ## JavaScript
