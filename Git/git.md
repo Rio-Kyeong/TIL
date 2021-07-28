@@ -30,6 +30,10 @@ souce : 1
 $ cp file1 file2
 ```
 ```text
+파일, 디렉토리 삭제
+$ rm [file name]
+```
+```text
 현재 폴더의 하위 디렉토리의 리스트를 보여준다(-al)
 $ ls [옵션]
 eclipse/  workspace/
