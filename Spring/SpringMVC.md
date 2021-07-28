@@ -6,7 +6,7 @@
 WEB-INF폴더 하위에 존재하는 <b>Web Application 설정</b>을 위한 <b>Deployment Descriptor(배포서술자)</b>
 사용자의 요청이 들어오면 <b>DispatcherServlet</b>을 servlet으로 등록한다. 
 </pre>
-## servlet-context.xml
+## servlet-context.xml(스프링 설정 파일)
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
