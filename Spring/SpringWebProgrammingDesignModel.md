@@ -11,11 +11,11 @@
 1. `DispatcherServlet`이 클라이언트(Client)로부터 **요청(Request)** 을 받는다.
 2. `HandlerMapping`이 받아온 정보를 통해 적합한 **Contorller**를 찾는다.<br/>
     (`DispatcherServlet` → `HandlerMapping` → `DispatcherServlet`)
-3. `HandlerAdapter`가 선택된 **Controller**에서 적합한 Method를 찾아준다.<br/>
+3. `HandlerAdapter`가 선택된 **Controller**에서 적합한 Method를 찾고 실행한다.<br/>
     (`DispatcherServlet` → `HandlerAdapter` → `DispatcherServlet`)
-4. 데이터를 **Model**로 가져오고 `ViewResolver`가 **Model**과 가장 적합한 **JSP** 문서를 찾는다.<br/>
+4. 사용자 응답에 필요한 데이터를 **Model**로 가져오고 `ViewResolver`가 **Model**과 가장 적합한 **JSP** 문서를 찾는다.<br/>
     (`DispatcherServlet` → `ViewResolver` → `DispatcherServlet`)
-5. `View`응답을 생성하고 브라우저로 해당 **JSP** 를 클라이언트에게 **응답(Response)** 시킨다.
+5. `View`응답을 생성하고 브라우저로 해당 **JSP파일** 를 클라이언트에게 **응답(Response)** 시킨다.
 ```
 개발자는 MVC를 사용하기위해 모든 부분을 구현할 필요가 없고 Controller와 JSP(View)만 만들면 된다.
 ```
