@@ -77,7 +77,7 @@ $ git status
 ```
 <pre>
 수정하였으나 아직 stage하지 않은 파일의 변경점을 보여줍니다.
-(commit 하기전 마지막으로 어떻게 변경 되었는가를 확인할 수 있다)
+working copy의 내용과 index의 내용을 비교할 수 있다.
 $ git diff [옵션]
 diff --git a/f2.txt b/f2.txt
 index e77ea5a..ed48ea0 100644
@@ -110,14 +110,22 @@ Date:   Sat Jul 24 13:38:08 2021 +0900
 ### 커밋 되돌리기
 * `실수한 내용을 지우고 기록을 바꾼다`<br/>
 (공유 이후 리셋x 공유하기 전 내 컴퓨터에 있는 버전에 대해서만 리셋을 한다)
+* reset에 대한 자세한 정보는 이 곳을 <a href="https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitMechanism2.md">참고</a>
 ```text
-모든 변경점과 기록을 버리고 특정 커밋으로 되돌아간다.(HEAD를 적으면 가장 최신 커밋상태로 돌아간다.)
+모든 변경점과 기록을 버리고 특정 커밋으로 되돌아간다.(HEAD를 적으면 특정 커밋을 가장 최신 커밋상태로 돌려준다.)
 $ git reset --hard [commit]
+$ git reset --hard c3017ff6b4037d632b885d3445dc17db7dccd8b4
 
-현재 파일의 변경 사항은 그대로 두고 '[커밋]' 이후의 모든 커밋 내용을 되돌린다.
+현재 파일의 변경 사항은 그대로 두고 '[commit]' 이후의 모든 커밋 내용을 되돌린다.
 $ git reset [commit]
 ```
+<pre>
+ORIG_HEAD를 참조하여 reset된 기록을 다시 되돌려준다. 
+$ git reset --hard ORIG_HEAD 
+</pre>
 ```text
 커밋을 취소하면서 새로운 버전을 생성한다.
 $ git revert [commit]
 ```
+
+
