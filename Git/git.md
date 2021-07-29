@@ -56,7 +56,7 @@ $ vim [file-name]
 새로운 로컬 저장소를 생성하고 이름을 정합니다(이름을 정하지 않으면 현재 디렉토리를 저장소로 설정)
 $ git init [project-name] 
 ```
-### 로컬디스크에 원격 저장소(remote directory) 만들기
+### 로컬디스크에 원격 저장소(remote repository) 만들기
 ```text
 일반적인 깃 저장소(원격 저장소가 따로 존재하는 로컬 저장소)는 'git init'으로 생성하지만 
 원격(서버) 저장소라면 bare-repository로 생성해야 한다. 
@@ -91,7 +91,7 @@ To C:/dev/git/remote
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 원격 저장소 삭제
-$ git remote remove origin
+$ git remote remove [remote repository]
 ```
 ### 저장소 복제해서 만들기 
 ```text
@@ -153,7 +153,7 @@ Date:   Sat Jul 24 13:38:08 2021 +0900
 (공유 이후 리셋x 공유하기 전 내 컴퓨터에 있는 버전에 대해서만 리셋을 한다)
 * reset에 대한 자세한 정보는 이 곳을 <a href="https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitMechanism2.md">참고</a>
 ```text
-모든 변경점과 기록을 버리고 특정 커밋으로 되돌아간다.(HEAD를 적으면 특정 커밋을 가장 최신 커밋상태로 돌려준다.)
+모든 변경점과 기록을 버리고 특정 커밋으로 되돌아간다.(HEAD를 적으면 특정 커밋을 가장 최신 커밋상태로 돌려준다)
 $ git reset --hard [commit]
 $ git reset --hard c3017ff6b4037d632b885d3445dc17db7dccd8b4
 
