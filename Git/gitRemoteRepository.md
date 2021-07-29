@@ -88,5 +88,6 @@ git fetch
 - 원격 저장소(origin)에서 최신 commit 내용을 가져오기만 한다.
 - 로컬 저장소의 master branch는 최신 commit을 가리키지 않는다.
 - 장점 : origin과 local의 master 사이에 차이점을 비교할 수 있다.
-- <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/fetch.PNG"/>
+
+  <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/fetch.PNG"/>
 </pre>
