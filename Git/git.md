@@ -51,11 +51,49 @@ $ vim [file-name]
 * `exmode`에서는 파일열기, 저장, 닫기, 종료등을 사용할 수 있다.
 * 종료(**:q**), 저장(**:w**), 저장 후 종료(**:wq**), 열기(**:e [file-name]**)
 ## Git 명령어
-### 저장소 생성하기
+### 저장소 생성
 ```text
-새로운 로컬 저장소를 생성하고 이름을 정합니다(이름을 정하지 않으면 .git만 생성)
+새로운 로컬 저장소를 생성하고 이름을 정합니다(이름을 정하지 않으면 현재 디렉토리를 저장소로 설정)
 $ git init [project-name] 
 ```
+### 로컬디스크에 원격 저장소(remote directory) 만들기
+```text
+일반적인 깃 저장소(원격 저장소가 따로 존재하는 로컬 저장소)는 'git init'으로 생성하지만 
+원격(서버) 저장소라면 bare-repository로 생성해야 한다. 
+
+bare-repository는 워킹 트리가 없고 변경사항만 추적하는 저장소를 말한다.
+bare-repository는 어떠한 작업도 하지않는다(작업이 불가능하다)
+```
+```text
+새로운 원격 저장소를 생성하고 이름을 정합니다(이름을 정하지 않으면 현재 디렉토리를 remote directory로 설정)
+$ git init --bare [project-name] 
+
+생성한 원격 저장소 경로를 검색
+$ pwd
+/c/dev/git/remote
+
+로컬 저장소에 가서 원격 저장소를 지정(추가)한다.
+$ git remote add origin /c/dev/git/remote
+
+원격 저장소가 추가되었는지 확인
+$ git remote -v
+origin  C:/dev/git/remote (fetch)
+origin  C:/dev/git/remote (push)
+
+로컬 저장소 master baranch에서 push 명령을 내리면 자동으로 원격 저장소 master branch로 push를 한다. 
+$ git push --set-upstream origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 201 bytes | 201.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To C:/dev/git/remote
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+원격 저장소 삭제
+$ git remote remove origin
+```
+### 원격 저장소 복제하기
 ```text
 기존 프로젝트의 모든 커밋 내역을 가져와 저장소를 만든다(로컬 저장소로 복제)
 $ git clone [클론할 저장소의 주소]
