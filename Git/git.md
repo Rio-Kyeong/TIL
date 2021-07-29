@@ -81,7 +81,8 @@ $ git remote -v
 origin  C:/dev/git/remote (fetch)
 origin  C:/dev/git/remote (push)
 
-로컬 저장소 master baranch에서 push 명령을 내리면 자동으로 원격 저장소 master branch로 push를 한다. 
+로컬 저장소 master baranch에서 push 명령을 내리면 자동으로 원격 저장소 master branch로 push를 한다는 의미를 가진다.
+(두 번째부터는 git push로 간결하게 사용가능하다)
 $ git push --set-upstream origin master
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
