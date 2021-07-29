@@ -48,6 +48,9 @@ $ git branch [새로운 브랜치] [분기해 올 브랜치]
 ```
 Branch를 이동
 $ git checkout [branch-name]
+
+어떠한 commit의 파일들이 궁금할 때(해당 커밋으로 HEAD가 변경된다)
+$ git checkout [commit] 
 ```
 ### branch 병합
 ```
