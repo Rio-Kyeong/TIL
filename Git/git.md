@@ -93,10 +93,10 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 원격 저장소 삭제
 $ git remote remove origin
 ```
-### 원격 저장소 복제하기
+### 저장소 복제해서 만들기 
 ```text
 기존 프로젝트의 모든 커밋 내역을 가져와 저장소를 만든다(로컬 저장소로 복제)
-$ git clone [클론할 저장소의 주소]
+$ git clone [클론할 저장소의 주소] [폴더 명]
 ```
 ### 환경 설정
 * 모든 로컬 저장소에 적용할 사용자 정보를 설정한다(최초 1회)
