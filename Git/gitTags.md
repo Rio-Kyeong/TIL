@@ -36,10 +36,10 @@ $ git push --tags
 ### tag 삭제
 ```
 tag 삭제한다. 
-git tag -d [tag name]
+$ git tag -d [tag name]
 
 원격 저장소에 올라간 tag 삭제하기
-git push [remote name] :[tag name]
+$ git push [remote name] :[tag name]
 ```
 ### 해당 tag로 이동
 ```
