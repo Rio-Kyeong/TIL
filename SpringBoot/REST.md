@@ -68,7 +68,7 @@ Web Application : 인터넷으로 연결된 웹 환경에서 사용자들간의 
     2. <b>Stateless(무상태성)</b>
         - 사용자나 클라이언트의 컨택스트를 서버쪽에 유지 하지 않는다.
         - 세션이나 쿠키등을 별도로 관리하지 않기 때문에 API서버는 요청만을 들어오는 메시지로만 처리하기 때문에 구현이 단순하다.
-        - REST는 Statelss한 성격을 가진 HTTP 프로토콜 상에 구현된 Resource Oriented Architecture (ROA) 설계 구조 입니다.
+        - REST는 Statelss한 성격을 가진 HTTP 프로토콜 상에 구현된 Resource Oriented Architecture (ROA) 설계 구조 이다.
       
     3. <b>Cacheable(캐시 처리 가능)</b>
         - HTTP 프로토콜 표준에서 사용하는 Last-Modified태그나 E-Tag를 이용하면 캐싱 구현이 가능하다.
