@@ -43,6 +43,6 @@ git push [remote name] :[tag name]
 ```
 ### 해당 tag로 이동
 ```
-tag에 해당하는 commit을 참조할 (해당 tag가 가리키는 커밋으로 HEAD가 변경된다)
+tag에 해당하는 commit을 참조한다(해당 tag가 가리키는 커밋으로 HEAD가 변경된다)
 $ git checkout [tag name]
 ```
