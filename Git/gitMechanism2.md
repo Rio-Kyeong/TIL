@@ -1,5 +1,5 @@
 # Git Mechanism2
-## 1장 HAED
+## 1. HAED
 ```
 HEAD는 현재 Checkout된 commit을 가리키는데 그 중에서도 작업트리의 가장 최근 커밋을 가리킨다.
 
@@ -14,7 +14,7 @@ HEAD 파일을 통해서 알 수 있는 것
 
 HEAD는 branch의 이름을 가리킨다.(HEAD -> master)
 ```
-## 2장 branch 충돌
+## 2. branch 충돌
 <pre>
 1. 서로 다른 파일을 가진 경우 
     - 병합을 해도 충돌이 일어나지 않는다.
@@ -38,7 +38,7 @@ HEAD는 branch의 이름을 가리킨다.(HEAD -> master)
     서로 같은 위치를 작업한 두개의 코드 내용을 알맞게 병합한 후에 특수기호를 제거해주면 된다.
     작업이 끝나면 파일을 add를 시켜서 충돌 작업을 끝냈다는 것을 깃에게 알려주면 된다.
     ```
-## 3장 reset & checkout 되돌리기
+## 3. reset & checkout 되돌리기
 ### reset
 ```
 ORIG_HEAD를 참조하여 reset된 기록을 다시 되돌려준다.
@@ -58,7 +58,7 @@ HAED가 해당 [commit]을 가리키며, 해당 [commit]은 최신 커밋으로 
 다시 branch를 바꿔주면 이 내용들은 사라지고 해당 branch의 내용으로 바뀐다.
 # git checkout [commit]
 ```
-## 4장 working copy & index & repository
+## 4. working copy & index & repository
 ![reset](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/reset.PNG)
 ### reset option
 ```
@@ -71,7 +71,7 @@ $ git reset --mixed
 repositroy와 index와 working directory의 작업 내용 모두 초기화한다.
 $ git reset --hard 
 ```
-## 5장 merge & conflict
+## 5. merge & conflict
 ```
 병합(merge)을 하던 도중 branch 충돌이 난 경우 병합작업을 해야하는데, 병합을 전문적으로 하는 도구를 사용하여 더욱 편리하게 작업을 할 수 있다.
 ```
@@ -86,7 +86,7 @@ $ git reset --hard
     $ git mergetool
 4. 병합작업을 마치고 저장 후 KDiff3를 종료하면 merge와 add가 자동으로 된다.
 </pre>
-## 6장 3 way merge 동작과정
+## 6. 3 way merge 동작과정
 ![3WayMerge](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/3waymerge.PNG)
 ```
 situation 1 - Base 코드를 수정한 Other를 따라서 아무것도 표시하지 않는다.
