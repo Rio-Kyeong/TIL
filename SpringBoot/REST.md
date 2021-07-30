@@ -19,7 +19,7 @@ Web Application : 인터넷으로 연결된 웹 환경에서 사용자들간의 
 - SOAP Messege의 구조
 
     <b>SOAP 엔벨로프(Envelope)</b>
-    모든 SOAP 메시지의 루트 요소이며 두 개의 하위 요소인 선택적 <Header> 요소 및 필수 <Body> 요소를 포함한다.
+    모든 SOAP 메시지의 루트 요소이며 두 개의 하위 요소인 선택적 Header 요소 및 필수 Body 요소를 포함한다.
     
     <b>SOAP 헤더(Header)</b>
     SOAP 엔벨로프의 선택적 하위 요소이며 메시지 경로를 따라 SOAP 노드로만 처리될 애플리케이션 관련 정보를 전달하는 데 사용된다.
@@ -140,5 +140,6 @@ Web Application : 인터넷으로 연결된 웹 환경에서 사용자들간의 
 
 - REST API 설계 규칙을 따르는 시스템
 - REST API의 설계 규칙을 올바르게 지킨 시스템을 RESTful하다 말할 수 있다.
+
 - <b>self-descriptiveness</b> : RESTful API는 그 자체만으로도 API의 목적이 무엇인지 쉽게 알 수 있습니다.
 </pre>
