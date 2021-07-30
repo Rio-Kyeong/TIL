@@ -13,11 +13,26 @@ Web Application : 인터넷으로 연결된 웹 환경에서 사용자들간의 
 이런 웹 서비스를 개발하기 위해서 SOAP 또는 REST를 사용할 수 있다.
 ```
 ## SOAP(Simple Object Access Protocol)
-```
-우리가 사용할 수 있는 HTTP, HTTPS, SMTP 등의 프로토콜을 이용해서 XML 기반의 메시지를 컴퓨터 네트워크상에서 전달할 수 있는 시스템
+<pre>
+<b>SOAP</b> : HTTP, HTTPS, SMTP 등의 프로토콜을 이용해서 XML 기반의 메시지를 컴퓨터 네트워크상에서 전달할 수 있는 시스템
 
-SOAP은 복잡한 구조로 되어있고 거기에 따른 오버헤드가 심하고 개발하기가 어렵기 때문에 REST를 더 많이 사용한다.
-```
+- SOAP Messege의 구조
+
+    <b>SOAP 엔벨로프(Envelope)</b>
+    모든 SOAP 메시지의 루트 요소이며 두 개의 하위 요소인 선택적 <Header> 요소 및 필수 <Body> 요소를 포함한다.
+    
+    <b>SOAP 헤더(Header)</b>
+    SOAP 엔벨로프의 선택적 하위 요소이며 메시지 경로를 따라 SOAP 노드로만 처리될 애플리케이션 관련 정보를 전달하는 데 사용된다.
+    
+    <b>SOAP 본문(Body)</b>
+    SOAP 엔벨로프의 필수 하위 요소이며 메시지의 최종 수신인을 대상으로 하는 정보를 포함한다.
+    
+    <b>SOAP 결함(Fault)</b>
+    SOAP 본문의 하위 요소이며 오류 보고에 사용된다.
+    
+    
+- SOAP은 복잡한 구조로 되어있고 거기에 따른 오버헤드가 심하고 개발하기가 어렵기 때문에 REST를 더 많이 사용한다.
+</pre>
 ## REST(REpresentational State Transfer)
 <pre>
 
