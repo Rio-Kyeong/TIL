@@ -57,7 +57,7 @@ PR(Pull Request)는 <b>오픈소스 프로젝트에 참여할 때 가장 기본�
 ## 5. Pull Request 생성
 1. push 완료 후 원본 프로젝트 저장소에 들어오면 Compare & pull request 버튼이 활성화되어 있다.
 2. 해당 버튼을 선택해서 메시지를 작성하고 PR을 생성한다.
-## 6. code review, Merge Pull Request
+## 6. Code Review, Merge Pull Request
  - PR을 받은 원본 저장소 관리자는 코드 변경내역을 확인하고 Merge 여부를 결정한다.
 ## 7. Merge 이후 동기화 및 branch 삭제
  1. 원본 저장소에 Merge가 완료되면 로컬 저장소의 코드와 원본 저장소의 코드를 동기화 한다.
