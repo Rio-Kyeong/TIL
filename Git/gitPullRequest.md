@@ -4,15 +4,16 @@ PR(Pull Request)는 <b>오픈소스 프로젝트에 참여할 때 가장 기본�
 </pre>
 ## 1. Fork
  - 타겟 프로젝트의 저장소를 자신의 저장소로 Fork 한다.
-<pre>
-<b>Fork</b> : 다른 사람의 github repository를 복제하여 어떤 부분을 수정, 추가, 삭제를 용이하도록 해주는 복제기능
+ 
+   <pre>
+   <b>Fork</b> : 다른 사람의 github repository를 복제하여 어떤 부분을 수정, 추가, 삭제를 용이하도록 해주는 복제기능
 
-- fork 한 저장소는 원본(repository)와 연결되어있어 원본에 변화가 생기면 그대로 forked된 repository로 반영할 수 있다. 
-  이 때 fetch나 rebase의 과정 필요하다.
+   - fork 한 저장소는 원본(repository)와 연결되어있어 원본에 변화가 생기면 그대로 forked된 repository로 반영할 수 있다. 
+     이 때 fetch나 rebase의 과정 필요하다.
 
-- 그 후 original repository에 변경사항을 적용하고 싶으면 해당 저장소에 pull request를 해야한다.
-  pull request 하기 전까지는 내 github에 있는 forked repository에만 change만 적용된다.
-</pre>
+   - 그 후 original repository에 변경사항을 적용하고 싶으면 해당 저장소에 pull request를 해야한다.
+     pull request 하기 전까지는 내 github에 있는 forked repository에만 change만 적용된다.
+   </pre>
 ## 2. clone, remote 설정
 1. fork로 생성한 본인 계정의 저장소에서 Code 버튼을 누르고 표시되는 url을 복사한다(브라우저 url을 그냥 복사하면 안 된다)
 2. 자신의 로컬 저장소에 clone 한다.
