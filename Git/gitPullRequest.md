@@ -30,7 +30,21 @@ PR(Pull Request)는 <b>오픈소스 프로젝트에 참여할 때 가장 기본�
     # 원격 저장소 설정 확인
     $ git remote -v
     ```
-## 3. branch 생성
+## 3. 저장소 동기화 
+ - 현업의 경우 내가 pr을 올리려는 그 사이 누군가 저장소에서 merge 작업을 진행하면 최신 상태가 아니게 된다.
+ - 또는, 로컬 저장소가 최신 정보가 아닐 수도 있기 때문에 PR 전에 동기화를 해주는 게 좋다.
+ 
+    ```
+    # 원본 저장소 정보 받기
+    $ git fetch [remote name] [default branch]
+    $ git fetch origin main
+    
+    # 원본 저장소 파일 병합
+    $ git rebase [remote name]/[default branch]
+    $ git rebase origin/main
+    ```
+
+## 4. branch 생성
  - 자신의 로컬 저장소에서 코드 파일을 추가하는 작업은 branch를 만들어서 진행한다.
 
     ```
@@ -40,7 +54,7 @@ PR(Pull Request)는 <b>오픈소스 프로젝트에 참여할 때 가장 기본�
     # branch 확인
     $ git branch
     ```
-## 4. 작업 후 add, commit, push
+## 5. 작업 후 add, commit, push
 1. 코드 파일 수정, 추가, 삭제 작업을 진행한다.
 2. 작업이 완료되면 add, commit, push를 통해서 자신의 원격 저장소(origin)에 수정사항을 반영한다.</br>
    (push 진행시에 branch 이름을 명시해주어야 한다)
@@ -54,12 +68,12 @@ PR(Pull Request)는 <b>오픈소스 프로젝트에 참여할 때 가장 기본�
     # branch의 수정 내역을 origin 으로 푸시한다.
     $ git push origin [branch name]
     ```
-## 5. Pull Request 생성
+## 6. Pull Request 생성
 1. push 완료 후 원본 프로젝트 저장소에 들어오면 Compare & pull request 버튼이 활성화되어 있다.
 2. 해당 버튼을 선택해서 메시지를 작성하고 PR을 생성한다.
-## 6. Code Review, Merge Pull Request
+## 7. Code Review, Merge Pull Request
  - PR을 받은 원본 저장소 관리자는 코드 변경내역을 확인하고 Merge 여부를 결정한다.
-## 7. Merge 이후 동기화 및 branch 삭제
+## 8. Merge 이후 동기화 및 branch 삭제
  1. 원본 저장소에 Merge가 완료되면 로컬 저장소의 코드와 원본 저장소의 코드를 동기화 한다.
  2. 작업하던 로컬의 branch를 삭제한다.
     
