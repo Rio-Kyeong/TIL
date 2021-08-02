@@ -84,11 +84,13 @@ $ git reset --hard
     $ git config --global --add mergetool.kdiff3.trustExitCode false
 3. git에서 KDiff3 실행
     $ git mergetool
-4. 병합작업을 마치고 저장 후 KDiff3를 종료하면 merge와 add가 자동으로 된다.
+4. 병합작업을 마치고 저장 후 KDiff3를 종료하면 merge와 add가 자동으로 된다
 </pre>
 ## 6. 3 way merge 동작과정
 ![3WayMerge](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/3waymerge.PNG)
 ```
+merge과정에서 3 way merge 기법이 동작한다.
+
 situation 1 - Base 코드를 수정한 Other를 따라서 아무것도 표시하지 않는다.
 situation 2 - 모두 코드가 같으므로 B코드를 표시한다.
 situation 3 - 모두 코드가 다르므로 conflict(충돌)이 일어난다.
