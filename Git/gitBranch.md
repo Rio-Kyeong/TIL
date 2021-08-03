@@ -66,8 +66,8 @@ $ git checkout master
 $ git merge exp
 
 ```
-* 병합에는 `Fast-forward방식`과 `Not Fast-forward방식`이 있다.
-* `Fast-forward방식`은 별도의 commit을 생성하지 않고, `Not Fast-forward방식`은 merge commit을 만든다. 
+* 병합에는 `Fast-forward 방식`과 `merge commit(Not Fast-forward) 방식`이 있다.
+* `Fast-forward 방식`은 별도의 commit을 생성하지 않고, `merge commit 방식`은 새로운 merge commit을 만든다. 
 [[참고]](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 ### branch 삭제
 ```
