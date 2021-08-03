@@ -1,4 +1,4 @@
-# Git Mechanism2
+# Git Branch Mechanism
 ## 1. HAED
 ```
 HEAD는 현재 Checkout된 commit을 가리키는데 그 중에서도 작업트리의 가장 최근 커밋을 가리킨다.
