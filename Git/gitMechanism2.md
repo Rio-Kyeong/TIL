@@ -89,7 +89,7 @@ $ git reset --hard
 ## 6. 3 way merge 동작과정
 ![3WayMerge](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/img/3waymerge.PNG)
 ```
-merge과정에서 3 way merge 기법이 동작한다.
+merge 과정에서 3-way merging 기법이 동작한다.
 
 situation 1 - Base 코드를 수정한 Other를 따라서 아무것도 표시하지 않는다.
 situation 2 - 모두 코드가 같으므로 B코드를 표시한다.
