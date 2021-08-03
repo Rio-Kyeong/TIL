@@ -21,9 +21,9 @@ Today I Learned :100:
 * [REpresentational State Transfer](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/REST.md)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
-* [Git Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitMechanism.md)
+* [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitMechanism.md)
 * [Git Branch](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitBranch.md)
-* [Git Mechanism2](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitMechanism2.md)
+* [Git Branch Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitMechanism2.md)
 * [Git Remote Repository](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitRemoteRepository.md)
 * [Git Tags](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitTags.md)
 * [Git Pull Request](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitPullRequest.md)
