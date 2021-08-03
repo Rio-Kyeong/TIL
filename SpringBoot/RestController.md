@@ -1,6 +1,6 @@
 # RestController
 <pre>
-<b>@RestController</b>는 @Controller에 @ResponseBody가 결합된 어노테이션입니다.
+<b>@RestController</b>는 @Controller에 @ResponseBody가 결합된 어노테이션이다.
 
 Spring MVC <b>@Controller</b>와 RESTful 컨트롤러인 <b>@RestController</b>의 차이점은 HTTP Response Body가 생성되는 방식이다.
 
@@ -76,6 +76,7 @@ public class HelloWorldBean {
 ```
 <pre>
 Lombok을 이용함으로써 메서드를 정의하지 않아도 어노테이션에 해당하는 메서드가 만들어진 것을 볼 수 있다.
+
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/img/Structure.PNG"/>
 </pre>
 ## Path Variable(@PathVariable)
