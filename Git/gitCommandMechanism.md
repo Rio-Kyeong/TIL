@@ -1,4 +1,4 @@
-# Git Mechanism
+# Git Command Mechanism
 ## git add
 ```
 1. git add 명령어를 수행 
