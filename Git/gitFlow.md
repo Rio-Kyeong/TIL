@@ -1,7 +1,7 @@
 # Git-Flow
 <pre>
-Git-Flow에는 5가지 종류의 브랜치가 존재한다.
-항상 유지되는 메인 브랜치들(master, develop)과 일정 기간 동안만 유지되는 보조 브랜치들(feature, release, hotfix)이 있습니다.
+Git-Flow는 대표적인 브랜칭(branching) 전략 중 하나로 5가지 종류의 브랜치가 존재한다.
+항상 유지되는 메인 브랜치들(master, develop)과 일정 기간 동안만 유지되는 보조 브랜치들(feature, release, hotfix)이 있다.
 
  - master : 제품으로 출시될 수 있는 브랜치 (사용자에게 최종적으로 노출되는 버전을 가짐)
  - develop : 실질적 개발(구현)하는 브랜치 (마스터로부터 파생된 브랜치)
