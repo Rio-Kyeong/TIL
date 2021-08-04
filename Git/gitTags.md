@@ -16,8 +16,8 @@ $ git tag [tag namne] [commit]
 ```
 ```
 주석 태그(annotated tag) 생성
-$ git tag -a [tag name] -m "messege"
-# git tag -a v1.0.3 -m"Release version 1.0.3"
+$ git tag -a [tag name] -m "messege" [branch name]
+# git tag -a v1.0.3 -m"Release version 1.0.3" master
 ```
 ### tag 조회
 ```
@@ -28,7 +28,7 @@ $ git tag -v [tag name]
 ### tag 원격 저장소에 올리기
 ```
 로컬 저장소에서 만든 tag를 원격 저장소로 보내기
-$ git push [remote name][tag name]
+$ git push [remote name] [tag name]
 
 모든 tag 올리기
 $ git push --tags
