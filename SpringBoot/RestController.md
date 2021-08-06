@@ -12,7 +12,7 @@ View를 가지 않는 REST Data(JSON/XML)를 반환한다.
 
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/img/RestController.PNG"/>
 </pre>
-```java
+```java 
 @RestController
 public class HelloWorldController {
 
