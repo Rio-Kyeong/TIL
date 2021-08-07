@@ -45,7 +45,7 @@ public ResponseEntity<User> createUser(@RequestBody User user){
 ## 사용자 지정 Exception Handling
 <pre>
 직접 Exception Class를 정의하여 예외처리를 해준다.
-<b>@ResponseStatus : 원하는 상태코드를 반환시켜준다.</b>
+<b>@ResponseStatus</b> : 원하는 상태코드를 반환시켜준다.
 </pre>
 ### 직접 정의한 예외처리 클래스
 ```java
