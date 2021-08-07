@@ -17,11 +17,10 @@
 이 때 ServletUriComponentsBuilder Class를 통해서 적잘한 URI를 만들고 요청한 사용자에게 특정값을 포함한 URI를 전달 할 수 있다.
 (파일업로드 후 파일 다운로드 경로를 사용자에게 보내주고자 할 때 자주 사용된다)
 ```
-
 ### Controller
 ```
 사용자를 추가하는 역할인 POST HTTP METHOD 는 200 OK 가 아닌 201 Created 상태코드를 전달 받는것이 좋다.
-상태코드 값을 제어하기위해 ServletUriComponentsBuilder Class 를 이용해서 Server 에서 반환시켜주려고 하는 데이터 값을 ResponseEntity 에 담아서 전달한다.
+ServletUriComponentsBuilder Class 를 이용해서 Server 에서 반환시켜주려고 하는 데이터 값을 ResponseEntity 에 담아서 전달한다.
 ```
 ```java
 /**
@@ -35,7 +34,7 @@ public ResponseEntity<User> createUser(@RequestBody User user){
 
     URI uri = ServletUriComponentsBuilder.fromCurrentRequest() //현재 요청된 요청(request) URI값을 가져온다.
             .path("/{id}") //buildAndExpand를 통해 얻은 id 값이 들어온다.
-            .buildAndExpand(savedUser.getId()) //방금 설정시켰던 가변 변수(id)에 새롭게 만들어진 savedUser.getId() 값을 설정시킨다.
+            .buildAndExpand(savedUser.getId()) //가변 변수{id}에 새롭게 만들어진 savedUser.getId() 값을 설정시킨다.
             .toUri(); //URI 형태로 변경(URI 생성)
 
     return ResponseEntity.created(uri).build();
