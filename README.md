@@ -20,7 +20,7 @@ Today I Learned :100:
 ## Spring Boot(RESTful)
 * [REpresentational State Transfer](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/REST.md)
 * [RestController](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/RestController.md)
-* [HTTP Status Code](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/StatusCode.md)
+* [HTTP Status Code Control](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/StatusCode.md)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
