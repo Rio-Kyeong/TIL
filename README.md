@@ -21,6 +21,8 @@ Today I Learned :100:
 * [REpresentational State Transfer](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/REST.md)
 * [RestController](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/RestController.md)
 * [HTTP Status Code Control](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/StatusCode.md)
+* [Implementing Validations for RESTful Services](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Validations.md)
+* [Programming Control for Filtering](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Filtering.md)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
