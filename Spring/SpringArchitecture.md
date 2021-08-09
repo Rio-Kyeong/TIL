@@ -1,4 +1,4 @@
-# Spring Rescue
+# Spring Architecture
 ## 프로젝트 전체 구조
 ![구조](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/img/rescue.PNG)
 ## web.xml
