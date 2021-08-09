@@ -17,7 +17,7 @@ JDK에 포함된 Validations API와 Hibernate Library에 포함된 Hibernate Val
     <version>6.0.7.Final</version>
 </dependency>
 ```
-## HTTP POST Method를 통해서 사용자가 입력하는 값(CREATE VALUE)을 검증
+## HTTP POST Method를 통해서 사용자가 입력하는 값 검증(Validation)하기
 ### Validation 2.0 Annotation
 ```
 @Valid : 대상 객체의 Validation 조건을 검사
