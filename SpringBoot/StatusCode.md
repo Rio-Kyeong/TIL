@@ -85,12 +85,12 @@ public User retrieveUser(@PathVariable int id){
 
 <b>ControllerAdvice</b>를 사용하여 Exception 처리를 한 곳으로 모으는 경우,
 <b>ResponseEntityExceptionHandler</b>를 상속받도록 하여 Spring MVC에서 기본으로 제공되는 Exception들의 처리를 간단하게 등록할 수 있다.
-각 Exception 처리를 위한 메서드들은 모두 protected로 선언되어 있으며, 하위 클래스에서 필요에 따라 Override할 수 있다.
+각 Exception 처리를 위한 메서드들은 모두 protected로 선언되어 있으며, 하위 클래스에서 필요에 따라 Override(재정의)할 수 있다.
 
 <b>@ControllerAdvice</b> : 모든 @Controller 즉, 전역에서 발생할 수 있는 예외를 잡아 처리해주는 annotation
 <b>@ExceptionHandler</b> : annotation 을 사용하여 예외를 처리할 클래스를 정의한다.
 </pre>
-### 예외처리를 위한 Pojo Class
+### 예외처리를 위한 POJO Class
 ```java
 import lombok.AllArgsConstructor;
 import lombok.Data;
