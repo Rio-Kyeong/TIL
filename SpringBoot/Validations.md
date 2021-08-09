@@ -56,7 +56,7 @@ public class User {
 ```
 ### Controller
 <pre>
-User 객체에 <b>@Valid Annotation</b>을 선언을 하여 사용자(Client)가 추가할 사용자의 정보를 입력하면 대상 객체(User)의 Validation 조건을 검사
+User 객체에 <b>@Valid</b>을 선언을 하여 사용자(Client)가 추가할 사용자의 정보를 입력하면 대상 객체(User)의 Validation 조건을 검사
 검증에 실패할 경우 HTTP Status Code는 <b>400 Bad Request(Client의 잘 못된 요청)</b>가 발생한다.
 </pre>
 ```java
@@ -78,9 +78,7 @@ public ResponseEntity<User> createUser(@Valid @RequestBody User user){
 }
 ```
 ## MethodArgumentNotValidException
-```
-사용자의 입력값에 문제(Validation Fail)가 생겨서 MethodArgumentNotValidException 가 발생할 때 사용하는 예외 메소드(handleMethodArgumentNotValid) 재정의
-```
+검증 실패가 생겨서 예외(`MethodArgumentNotValidException`) 가 발생할 때 사용하는 예외 메소드(`handleMethodArgumentNotValid`) 재정의
 ### AOP를 이용한 Exception Handling
 ```java
 @RestController
