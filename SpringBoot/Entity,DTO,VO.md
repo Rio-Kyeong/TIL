@@ -67,7 +67,7 @@ DTO는 주로 비동기 처리를 할 때 사용한다.
 로직을 갖고 있지 않는 순수한 데이터 객체이며, getter/setter 메서드만을 갖는다.
 또한 Controller Layer에서 Response DTO 형태로 Client에 전달한다.
 
-<img src="img"/>
+<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/img/structure.PNG"/>
 </pre>
 ### DTO와 VO의 차이점
 ```
@@ -108,6 +108,7 @@ class ArticleVO {
     // public boolean equals(Object o) { ... }
     // @Override
     // public int hashCode() { ... }
+}
 ```
 ## 요약
 | |**DTO**|**VO**|**Entity**|
