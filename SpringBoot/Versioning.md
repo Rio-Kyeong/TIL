@@ -147,5 +147,7 @@ public MappingJacksonValue retrieveUserV1(@PathVariable int id){ ... }
 public MappingJacksonValue retrieveUserV2(@PathVariable int id){ ... }
 ```
 <pre>
+- 문서 타입을 원하면 Headers의 KEY를 Accept를 용한다.
+
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/img/mime.PNG">
 </pre>
