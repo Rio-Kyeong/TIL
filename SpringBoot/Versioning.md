@@ -111,10 +111,10 @@ public class AdminUserController {
 ## Request Parameter를 이용한 버전 관리 방법
 ```java
 // params 값이 추가되어야 하기 때문에 URI 맨 마지막에 슬러시(/)를 추가해준다.
-@GetMapping(value = "/users/{id}/", params = "version=1")
+@GetMapping(value = "/admin/users/{id}/", params = "version=1")
 public MappingJacksonValue retrieveUserV1(@PathVariable int id){ ... }
 
-@GetMapping(value = "/users/{id}/", params = "version=2")
+@GetMapping(value = "/admin/users/{id}/", params = "version=2")
 public MappingJacksonValue retrieveUserV2(@PathVariable int id){ ... }
 ```
 <pre>
@@ -123,10 +123,10 @@ public MappingJacksonValue retrieveUserV2(@PathVariable int id){ ... }
 ## header 값을 이용해 버전을 관리하는 방법
 ```java
 //headers= "헤더 값"
-@GetMapping(value = "/users/{id}", headers="X-API-VERSION=1")
+@GetMapping(value = "/admin/users/{id}", headers="X-API-VERSION=1")
 public MappingJacksonValue retrieveUserV1(@PathVariable int id){ ... }
 
-@GetMapping(value = "/users/{id}", headers="X-API-VERSION=2")
+@GetMapping(value = "/admin/users/{id}", headers="X-API-VERSION=2")
 public MappingJacksonValue retrieveUserV2(@PathVariable int id){ ... }
 ```
 <pre>
@@ -140,10 +140,10 @@ public MappingJacksonValue retrieveUserV2(@PathVariable int id){ ... }
 ```
 ```java
 // produces = "제공 하고자하는 Mime Type"
-@GetMapping(value = "/users/{id}", produces = "application/vnd.company.appv1+json")
+@GetMapping(value = "/admin/users/{id}", produces = "application/vnd.company.appv1+json")
 public MappingJacksonValue retrieveUserV1(@PathVariable int id){ ... }
 
-@GetMapping(value = "/users/{id}", produces = "application/vnd.company.appv2+json")
+@GetMapping(value = "/admin/users/{id}", produces = "application/vnd.company.appv2+json")
 public MappingJacksonValue retrieveUserV2(@PathVariable int id){ ... }
 ```
 <pre>
