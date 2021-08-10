@@ -8,6 +8,9 @@ Entity 클래스는 상속을 받거나 구현체여서는 안되며, 테이블�
 Domain Logic만 가지며 Presentation Logic을 가지고 있어서는 안된다.
 
 구현 method는 주로 Service Layer에서 사용한다.
+
+Domain Objects는 Business Entity를 표현한 Object이며, JPA Entities는 Domain을 구현하는 데 유용한 특정 기술을 나타낸다.
+자세한 내용은 이 곳을 <a href="https://stackoverflow.com/questions/10394667/are-domain-objects-the-same-as-jpa-entities">참조</a>
 </pre>
 ### Entity, DTO 를 분리해야 하는 이유
 <pre>
@@ -116,3 +119,5 @@ class ArticleVO {
 |**용도**|레이어간의 데이터 전송|의미 있는 값을 표현|DB 테이블과 매핑되는 클래스|
 |**가변/불변**|**가변객체**</br>생성 후 상태를 변경할 수 있다|**불변객체**</br>생성 후 상태 변경이 없다.|**가변객체** </br>생성 후 상태를 변경할 수 있다|
 |**로직 포함 여부**|로직 포함 불가능|로직 포함 가능|로직 포함 가능|
+
+참고사이트 : [Entity, DTO, VO 바로 알기(gillog님)](https://velog.io/@gillog/Entity-DTO-VO-%EB%B0%94%EB%A1%9C-%EC%95%8C%EA%B8%B0)
