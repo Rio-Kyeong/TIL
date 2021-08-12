@@ -23,7 +23,9 @@ Today I Learned :100:
 * [HTTP Status Code Control](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/StatusCode.md)
 * [Implementing Validations for RESTful Services](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Validations.md)
 * [Programming Control for Filtering](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Filtering.md)
-* [Versioning - Basic Approach with URIs](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Versioning.md) 
+* [Versioning - Basic Approach with URIs](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Versioning.md)
+* [Implementing HATEOAS for RESTful Services](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/HATEOAS.md)
+* [Configuring Auto Generation of Swagger Documentation](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Swagger.md)
 * [Entity, DTO, VO](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Entity%2CDTO%2CVO.md)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
