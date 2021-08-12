@@ -92,7 +92,7 @@ public class User {
     private String ssn;
 }
 ```
-### Postman 
+### Postman 조회
 ```json
 // http://localhost/v2/api-docs
 
