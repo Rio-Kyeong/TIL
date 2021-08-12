@@ -59,7 +59,7 @@ public class SwaggerConfig {
     }
 }
 ```
-### Postman 조회
+### Postman 조회 
 <pre>
 // http://localhost/v2/api-docs
 
@@ -71,10 +71,6 @@ Swagger가 적용 될 Model에 대한 정보 추가하기
 
 @ApiModel : Model에 대한 설명 추가(모델명)
 @ApiModelProperty : Model 속성에 대한 설명 추가
-
-// add "description" property
-
-<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/img/UserDomain.PNG"/>
 </pre>
 ```java
 @ApiModel(description = "사용자 상세 정보를 위한 도메인 객체")
@@ -95,6 +91,41 @@ public class User {
     @ApiModelProperty(notes = "사용자 주민번호를 입력해 주세요.")
     private String ssn;
 }
+```
+### Postman 
+```json
+// http://localhost/v2/api-docs
+
+"User": {
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "format": "int32"
+        },
+        "joinDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "사용자 등록일을 입력해 주세요."
+        },
+        "name": {
+            "type": "string",
+            "description": "사용자 이름을 입력해 주세요.",
+            "minLength": 2,
+            "maxLength": 2147483647
+        },
+        "password": {
+            "type": "string",
+            "description": "사용자 비밀번호를 입력해 주세요."
+        },
+        "ssn": {
+            "type": "string",
+            "description": "사용자 주민번호를 입력해 주세요."
+        }
+    },
+    "title": "User",
+    "description": "사용자 상세 정보를 위한 도메인 객체"
+},
 ```
 ### Controller
 ```
