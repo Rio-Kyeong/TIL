@@ -31,7 +31,7 @@ Git-Flow는 대표적인 브랜칭(branching) 전략 중 하나로 5가지 종�
  - Upstream Repository : 개발자들이 공유하는 저장소(최신 소스코드가 저장되어 있는 원격 저장소)
  - Origin Repository : Upstream Repository를 Fork한 원격 개인 저장소
  - Local Repository : 내 컴퓨터에 저장되어 있는 개인 로컬 저장소
-</pre> 
+</pre>  
 
 
 
