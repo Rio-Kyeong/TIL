@@ -28,8 +28,9 @@ Today I Learned :100:
 * [Implementing HATEOAS for RESTful Services](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/HATEOAS.md)
 * [Configuring Auto Generation of Swagger Documentation](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Swagger.md)
 * [Implementing Basic Authentication with Spring Security](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Security.md)
-* [Entity, DTO, VO](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Entity%2CDTO%2CVO.md)
 * [Overview of Connecting RESTful Service to JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/JavaPersistenceAPI.md)
+* [Entity, DTO, VO](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Entity%2CDTO%2CVO.md)
+
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
