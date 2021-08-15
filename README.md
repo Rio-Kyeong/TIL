@@ -18,6 +18,7 @@ Today I Learned :100:
 * [redirect and foward](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/redirect%26foward.md)
 * [JdbcTemplate](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JdbcTemplate.md)
 ## Spring Boot(RESTful)
+* [Spring Boot](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringBoot.md)
 * [REpresentational State Transfer](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/REST.md)
 * [RestController](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/RestController.md)
 * [HTTP Status Code Control](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/StatusCode.md)
@@ -26,7 +27,9 @@ Today I Learned :100:
 * [Versioning - Basic Approach with URIs](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Versioning.md)
 * [Implementing HATEOAS for RESTful Services](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/HATEOAS.md)
 * [Configuring Auto Generation of Swagger Documentation](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Swagger.md)
+* [Implementing Basic Authentication with Spring Security](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Security.md)
 * [Entity, DTO, VO](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Entity%2CDTO%2CVO.md)
+* [Overview of Connecting RESTful Service to JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/JavaPersistenceAPI.md)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
