@@ -11,6 +11,7 @@
 
 기존 스프링에서는 여러가지 설정을 할려면 xml이 필요하다.
 아래 경우는 일반적인 스프링 환경에서 web.xml servlet-context.xml 등 여러가지 설정을 하는 경우이다.
+
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/img/SpringXML.PNG"/>
 
 하지만 스프링부트의 경우 이러한 xml 설정이 필요가 없이 자바코드로 설정하여 쉽게 관리를 할 수 있다.
@@ -34,14 +35,10 @@
 spring boot 에서 모든 설정(servlet-context, root-context 등)은 application.properties 에 작성된다.
 외부에서 읽어들일 필요가 없으므로 web.xml도 필요가 없고 webapp에는 결국 화면에 보여줄 View 파일만 존재한다.
 
-JSP 사용을 위해 /src/main/webapp/WEB-INF/views/ 폴더를 만들고 여기에 jsp 파일을 만들어주어야 한다.
+<b>JSP 사용을 위해 /src/main/webapp/WEB-INF/views/ 폴더를 만들고 여기에 jsp 파일을 만들어주어야 한다.</b>
 </pre>
 ### application.properties
 ```properties
-# WAS server setting
-server.port=8080
-server.servlet.context-path=/product
- 
 # View Resolver setting
 spring.mvc.view.prefix=/WEB-INF/views/
 spring.mvc.view.suffix=.jsp
