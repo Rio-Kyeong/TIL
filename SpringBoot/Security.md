@@ -32,6 +32,15 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity //웹 보안 활성화
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+
+        //모든 사용자가 접근할 수 있는 URL 패턴을 지정한다("/h2-console 로 시작할 경우 사용자는 해당 요청에 접근할 수 있다)
+        http.authorizeRequests().antMatchers("/h2-console/**").permitAll();
+        http.csrf().disable(); //크로사이드 스크립트 관련된 것들 사용하지 않는다.
+        http.headers().frameOptions().disable(); //헤더 값의 프레임에 관련된 속성 값을 사용하지 않는다.
+    }
+    
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth)throws Exception{
         auth.inMemoryAuthentication()
