@@ -175,7 +175,8 @@ public class UserJpaController {
         userRepository.deleteById(id);
         
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().build().toUri();
-
+        
+        // builder pattern 이용
         return ResponseEntity.notFound().location(location).build();
     }
 
@@ -189,6 +190,7 @@ public class UserJpaController {
                 .path("/{id}")
                 .buildAndExpand(saveUser.getId())
                 .toUri();
+        // builder pattern 이용
         return ResponseEntity.created(location).build();
     }
 
