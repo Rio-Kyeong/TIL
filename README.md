@@ -33,8 +33,7 @@ Today I Learned :100:
 * [Use H2Database](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/H2Database.md)
 * [Creating Entity and useing Spring Data JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringDataJPA.md)
 * [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md)
-
-
+## Spring Boot(JPA)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
