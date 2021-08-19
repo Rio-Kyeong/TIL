@@ -20,6 +20,7 @@ Today I Learned :100:
 ## Spring Boot(RESTful)
 * [Spring Boot](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringBoot.md)
 * [REpresentational State Transfer](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/REST.md)
+* [Entity, DTO, VO](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Entity%2CDTO%2CVO.md)
 * [RestController](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/RestController.md)
 * [HTTP Status Code Control](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/StatusCode.md)
 * [Implementing Validations for RESTful Services](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Validations.md)
@@ -29,7 +30,10 @@ Today I Learned :100:
 * [Configuring Auto Generation of Swagger Documentation](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Swagger.md)
 * [Implementing Basic Authentication with Spring Security](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Security.md)
 * [Overview of Connecting RESTful Service to JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/JavaPersistenceAPI.md)
-* [Entity, DTO, VO](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Entity%2CDTO%2CVO.md)
+* [Use H2Database](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/H2Database.md)
+* [Creating Entity and useing Spring Data JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringDataJPA.md)
+* [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md)
+
 
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
