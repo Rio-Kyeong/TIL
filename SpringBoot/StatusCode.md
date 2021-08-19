@@ -13,6 +13,7 @@ POST(생성)
 성공 : 201 Created
 클라이언트의 요청이 허용되지 않는 메소드일 때(실패) : 405 Method Not Allowed
 
+
 PUT(수정)
 성공 : 201 Created
 자원 수정 요청의 결과가 기존의 자원 내용과 동일하여 변경된 내용이 없을 때 : 204 No Content
@@ -23,6 +24,7 @@ DELETE(삭제)
 자원이 존재하지 않을 때 : 404 Not Found
 
 자세한 내용은 이곳을 <a href="https://sanghaklee.tistory.com/61">참조</a>
+ResponseEntity를 이용하여 <a href="https://devlog-wjdrbs96.tistory.com/197">응답</a>
 </pre>
 ## ResponseEntity를 사용한 컨트롤러단 상태코드 제어
 <pre>
