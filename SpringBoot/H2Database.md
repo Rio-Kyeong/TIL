@@ -1,5 +1,5 @@
 # Creating some test data
-## h2
+## H2Database
 ```
 H2DB는 자바 기반의 오픈소스 관계형 데이터 베이스 관리 시스템(DBMS)이다.
 H2DB는 서버(Server) 모드와 임베디드(Embedded) 모드의 인메모리 DB 기능을 지원한다.
