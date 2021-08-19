@@ -142,13 +142,13 @@ public class UserJpaController {
     // http://localhost/jpa/users
     // 전체 회원 조회 : findAll 메소드 사용
     @GetMapping("/users")
-    public List<User> retrieveAllUsers(){
+    public List<User> retrieveAllUsers() throws Exception{
         return userRepository.findAll();
     }
 
     // 개별 회원 조회 : findById 메소드 사용 
     @GetMapping("/users/{id}")
-    public EntityModel<User> retrieveUser(@PathVariable int id){
+    public EntityModel<User> retrieveUser(@PathVariable int id) throws Exception{
 
         // Optional<T> findById(ID var1); <- findById()의 반환 값은 Optional<T> 이다.
         // Optional<T> 클래스는 'T' 타입의 객체를 포장해주는 래퍼 클래스이다.
@@ -171,13 +171,17 @@ public class UserJpaController {
 
     // 회원 삭제 : deleteById 메소드 사용
     @DeleteMapping("/users/{id}")
-    public void deleteUser(@PathVariable int id){
+    public ResponseEntity<User> deleteUser(@PathVariable int id) throws Exception{
         userRepository.deleteById(id);
+        
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().build().toUri();
+
+        return ResponseEntity.notFound().location(location).build();
     }
 
     // 회원 등록 : save 메소드 사용
     @PostMapping("/users")
-    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user) throws Exception{
         //save(S) : 새로운 엔티티는 저장하고 이미 잇는 엔티티는 수정(insert, update)
         User saveUser = userRepository.save(user);
 
@@ -191,7 +195,7 @@ public class UserJpaController {
     // user 의 정보를 받아온 후 그 유저가 작성한 posts 의 정보를 가져온다.(개별 회원의 게시글 조회)
     // /jpa/users/90001/posts
     @GetMapping("/users/{id}/posts")
-    public List<Post> retrieveAllPostByUser(@PathVariable int id){
+    public List<Post> retrieveAllPostByUser(@PathVariable int id) throws Exception{
 
         Optional<User> user = userRepository.findById(id);
         // 리턴 값이 Optional인 이유 : 데이터가 존재할수도 안할수도 있기 때문에
@@ -206,7 +210,7 @@ public class UserJpaController {
 
     // 게시글 추가
     @PostMapping("/users/{id}/posts")
-    public ResponseEntity<Post> createPost(@PathVariable int id, @Valid @RequestBody Post post) {
+    public ResponseEntity<Post> createPost(@PathVariable int id, @Valid @RequestBody Post post) throws Exception{
 
         Optional<User> user = userRepository.findById(id);
 
