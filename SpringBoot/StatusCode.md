@@ -1,10 +1,29 @@
 # Status Code 제어
-```
+<pre>
 클라이언트의 요청이 정상적으로 처리가 되면 200(성공)의 상태코드를 반환받게 된다.
 (GET HTTP METHOD 를 이용하여 DB 에 존재하지 않는 데이터를 검색하여도 서버측의 오류가 아니기 때문에 200 OK 의 상태코드를 받는다) 
 
 각각의 CRUD에 따라서 서버로부터 요청결과값에 적절한 상태코드를 반환시켜주는 것이 좋은 REST API 중 하나이다.
-```
+
+GET(조회) 
+성공 : 200 OK 
+조회할 자원이 존재하지 않을 때 : 404 Not Found
+
+POST(생성) 
+성공 : 201 Created
+클라이언트의 요청이 허용되지 않는 메소드일 때(실패) : 405 Method Not Allowed
+
+PUT(수정)
+성공 : 201 Created
+자원 수정 요청의 결과가 기존의 자원 내용과 동일하여 변경된 내용이 없을 때 : 204 No Content
+수정하려는 자원이 없을 때 : 404 Not Found
+
+DELETE(삭제) 
+성공 : 204 No Content
+자원이 존재하지 않을 때 : 404 Not Found
+
+자세한 내용은 이곳을 <a href="https://sanghaklee.tistory.com/61">참조</a>
+</pre>
 ## ResponseEntity를 사용한 컨트롤러단 상태코드 제어
 <pre>
 <b>ResponseEntity</b>는 <b>HtttHeaders headers</b>와 <b>T body</b>, <b>HttpStatus status</b>를 포함한 클래스이다.
