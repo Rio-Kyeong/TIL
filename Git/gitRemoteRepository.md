@@ -13,6 +13,10 @@ $ git clone [클론할 저장소의 주소] [저장소로 만들 폴더 명(자�
 
 (파일 작업)
 
+$ git add .
+
+$ git commit -m"[message]"
+
 $ git push
 ```
 ### 이미 로컬 저장소가 있고, 로컬 저장소에서 해오던 작업을 원격 저장소에 올려서 작업진행
@@ -24,6 +28,10 @@ $ git remote add origin [깃허브 원격 저장소 주소]
 $ git remote -v
 
 (파일 작업)
+
+$ git add .
+
+$ git commit -m"[message]"
 
 원격 저장소에 파일 올리기(두번 째부터는 git push로 간결하게 사용가능)
 $ git push -u origin master
