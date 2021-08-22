@@ -3,7 +3,7 @@
 <pre>
 스프링 부트 스타터(<a href="https://start.spring.io/">https://start.spring.io/</a>)를 이용하여 프로젝트 생성하기
 
-<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/img/Templates.PNG"/>
+<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/img/project.PNG"/>
 </pre>
 ## Build Tool
 <pre>
@@ -34,7 +34,8 @@ JVM이나 WAS가 인식할 수 있도록 패키징 해주는 빌드 과정, <b>�
 
 <b>Thymeleaf와 jsp의 차이점</b>
 
-- <b>Thymeleaf</b>는 (HTML, XML, JavaScript, CSS 및 일반 텍스트)를 처리 할 수 있는 웹 및 독립형 환경에서 사용할 수 있는 Java 템플릿 엔진이다.
+- <b>Thymeleaf</b>는 (HTML, XML, JavaScript, CSS 및 일반 텍스트)를 처리 할 수 있는 
+  웹 및 독립형 환경에서 사용할 수 있는 Java 템플릿 엔진이다.
 - html파일을 가져와서 파싱해서 분석후 정해진 위치에 데이터를 치환해서 웹 페이지를 생성한다.
   (코드자체가 html 같은 웹형태이기에 was없이도 그냥 브라우저에서 직접 띄어볼 수 가 있다)
 - Thymeleaf는 자바코드를 사용할 수 없고, jsp에서 처럼 커스텀 태그와 같은 기능도 없다.
@@ -110,10 +111,11 @@ Version 1.4.200(Windows): <a href="https://h2database.com/h2-setup-2019-10-14.ex
   2. H2/bin/h2.bat 실행
   3. URL에서 앞에 ip를 localhost로만 딱 바꿔준다(key는 건들지 않는다)
      예:) http://localhost:8082/?key=xxxxxx...
-  4. H2 데이터베이스 화면의 접속 URL에 jdbc:h2:~/test, jdbc:h2:~/jpashop 등 파일명을 적어주고 연결을 한다(최초 1회)
+  4. H2 데이터베이스 화면의 접속 URL에 jdbc:h2:~/jpashop 등 파일명을 적어주고 연결을 한다(최초 1회)
      <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/img/server.PNG"/>
-  5. C:/Users/home(본인 홈 폴더)에 test.mv.db 또는 jpashop.mv.db 같은 파일이 생성되었는지 확인한다.
-  6. H2 데이터베이스 화면의 접속 URL에 jdbc:h2:tcp://localhost/~/test, jdbc:h2:tcp://localhost/~/jpashop와 같이 설정 내용에 맞게 입력해서 접속해준다.
+     
+  5. C:/Users/home(본인 홈 폴더)에 jpashop.mv.db 파일이 생성되었는지 확인한다.
+  6. H2 데이터베이스 화면의 접속 URL에 jdbc:h2:tcp://localhost/~/jpashop와 같이 설정 내용에 맞게 입력해서 접속해준다.
   7. H2 접속 오류 시 <a href="https://docs.google.com/document/d/1j0jcJ9EoXMGzwAA2H0b9TOvRtpwlxI5Dtn3sRtuXQas/edit#">참고</a>
 </pre>
 ### Gradle(build.gradle)
