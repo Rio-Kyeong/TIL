@@ -33,10 +33,14 @@ Today I Learned :100:
 * [Use H2Database](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/H2Database.md)
 * [Creating Entity and useing Spring Data JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringDataJPA.md)
 * [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md)
-## Spring Boot(JPA - 1)
+## Spring Boot(JPA)
 프로젝트 환경설정
 * [Project Preferences](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ProjectPreferences.md)
 * [H2Database Connection Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ConnectionTest.md)
+
+도메인 분석 설계
+* [Domain Analytical Design](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/DomainAnalyticalDesign.md)
+## Spring Boot(Spring Data JPA)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
@@ -48,5 +52,6 @@ Today I Learned :100:
 * [Git Rebase](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitRebase.md)
 * [Git Flow](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitFlow.md)
 ## Java
+* [BOJ-java Algorithm](https://github.com/RyuKyeongWoo/BOJ-java)
 ## JavaScript
 * [modern-javascript-tutorial](https://github.com/Conquering-js)
