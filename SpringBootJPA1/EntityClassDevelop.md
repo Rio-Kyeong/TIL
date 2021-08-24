@@ -31,6 +31,12 @@
     - <b>주인이 아닌쪽은 읽기만 가능</b>
     - <b>주인이 아닌 곳에서는 mappedBy로 주인을 명시</b>해야하며, <b>주인만 FK를 관리</b>한다.
 </pre>
+<pre>
+<b>연관관계 편의 메서드</b>
+    - <b>양방향 연관관계를 한번에 설정하는 편리한 메서드</b>
+    - 엔티티 A와 B가 서로 양방향 연관관계인데, 어디에 연관관계 편의 메서드를 두는게 좋을까?
+      -> JPA의 영역이라기 보다는 오히려 객체지향 설계의 영역이기 때문에 어디에 두든 정답은 없다.
+</pre>
 ### Order(주문)
 ```java
 //Entity Class
@@ -38,7 +44,7 @@
 //Entity Class 와 DB Table 의 이름이 다르면 @Table 을 통해서 이름을 지정해준다.
 @Table(name = "orders")
 @Getter
-public class Order {
+public class Order { 
 
     @Id // PK
     @GeneratedValue // PK의 값을 위한 자동 생성
@@ -56,8 +62,10 @@ public class Order {
     private List<OrderItem> orderItems = new ArrayList<OrderItem>();
 
     // 1:1 (1:1관계에서는 PK를 어디에 넣어도 상관없다)
-    // 고로 연관관계를 어디에 설정하여도 상관없다
-    @OneToOne
+    // 고로 연관관계의 주인을 어디에 설정하여도 상관없다.
+    // 모든 Entity는 기본적으로 parsist()를 하려면 각각 해야한다.
+    // CascadeType.ALL 속성값으로 Order 를 parsist 하면 자동으로 Delivery 도 parsist 된다.
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "delivery_id")
     private Delivery delivery; // 배송
 
@@ -65,6 +73,22 @@ public class Order {
 
     @Enumerated(EnumType.STRING) //enum type
     private OrderStatus status; //주문상태 [ORDER, CANCEL]
+    
+    //==연관관계 편의 메서드==//
+    public void setMember(Member member){
+        this.member = member;
+        member.getOrders().add(this);
+    }
+
+    public void addOrderItem(OrderItem orderItem){
+        orderItems.add(orderItem);
+        orderItem.setOrder(this);
+    }
+
+    public void setDelivery(Delivery delivery){
+        this.delivery = delivery;
+        delivery.setOrder(this);
+    }
 }
 ```
 ### OrderItem(주문상품)
