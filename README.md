@@ -40,6 +40,8 @@ Today I Learned :100:
 
 도메인 분석 설계
 * [Domain Analytical Design](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/DomainAnalyticalDesign.md)
+* [Entity Class Develop](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityClassDevelop.md)
+* [Entity Design Precautions](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityDesignPrecautions.md)
 ## Spring Boot(Spring Data JPA)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
