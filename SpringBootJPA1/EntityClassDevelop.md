@@ -197,7 +197,7 @@ InheritanceType 종류
 //single_table 전략을 사용한다(한개의 테이블에 모든 컬럼 정의)
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="DTYPE") //DTYPE으로 구분
-@Getter @Setter
+@Getter 
 public abstract class Item {
 
     @Id
@@ -214,7 +214,7 @@ public abstract class Item {
 ```java
 @Entity
 @DiscriminatorValue("A")// 구분 값
-@Getter @Setter
+@Getter 
 public class Album extends Item{
 
     private String artist;
@@ -225,7 +225,7 @@ public class Album extends Item{
 ```java
 @Entity
 @DiscriminatorValue("M")// 구분 값
-@Getter @Setter
+@Getter 
 public class Movie extends Item{
 
     private String director;
@@ -236,7 +236,7 @@ public class Movie extends Item{
 ```java
 @Entity
 @DiscriminatorValue("B")// 구분 값
-@Getter @Setter
+@Getter 
 public class Book extends Item{
 
     private String author;
