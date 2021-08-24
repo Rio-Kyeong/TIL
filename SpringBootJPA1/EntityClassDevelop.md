@@ -167,6 +167,7 @@ public class Delivery {
 <pre>
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/img/dtype.PNG"/>
 
+- Item(상품) 클래스는 여러(Album, Movie, Book) 클래스들에게 상속되어 있다.
 - 객체에는 상속관계가 존재하지만, 관계형 데이터베이스는 상속 관계가 없다.
 - 그나마 슈퍼타입 서브타입 관계라는 모델링 기법이 객체 상속과 유사하다.
 - 상속관계 매핑이라는 것은 객체의 상속 구조와 DB의 슈퍼타입 서브타입 관계를 매핑하는 것이다.
@@ -190,7 +191,7 @@ InheritanceType 종류
 
 자세한 내용은 이곳을 <a href="https://ict-nroo.tistory.com/128">참조</a>
 </pre>
-### Item
+### Item(상품)
 ```java
 @Entity
 //single_table 전략을 사용한다(한개의 테이블에 모든 컬럼 정의)
