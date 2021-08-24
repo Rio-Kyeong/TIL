@@ -125,6 +125,7 @@ public class OrderItem {
 - <b>Address를 표현하는 city,street,zipcode 필드를 하나로 묶어서 코드의 가독성을 높이고,
   좀 더 주소라는 의미를 확실하게 표현</b>하였다.
 - <b>주소 값 타입은 변경 불가능하게 설계</b>해야 한다.(Setter메소드를 사용하지 않는다)
+
 - <b>@Embeddable</b> : 값 타입을 정의하는 곳에 표시
 - <b>@Embedded</b> : 값 타입을 사용하는 곳에 표시
 </pre>
