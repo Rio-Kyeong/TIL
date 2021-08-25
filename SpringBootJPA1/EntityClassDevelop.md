@@ -63,8 +63,8 @@ public class Order {
 
     // 1:1 (1:1관계에서는 PK를 어디에 넣어도 상관없다)
     // 고로 연관관계의 주인을 어디에 설정하여도 상관없다.
-    // 모든 Entity는 기본적으로 parsist()를 하려면 각각 해야한다.
-    // CascadeType.ALL 속성값으로 Order 를 parsist 하면 자동으로 Delivery 도 parsist 된다.
+    // 모든 Entity는 기본적으로 엔티티를 영속성 컨텍스트에 저장하려면 각각 persist 를 사용해야 한다.
+    // CascadeType.ALL 속성값으로 Order 를 persist 하면 자동으로 Delivery 도 persist 된다.
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "delivery_id")
     private Delivery delivery; // 배송
