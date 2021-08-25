@@ -48,6 +48,7 @@ Today I Learned :100:
 * [Member Function Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberFunctionTest.md)
 
 상품 도메인 개발
+* [Item Business Logic implement](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemBusinessLogic.md)
 * [Item Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemDomainDevelopment.md)
 
 ## Spring Boot(Spring Data JPA)
