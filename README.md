@@ -42,6 +42,14 @@ Today I Learned :100:
 * [Domain Analytical Design](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/DomainAnalyticalDesign.md)
 * [Entity Class Develop](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityClassDevelop.md)
 * [Entity Design Precautions](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityDesignPrecautions.md)
+
+회원 도메인 개발
+* [Member Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberDevelopment.md)
+* [Member Function Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberFunctionTest.md)
+
+상품 도메인 개발
+* [Item Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemDomainDevelopment.md)
+
 ## Spring Boot(Spring Data JPA)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
