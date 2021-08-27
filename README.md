@@ -45,11 +45,16 @@ Today I Learned :100:
 
 회원 도메인 개발
 * [Member Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberDevelopment.md)
-* [Member Function Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberFunctionTest.md)
+* [Member Unit Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberFunctionTest.md)
 
 상품 도메인 개발
-* [Item Business Logic implement](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemBusinessLogic.md)
+* [Item Business Logic Implement](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemBusinessLogic.md)
 * [Item Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemDomainDevelopment.md)
+
+주문 도메인 개발
+*[Order Business Logic Implement](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderBusinessLogic.md)
+*[Order Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderDevelopment.md)
+*[Order Unit Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderUnitTest.md)
 
 ## Spring Boot(Spring Data JPA)
 ## Git
