@@ -1,4 +1,4 @@
-# Member Function Test
+# Member unit test
 ## JUnit
 <pre>
 <b>JUnit</b>은 <b>Java에서 독립된 단위테스트(Unit Test)를 지원해주는 프레임워크</b>이다.
