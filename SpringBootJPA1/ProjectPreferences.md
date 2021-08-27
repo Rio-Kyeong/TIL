@@ -81,6 +81,9 @@ public class HelloController {
 </body>
 </html>
 ```
+<pre>
+<b>main/resources/static</b> : html, css, js, img 등 바로 제공되는 정적컨텐츠 resource directory
+</pre>
 ```html
 <!-- 파일 : index.html(정적인 페이지) -->
 <!-- 경로 : main/resources/static -->
