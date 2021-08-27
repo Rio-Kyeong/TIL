@@ -52,9 +52,9 @@ Today I Learned :100:
 * [Item Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemDomainDevelopment.md)
 
 주문 도메인 개발
-*[Order Business Logic Implement](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderBusinessLogic.md)
-*[Order Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderDevelopment.md)
-*[Order Unit Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderUnitTest.md)
+* [Order Business Logic Implement](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderBusinessLogic.md)
+* [Order Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderDevelopment.md)
+* [Order Unit Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderUnitTest.md)
 
 ## Spring Boot(Spring Data JPA)
 ## Git
