@@ -49,6 +49,22 @@ public class ItemService {
     public void saveItem(Item item){
         itemRepository.save(item);
     }
+    
+    // 변경 감지 사용
+    // 파라미터 값이 많을 경우 DTO 를 따로 만들어서 받는 방법을 사용하면 된다.
+    @Transactional
+    public void updateItem(Long itemId, String name, int price, int stockQuantity){
+        // findItem 의 상태는 영속상태이다.
+        // 값이 셋팅되면 @Transactional 에 의해서 commit 이 되고 커밋 시점에 변경 감지가 실행된다.
+        // (영속성 컨텍스트에서 변경된 엔티티를 찾고 바뀐값을 update 한다)
+        Item findItem = itemRepository.findOne(itemId);
+
+        //setter method 보다는 엔티티에서 의미있는 변경 메서드를 하나 만들어서 값을 주입 해주는게 좋다.
+        //EX) findItem.change(price, name, stockQuantity);
+        findItem.setName(name);
+        findItem.setPrice(price);
+        findItem.setStockQuantity(stockQuantity);
+    }
 
     public List<Item> findItems(){
         return  itemRepository.findAll();
