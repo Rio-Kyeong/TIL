@@ -33,7 +33,7 @@ Today I Learned :100:
 * [Use H2Database](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/H2Database.md)
 * [Creating Entity and useing Spring Data JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringDataJPA.md)
 * [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md)
-## Spring Boot(JPA)
+## Spring Boot(Spring MVC & JPA)
 프로젝트 환경설정
 * [Project Preferences](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ProjectPreferences.md)
 * [H2Database Connection Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ConnectionTest.md)
@@ -44,7 +44,7 @@ Today I Learned :100:
 * [Entity Design Precautions](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityDesignPrecautions.md)
 
 회원 도메인 개발
-* [Member Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberDevelopment.md)
+* [Member Development - Persistence Context, Transaction](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberDevelopment.md)
 * [Member Unit Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberFunctionTest.md)
 
 상품 도메인 개발
@@ -52,14 +52,16 @@ Today I Learned :100:
 * [Item Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemDomainDevelopment.md)
 
 주문 도메인 개발
-* [Order Business Logic Implement](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderBusinessLogic.md)
+* [Order Business Logic Implement - Domain Model Pattern](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderBusinessLogic.md)
 * [Order Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderDevelopment.md)
 * [Order Unit Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderUnitTest.md)
 
 웹 계층 개발
+* [Member Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberWebDevelopment.md)
 * [Item Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemWebDevelopment.md)
+* [Order Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderWebDevelopment.md)
 
-## Spring Boot(Spring Data JPA)
+## Spring Boot(REST API & JPA)
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
