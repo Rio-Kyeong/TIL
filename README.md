@@ -34,29 +34,29 @@ Today I Learned :100:
 * [Creating Entity and useing Spring Data JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringDataJPA.md)
 * [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md)
 ## Spring Boot(Spring MVC & JPA)
-프로젝트 환경설정
+Project Preferences
 * [Project Preferences](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ProjectPreferences.md)
 * [H2Database Connection Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ConnectionTest.md)
 
-도메인 분석 설계
+Domain Analysis Design
 * [Domain Analytical Design](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/DomainAnalyticalDesign.md)
 * [Entity Class Develop](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityClassDevelop.md)
 * [Entity Design Precautions](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityDesignPrecautions.md)
 
-회원 도메인 개발
+Member Domain Development
 * [Member Development - Persistence Context, Transaction](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberDevelopment.md)
 * [Member Unit Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberFunctionTest.md)
 
-상품 도메인 개발
+Item Domain Development
 * [Item Business Logic Implement](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemBusinessLogic.md)
 * [Item Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemDomainDevelopment.md)
 
-주문 도메인 개발
+Order Domain Development
 * [Order Business Logic Implement - Domain Model Pattern](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderBusinessLogic.md)
 * [Order Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderDevelopment.md)
 * [Order Unit Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderUnitTest.md)
 
-웹 계층 개발
+Web layer Development
 * [Member Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberWebDevelopment.md)
 * [Item Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemWebDevelopment.md)
 * [Order Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderWebDevelopment.md)
