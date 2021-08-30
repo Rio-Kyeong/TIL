@@ -4,6 +4,7 @@
 <b>@RequestParam("가져올 데이터의 name") [데이터타입] [변수]</b>
     - 사용자가 요청시 전달하는 값을 Handler(Controller)의 매개변수로 1:1 맵핑할 때 사용되는 어노테이션이다.
     - <b>HttpServletRequest</b> 의 getParameter() 메서드와 같은 역할을 한다.
+    - 전달되는 url 상에서 데이터를 찾는다.
 
 <b>@ModelAttribute("Object")</b>
     - 사용자가 요청시 전달하는 값을 오브젝트 형태로 매핑해준다.
