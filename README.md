@@ -41,7 +41,7 @@ Project Preferences
 Domain Analysis Design
 * [Domain Analytical Design](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/DomainAnalyticalDesign.md)
 * [Entity Class Develop](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityClassDevelop.md)
-* [Entity Design Precautions](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityDesignPrecautions.md)
+* [Entity Design Precautions - EAGER, LAZY](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityDesignPrecautions.md)
 
 Member Domain Development
 * [Member Development - Persistence Context, Transaction](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberDevelopment.md)
