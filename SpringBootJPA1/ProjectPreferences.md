@@ -13,12 +13,12 @@
 
 우리가 프로젝트에서 작성한 java 코드와 프로젝트 내에 필요한 각종 xml, properties, jar 파일들을
 JVM이나 WAS가 인식할 수 있도록 패키징 해주는 빌드 과정, <b>빌드 자동화 도구</b>라고 할 수 있다.
+mvnrepository : <a href="https://mvnrepository.com/">https://mvnrepository.com/</a>
 
 <b>Maven</b>
 - Maven은 <b>Java용 프로젝트 관리도구로 Apache의 Ant 대안</b>으로 만들어졌다.
 - 필드 중인 프로젝트, 빌드 순서, 다양한 외부 라이브러리 종속성 관계를 pom.xml파일에 명시한다.
 - Maven은 외부저장소에서 필요한 라이브러리와 플러그인들을 다운로드 한다음, 로컬시스템의 캐시에 모두 저장한다.
-- Maven : <a href="https://mvnrepository.com/">https://mvnrepository.com/</a>
 
 <b>Gradle</b>
 - Gradle은 <b>Groovy를 이용한 빌드 자동화 시스템</b>이다.
