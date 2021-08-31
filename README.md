@@ -7,7 +7,7 @@ Today I Learned :100:
 * [Dependency Injection - xml](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/DependencyInjection.md)
 * [XML Separation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/XMLSeparation.md)
 * [Dependency Injection - annotation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/DependencyInjection2.md)
-* [Bean Life Cycle](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/BeanLifeCycle.md)
+* [Bean Life Cycle - init, destory](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/BeanLifeCycle.md)
 * [Java Spring Config File](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JavaSpringConfig.md)
 * [Java Separation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JavaSeparation.md)
 * [Spring Web Programming Structure](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringWebProgrammingDesignModel.md)
@@ -45,7 +45,7 @@ Domain Analysis Design
 
 Member Domain Development
 * [Member Development - Persistence Context, Transaction](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberDevelopment.md)
-* [Member Unit Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberFunctionTest.md)
+* [Member Unit Test - JUnit](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberUnitTest.md)
 
 Item Domain Development
 * [Item Business Logic Implement](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemBusinessLogic.md)
@@ -58,10 +58,14 @@ Order Domain Development
 
 Web layer Development
 * [Member Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberWebDevelopment.md)
-* [Item Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemWebDevelopment.md)
+* [Item Web Development - Dirty Checking](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemWebDevelopment.md)
 * [Order Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderWebDevelopment.md)
 
 ## Spring Boot(REST API & JPA)
+Member API Development & Ready
+* [Member API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/MemberAPI.md)
+* [Sample Data Input](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/SampleDataInput.md)
+
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
