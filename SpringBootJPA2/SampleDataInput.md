@@ -30,7 +30,9 @@ public void destory() {
 @PostConstruct는 해당 빈 자체만 생성되었다고 가정하고 호출된다.
 해당 빈에 관련된 AOP등을 포함한, 전체 스프링 애플리케이션 컨텍스트가 초기화 된 것을 의미하지는 않는다.
 
-그러나 트랜잭션을 처리하는 AOP등은 스프링의 후 처리기(post processer)가 완전히 동작을 끝내서, 스프링 애플리케이션 컨텍스트의 초기화가 완료되어야 적용된다.
+그러나 트랜잭션을 처리하는 AOP등은 스프링의 후 처리기(post processer)가 완전히 동작을 끝내서, 스프링 애플리케이션 컨텍스트의 
+초기화가 완료되어야 적용된다.
+
 정리하면 @PostConstruct는 해당빈의 AOP 적용을 보장하지 않기 때문에 @Transactional를 추가하여도 무시되어진다.
 
 자세한 내용은 이곳을 <a href="https://stackoverflow.com/questions/17346679/transactional-on-postconstruct-method">참조</a>
