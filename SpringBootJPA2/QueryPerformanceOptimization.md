@@ -131,7 +131,7 @@ public class OrderSimpleApiController {
 ```
 ### V3. 엔티티를 조회해서 DTO 로 변환(fetch join 사용)
 <pre>
-V2 에서 일반조인을 했을 때에는 쿼리가 반복적으로 호출되어 성능이 저하되었다.
+V2 에서 조회을 했을 때에는 쿼리가 반복적으로 호출되어 성능이 저하되었다.
 - Order 의 결과가 2건이므로 order select 1번 + member select 2번 + delivery select 2번 총 5번이 쿼리가 호출되었다.
 
 <b>Fetch  Join</b>
