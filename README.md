@@ -62,9 +62,12 @@ Web layer Development
 * [Order Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderWebDevelopment.md)
 
 ## Spring Boot(REST API & JPA)
-Member API Development & Ready
+Member API Development & Sample Data Ready
 * [Member API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/MemberAPI.md)
 * [Sample Data Input](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/SampleDataInput.md)
+
+Lazy loading and Query performance optimization - XToOne(ManyToOne, OneToOne)
+* [Order Simple API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/QueryPerformanceOptimization.md)
 
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
