@@ -17,7 +17,7 @@
 </pre>
 ## 지연 로딩과 조회 성능 최적화
 <pre>
-<b>목표 : 지연 로딩(LAZY) 설정이 되어있는 XToOne(ManyToOne, OneToOne) 관계를 가지는 엔티티 조회 시 성능 최적화</b>
+<b>목표 : 지연 로딩(LAZY) 설정이 되어있는 XToOne(ManyToOne, OneToOne) 관계 조회 시 성능 최적화</b>
 
 <b>주문(Order) 엔티티 조회하기</b>
 order -> member 와 order -> address 는 지연 로딩이다.
