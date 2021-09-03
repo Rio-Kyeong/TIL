@@ -69,6 +69,10 @@ Member API Development & Sample Data Ready
 Lazy loading and Query performance optimization - XToOne(ManyToOne, OneToOne)
 * [Order Simple API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/QueryPerformanceOptimization.md)
 
+Collection Optimization - XToMany(OneToMany)
+* [Order API - Entity Lookup](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization.md)
+* [Order API - DTO Lookup]()
+
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
