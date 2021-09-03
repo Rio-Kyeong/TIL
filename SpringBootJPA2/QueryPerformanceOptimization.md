@@ -171,6 +171,7 @@ public List<Order> findAllWithMemberDelivery() {
 - SELECT절에서 원하는 데이터를 직접 선택하므로 DB -> 애플리케이션 네트웍 용량 최적화(생각보다 미비)
 - <b>리포지토리 재사용성이 떨어짐, API 스펙에 맞춘 코드가 리포지토리에 들어가는 단점이다.</b>
     * 리포지토리는 가급적 순수한 엔티티를 조회하는데 사용하기 때문에 따로 DTO로 조회하는 리포지토리를 만드는 것이 유지보수성에 좋다.
+    * <b>관심사의 분리</b>
       <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/img/OrderSimpleQueryRepository.PNG"/>
 
 <b>쿼리 방식 선택 권장 순서</b>
