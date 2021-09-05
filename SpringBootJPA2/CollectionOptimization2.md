@@ -13,7 +13,7 @@
 - SELECT절에서 원하는 데이터를 직접 선택하므로 DB -> 애플리케이션 네트웍 용량 최적화(생각보다 미비)
 - <b>리포지토리 재사용성이 떨어짐, API 스펙에 맞춘 코드가 리포지토리에 들어가는 단점이다.</b>
 - 리포지토리는 가급적 순수한 엔티티를 조회하는데 사용하기 때문에 <b>따로 DTO로 조회하는 리포지토리를 만드는 것이 유지보수성에 좋다.</b>
-- <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/img/dtorepository.PNG"/>
+  <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/img/dtorepository.PNG"/>
 
 컬렉션 조회 최적화 방법은 <b>엔티티 조회 방식</b>과 <b>DTO 직접 조회 방식</b>을 이용한다.
 </pre>
