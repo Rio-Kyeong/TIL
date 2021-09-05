@@ -71,7 +71,7 @@ Lazy loading and Query performance optimization - XToOne(ManyToOne, OneToOne)
 
 Collection Optimization - XToMany(OneToMany)
 * [Order API - Entity Lookup](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization.md)
-* [Order API - DTO Lookup]()
+* [Order API - DTO Lookup](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization2.md)
 
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
