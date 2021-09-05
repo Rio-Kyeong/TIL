@@ -172,7 +172,7 @@ public List<Order> findAllWithMemberDelivery() {
 - <b>리포지토리 재사용성이 떨어짐, API 스펙에 맞춘 코드가 리포지토리에 들어가는 단점이다.</b>
     * 리포지토리는 가급적 순수한 엔티티를 조회하는데 사용하기 때문에 따로 DTO로 조회하는 리포지토리를 만드는 것이 유지보수성에 좋다.
     * <b>관심사의 분리</b>
-      <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/img/OrderSimpleQueryRepository.PNG"/>
+      <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/img/dtorepository.PNG"/>
 
 <b>쿼리 방식 선택 권장 순서</b>
 1. 우선 엔티티를 DTO로 변환하는 방법을 선택한다.
