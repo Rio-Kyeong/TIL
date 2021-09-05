@@ -73,7 +73,7 @@ public class OrderQueryRepository {
     private final EntityManager em;
 
     /**
-     * 컬렉션은 별도로 조회
+     * V4. 조회된 컬렉션을 병합
      * Query: 루트 1번, 컬렉션 N 번
      * 단건 조회에서 많이 사용하는 방식
      */
