@@ -73,8 +73,8 @@ Collection Optimization - XToMany(OneToMany)
 * [Order API - Entity Lookup](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization.md)
 * [Order API - DTO Lookup](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization2.md)
 
-Practical Essential Optimization - Open Session In View
-* [OSIV](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/OpenSessionInView.md)
+Practical Essential Optimization - OSIV
+* [Open Session In View](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/OpenSessionInView.md)
 
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
