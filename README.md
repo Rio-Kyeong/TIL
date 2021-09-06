@@ -53,7 +53,7 @@ Item Domain Development
 
 Order Domain Development
 * [Order Business Logic Implement - Domain Model Pattern](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderBusinessLogic.md)
-* [Order Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderDevelopment.md)
+* [Order Development - QueryDSL](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderDevelopment.md)
 * [Order Unit Test](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderUnitTest.md)
 
 Web layer Development
@@ -72,6 +72,9 @@ Lazy loading and Query performance optimization - XToOne(ManyToOne, OneToOne)
 Collection Optimization - XToMany(OneToMany)
 * [Order API - Entity Lookup](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization.md)
 * [Order API - DTO Lookup](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization2.md)
+
+Practical Essential Optimization - Open Session In View
+* [OSIV](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/OpenSessionInView.md)
 
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
