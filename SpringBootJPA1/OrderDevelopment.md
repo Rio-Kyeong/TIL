@@ -1,5 +1,24 @@
 # Order Domain Development
 ## Order Repository
+<pre>
+<b>동적 쿼리 작성하기</b>
+1. JAVA 코드 작성 - 복잡하고 노가다성
+2. JPA Criteria - 실무에서 적용하기 어렵다.
+3. QueryDSL - SQL(JPQL)과 모양이 유사하면서 자바 코드로 동적 쿼리를 편리하게 생성할 수 있다.
+    
+<b>QueryDSL</b>
+- 복잡한 동적 쿼리를 사용할 때, Querydsl을 사용하면 높은 개발 생산성을 얻으면서 동시에 쿼리 오류를 컴파일 시점에 빠르게 잡을 수 있다.
+- 꼭 동적 쿼리가 아니라 정적 쿼리인 경우에도 다음과 같은 이유로 Querydsl을 사용하는 것이 좋다.
+
+<b>장점</b>
+- 직관적인 문법
+- 컴파일 시점에 빠른 문법 오류 발견
+- 코드 자동완성
+- 코드 재사용(이것은 자바다)
+- JPQL new 명령어와는 비교가 안될 정도로 깔끔한 DTO 조회를 지원한다.
+
+Querydsl은 JPQL을 코드로 만드는 빌더 역할을 할 뿐이다. 따라서 JPQL을 잘 이해하면 금방 배울 수 있다.
+</pre>
 ```java
 @Repository
 @RequiredArgsConstructor
