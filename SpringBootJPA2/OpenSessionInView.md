@@ -1,7 +1,7 @@
 # OSIV - Open Session In View
 ## OSIV ON
 <pre>
-<img src="d"/>
+<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/img/OSIVTRUE.PNG"/>
 <b>spring.jpa.open-in-view : true 기본값</b>
 
 <b>장점</b>
@@ -16,7 +16,7 @@
 </pre>
 ## OSIV OFF
 <pre>
-<img src="d"/>
+<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/img/OSIVFALSE.PNG"/>
 <b>spring.jpa.open-in-view : false OSIV 종료</b>
 
 <b>장점</b>
