@@ -5,7 +5,7 @@ JdbcTemplate를 사용함으로써 불필요한 중복 코드들을 줄여 줍�
 ## JdbcTemplate 환경설정
 <pre>
 JdbcTemplate를 사용하기 위해서 필요한 Library를 <b>pom.xml 파일</b>에 설정한다.
-Maven Repository  : <a href="https://mvnrepository.com/">https://mvnrepository.com/</a>
+mvn Repository  : <a href="https://mvnrepository.com/">https://mvnrepository.com/</a>
 </pre>
 ### pom.xml
 **spring-jdbc** 또는 **c3p0**를 사용한다.
