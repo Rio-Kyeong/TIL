@@ -34,6 +34,7 @@ Today I Learned :100:
 * [Creating Entity and useing Spring Data JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringDataJPA.md)
 * [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md)
 ## Spring Boot(JPA Programming)
+* [Java Persistence API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JavaPersistenceAPI.md)
 
 ## Spring Boot(Spring MVC & JPA)
 Project Preferences
