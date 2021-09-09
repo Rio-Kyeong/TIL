@@ -35,7 +35,7 @@ Today I Learned :100:
 * [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md)
 ## Spring Boot(JPA Programming)
 * [Java Persistence API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JavaPersistenceAPI.md)
-* [Hello JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/HelloJPA.md)
+* [JPA Flow](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/HelloJPA.md)
 
 ## Spring Boot(Spring MVC & JPA)
 Project Preferences
