@@ -67,7 +67,7 @@ Member findMember = em.find(Member.class, "member1");
 3. 캐시에 정보가 없다면 DB에서 검색 후 해당 객체를 1차 캐시에 저장하고 반환한다. - <b>영속상태</b>
 
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/EntityIdentity.PNG"/>
-- 이런 1차 캐시를 거친 조회로 엔티티의 동일성 보장이 가능한 것이다.
+- 이런 1차 캐시를 거친 조회로 <b>엔티티의 동일성 보장</b>이 가능한 것이다.
 </pre>
 ### `트랜잭션을 지원하는 쓰기 지연(transactional write-behind)`
 <pre>
