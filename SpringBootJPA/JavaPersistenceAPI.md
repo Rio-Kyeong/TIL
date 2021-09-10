@@ -22,23 +22,31 @@
 - 하이버네이트(Hibernate), EclipseLink, DataNucleus
 </pre>
 ## JPA를 왜 사용해야 하는가?
+### `SQL 중심적인 개발에서 객체 중심으로 개발`
 <pre>
-<b>SQL 중심적인 개발에서 객체 중심으로 개발</b>
+<b>SQL 중심적인 개발의 문제점</b>
+- 코드의 무한 반복
+- 객체 지향과 관계형 데이터베이스 간의 패러다임 불일치
+- 객체(Object)와 관계형 데이터베이스(RDB)의 차이
+- 모델링 과정에서의 문제
+- 객체 그래프 탐색에서의 문제
 
-
-<b>생산성 - JPA와 CRUD</b>
+<b>그러므로 객체 중심으로 개발을 위해 JPA를 사용해야 한다.</b>
+</pre>
+### `생산성 증대 - JPA와 CRUD`
+<pre>
 • 저장: jpa.persist(member)
 • 조회: Member member = jpa.find(memberId)
 • 수정(dirty checking): member.setName(“변경할 이름”)
 • 삭제: jpa.remove(member)
-
-
-<b>유지보수</b>
+</pre>
+### `유지보수의 용이`
+<pre>
 - 기존 : 필드 변경시 필드와 관련된 모든 SQL을 수정해야 한다.
 - JPA : 필드만 추가하면 됨, SQL은 JPA가 처리한다.
-
-
-<b>패러다임의 불일치 해결</b>
+</pre>
+### `패러다임 불일치 해결`
+<pre>
 <b>1.JPA와 상속</b>
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/JPA_EXTEND.PNG"/>
 
@@ -59,16 +67,15 @@
 
 <b>3.JPA와 비교하기</b>
 - 동일한 트랜잭션에서 조회(find)한 엔티티는 같음을 보장한다.
-
-
-<b>성능 최적화 기능</b>
+</pre>
+### `성능 최적화 기능`
+<pre>
 <b>1.1차 캐시와 동일성(identity) 보장</b>
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/CACHE.PNG"/>
 - <b>같은 트랜잭션 안에서는 같은 엔티티를 반환</b> - 약간의 조회 성능 향상
 - 동일한 PK(식별자) 값으로 조회(find)하면 동일한 객체를 반환해준다 - SQL 1번만 실행
 
 <b>2.트랜잭션을 지원하는 쓰기 지연(transactional write-behind)</b>
-
     <b>INSERT</b>
     <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/transactional_write-behind1.PNG"/>
     - 트랜잭션을 커밋할 때까지 INSERT SQL을 모음
@@ -79,16 +86,10 @@
     - UPDATE, DELETE로 인한 로우(ROW)락 시간 최소화
     - 트랜잭션 커밋 시 UPDATE, DELETE SQL 실행하고, 바로 커밋
 
-
 <b>3.지연 로딩(Lazy Loading)</b>
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/LAZY.PNG"/>
 - <b>지연 로딩(LAZY)</b>: 객체가 실제 사용될 때 로딩
   (조회할 때 Member 객체만 가져오고 Team 객체는 필요할 때 따로 로딩한다)
 - <b>즉시 로딩(EAGER)</b>: JOIN SQL로 한번에 연관된 객체까지 미리 조회
   (조회할 때 Member 객체와 연관된 Team 객체를 한번에 로딩한다)
-
-
-<b>데이터 접근 추상화와 벤더 독립성</b>
-
-<b>표준</b>
 </pre>
