@@ -36,6 +36,7 @@ Today I Learned :100:
 ## Spring Boot(JPA Programming)
 * [Java Persistence API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JavaPersistenceAPI.md)
 * [JPA Flow](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/HelloJPA.md)
+* [Persistence Context](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/PersistenceContext.md)
 
 ## Spring Boot(Spring MVC & JPA)
 Project Preferences
@@ -48,7 +49,7 @@ Domain Analysis Design
 * [Entity Design Precautions - EAGER, LAZY](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/EntityDesignPrecautions.md)
 
 Member Domain Development
-* [Member Development - Persistence Context, Transaction](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberDevelopment.md)
+* [Member Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberDevelopment.md)
 * [Member Unit Test - JUnit](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberUnitTest.md)
 
 Item Domain Development
@@ -62,7 +63,7 @@ Order Domain Development
 
 Web layer Development
 * [Member Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberWebDevelopment.md)
-* [Item Web Development - Dirty Checking](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemWebDevelopment.md)
+* [Item Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemWebDevelopment.md)
 * [Order Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderWebDevelopment.md)
 
 ## Spring Boot(REST API & JPA)
