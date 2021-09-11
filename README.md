@@ -66,7 +66,7 @@ Web layer Development
 * [Item Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemWebDevelopment.md)
 * [Order Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderWebDevelopment.md)
 
-## Spring Boot(REST API & JPA)
+## Spring Boot(REST API & JPA) 
 Member API Development & Sample Data Ready
 * [Member API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/MemberAPI.md)
 * [Sample Data Input](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/SampleDataInput.md)
