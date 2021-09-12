@@ -39,6 +39,7 @@ Today I Learned :100:
 * [Java Persistence API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JavaPersistenceAPI.md)
 * [JPA Flow](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/HelloJPA.md)
 * [Persistence Context](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/PersistenceContext.md)
+* [Entity Mapping](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/EntityMapping.md)
 
 ## Spring Boot(Spring MVC & JPA)
 Project Preferences
