@@ -282,7 +282,7 @@ create sequence MEMBER_SEQ start with 1 increment by 50
 @Entity
 @TableGenerator( 
  name = "MEMBER_SEQ_GENERATOR", 
- table = "MY_SEQUENCES", // 데이터베이스 테이블 명
+ table = "MY_SEQUENCES", // 키 생성 테이블 명
  pkColumnValue = "MEMBER_SEQ", allocationSize = 1)
 public class Member {
   @Id
