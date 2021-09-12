@@ -17,6 +17,7 @@ Today I Learned :100:
 * [Session and Cookie](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Session%26Cookie.md)
 * [redirect and foward](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/redirect%26foward.md)
 * [JdbcTemplate](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JdbcTemplate.md)
+
 ## Spring Boot(RESTful)
 * [Spring Boot](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringBoot.md)
 * [REpresentational State Transfer](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/REST.md)
@@ -33,6 +34,7 @@ Today I Learned :100:
 * [Use H2Database](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/H2Database.md)
 * [Creating Entity and useing Spring Data JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringDataJPA.md)
 * [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md)
+
 ## Spring Boot(JPA Programming)
 * [Java Persistence API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JavaPersistenceAPI.md)
 * [JPA Flow](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/HelloJPA.md)
@@ -75,8 +77,8 @@ Lazy loading and Query performance optimization - XToOne(ManyToOne, OneToOne)
 * [Order Simple API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/QueryPerformanceOptimization.md)
 
 Collection Optimization - XToMany(OneToMany)
-* [Order API - Entity Lookup](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization.md)
-* [Order API - DTO Lookup](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization2.md)
+* [Order API - Entity Reference](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization.md)
+* [Order API - DTO Reference](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/CollectionOptimization2.md)
 
 Practical Essential Optimization - OSIV
 * [Open Session In View](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/OpenSessionInView.md)
@@ -91,7 +93,9 @@ Practical Essential Optimization - OSIV
 * [Git Pull Request](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitPullRequest.md)
 * [Git Rebase](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitRebase.md)
 * [Git Flow](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitFlow.md)
+
 ## Java
 * [BOJ-java Algorithm](https://github.com/RyuKyeongWoo/BOJ-java)
+
 ## JavaScript
 * [modern-javascript-tutorial](https://github.com/Conquering-js)
