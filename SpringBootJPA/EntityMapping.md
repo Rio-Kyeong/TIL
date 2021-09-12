@@ -199,9 +199,9 @@ create table Member (
 <pre>
 <b>SEQUENCE - @SequenceGenerator</b>
 
-<b>SEQUENCE 전략을 사용할 경우, Sequence를 매번 DB에서 가지고오는 과정에서 네트워크를 타기 때문에 성능 상의 저하를 가져올 수 있다.</b>
+<b>Sequence를 매번 DB에서 가지고오는 과정에서 네트워크를 타기 때문에 성능 상의 저하를 가져올 수 있다.</b>
 - 이를 해결하기 위한 성능 최적화 방법으로 <b>allocationSize 속성값 (기본값: 50) 이용</b>
-- 이 옵션을 사용하면 next call을 할 때 미리 DB에 50개를 한 번에 올려 놓고(DB는 sequence가 51로 셋팅) 메모리 상에서 1개씩 사용한다.
+- allocationSize 사용 시 next call을 할 때 미리 DB에 50개를 한 번에 올려 놓고(DB는 sequence가 51로 셋팅) 메모리 상에서 1개씩 사용
 
 <table>
 <th>속성</th><th>설명</th><th>기본값</th>
@@ -215,7 +215,7 @@ create table Member (
     <td><b>initialValue</b></td><td>DDL 생성 시에만 사용됨, 시퀀스 DDL을 생성할</br>때 처음 시작하는 수를 지정한다.</td><td>1</td>
 </tr>
 <tr>
-    <td><b>allocationSize</b></td><td>시퀀스 한 번 호출에 증가하는 수(성능 최적화에 사용)</br><b>데이터베이스 시퀀스 값이 하나씩 증가하도록 설정되어 있으면 이 값을 반드시 1로 설정해야 한다.</b></br>(보통 50 ~ 100이 적당)</td><td>50</td>
+    <td><b>allocationSize</b></td><td>시퀀스 한 번 호출에 증가하는 수(성능 최적화에 사용)</br><b>데이터베이스 시퀀스 값이 하나씩 증가하도록 설정되어 있으면</br>이 값을 반드시 1로 설정해야 한다.</b></br>(보통 50 ~ 100이 적당)</td><td>50</td>
 </tr>
 <tr>
     <td>catalog,</br>schema</td><td>데이터베이스 catalog, schema 이름</td><td></td>
@@ -332,7 +332,6 @@ create table MY_SEQUENCES (
 <tr>
     <td>none<td>사용하지 않음(주석과 같음)</td>
 </tr>
-<tr>
 </table>
 <b>운영 장비에는 절대 create, create-drop, update 사용하면 안된다.</b>
 - 개발 초기 단계는 create 또는 update
