@@ -178,7 +178,7 @@ public class Member {
 // IDENTITY 전략에서만 예외적으로 entityManager.persist()가 호출되는 시점에 바로 DB에 INSERT 쿼리를 날린다.
 public class Member{
     @Id 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 }
 ```
