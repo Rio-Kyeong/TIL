@@ -39,7 +39,7 @@ class B{
 ```
 ### `객체 지향 모델링`
 <pre>
-<img src="a"/>
+<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/one-way.PNG"/>
 - 회원(Member)과 팀(Team)이 있다.
 - 회원은 하나의 팀에만 소속될 수 있다.
 - 회원과 팀은 다대일 관계(N:1)이다.
