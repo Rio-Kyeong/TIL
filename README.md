@@ -40,6 +40,8 @@ Today I Learned :100:
 * [JPA Flow](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/HelloJPA.md)
 * [Persistence Context](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/PersistenceContext.md)
 * [Entity Mapping](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/EntityMapping.md)
+* [Reference Relation Mapping - One Way](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/One-Way.md)
+* [Reference Relation Mapping]()
 
 ## Spring Boot(Spring MVC & JPA)
 Project Preferences
