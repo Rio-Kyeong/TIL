@@ -145,6 +145,22 @@ class B{
 - 주인은 mappedBy 속성 사용X
 - 주인이 아니면 mappedBy 속성으로 주인 지정
 
+<b>@OneToMany(mappedBy = "team")</b>
+- 일대다(1:N) 관계에서 사용한다.
+
+<table>
+<th>속성</th><th>기능</th><th>기본값</th>
+<tr>
+    <td>optional</td><td>false로 설정하면 연관된 엔티티가 항상 있어야 한다.</td><td>true</td>
+</tr>
+<tr>
+    <td>fetch</td><td>글로벌 페치전략</td><td>@ManyToOne = fetchType.EAGER</br>@OneToMany = fetchType.LAZY</td>
+</tr>
+<tr>
+    <td>cascade</td><td>연속성 전이 기능</td><td></td>
+</tr>
+</table>
+
 <b>요약</b>
 - <b>복잡도가 늘어나기 때문에 가급적 설계할 때는 단방향으로 맵핑을 하고 개발하다가 필요시 양방향을 추가 하는것이 좋다.</b>
 - <b>연관관계의 주인은 외래 키가 있는 곳(다(N)쪽)을 주인으로 정한다.</b>
@@ -188,7 +204,17 @@ public class Team {
     }
 }
 ```
+### `양방향 매핑 시 무한루프 주의`
+<pre>
+<b>양방향 매핑시에 무한 루프를 주의해야 한다.</b>
 
+<b>lombok이 자동으로 만드는 toString()을 사용하지 말자(재정의하여 사용)</b>
+- 양방향 매핑 후 toString()을 호출하는 순간 서로간의 관계로 인해 무한루프 생성(스택오버플로우 발생)
+
+<b>JSON 생성 라이브러리</b>
+- 양방향 관계의 엔티티를 JSON으로 시리얼라이즈 하는순간 무한루프에 빠져버린다.
+- <b>컨트롤러에서는 엔티티를 절대 직접 반환하지 말자(DTO로 변환해서 반환)</b>
+</pre>
 ### `양방향 매핑 시 값 셋팅 주의`
 ```java
 //잘못된 예시(연관관계의 주인에 값을 입력하지 않음)
