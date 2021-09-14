@@ -10,7 +10,6 @@
 
 
 <b>@Table</b> : @Table은 엔티티와 매핑할 테이블 지정
-
 <table>
 <th>속성</th><th>기능</th><th>기본값</th>
 <tr>
@@ -37,7 +36,6 @@ public class Member {
 ## Field and Column Mapping
 <pre>
 <b>@Column</b> : 컬럼 매핑
-
 <table>
 <th>속성</th><th>설명</th><th>기본값</th>
 <tr>
@@ -64,7 +62,6 @@ public class Member {
 <b>@Temporal</b> : 날짜 타입 매핑
 - 날짜 타입(java.util.Date, java.util.Calendar)을 매핑할 때 사용
 - 참고 : <b>LocalDate, LocalTime, LocalDateTime을 사용할 때는 생략 가능(최신 하이버네이트 지원)</b>
-
 <table>
 <th>속성</th><th>설명</th><th>기본값</th>
 <tr>
@@ -75,7 +72,6 @@ public class Member {
 
 <b>@Enumerated</b> : enum 타입 매핑
 - 무조건 <b>EnumType.STRING</b>을 사용해야 한다.
-
 <table>
 <th>속성</th><th>설명</th><th>기본값</th>
 <tr>
@@ -145,7 +141,6 @@ public class Member {
 - @Id만 사용할 경우 직접 기본키를 할당
 
 <b>@GeneratedValue</b> : 기본 키 자동 생성
-
 <table>
 <th>속성</th><th>설명</th><th>데이터베이스</th>
 <tr>
@@ -202,7 +197,6 @@ create table Member (
 <b>Sequence를 매번 DB에서 가지고오는 과정에서 네트워크를 타기 때문에 성능 상의 저하를 가져올 수 있다.</b>
 - 이를 해결하기 위한 성능 최적화 방법으로 <b>allocationSize 속성값 (기본값: 50) 이용</b>
 - allocationSize 사용 시 next call을 할 때 미리 DB에 50개를 한 번에 올려 놓고(DB는 sequence가 51로 셋팅) 메모리 상에서 1개씩 사용
-
 <table>
 <th>속성</th><th>설명</th><th>기본값</th>
 <tr>
@@ -246,7 +240,6 @@ create sequence MEMBER_SEQ start with 1 increment by 50
 - <b>키 생성 전용 테이블을 하나 만들어서 데이터베이스 시퀀스를 흉내내는 전략</b>
 - 장점 : 모든 데이터베이스에 적용 가능
 - 단점 : 최적화 되어있지 않은 테이블을 직접 사용하기 때문에 성능상의 이슈가 있음
-
 <table>
 <th>속성</th><th>설명</th><th>기본값</th>
 <tr>
@@ -314,7 +307,6 @@ create table MY_SEQUENCES (
 - 생성된 DDL은 운영서버에서는 사용하지 않으나, 적절히 다듬은 후 사용가능
 
 <b>hibernate.hbm2ddl.auto</b>
-
 <table>
 <th>옵션</th><th>설명</th>
 <tr>
@@ -333,6 +325,7 @@ create table MY_SEQUENCES (
     <td>none<td>사용하지 않음(주석과 같음)</td>
 </tr>
 </table>
+
 <b>운영 장비에는 절대 create, create-drop, update 사용하면 안된다.</b>
 - 개발 초기 단계는 create 또는 update
 - 테이트 서버는 update 또는 validate
