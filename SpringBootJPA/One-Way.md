@@ -43,6 +43,9 @@
 <tr>
     <td>cascade</td><td>연속성 전이 기능</td><td></td>
 </tr>
+<tr>
+    <td>targetEntity</td><td>연관된 엔티티의 타입 정보를 설정한다.</br>(이 기능은 거의 사용하지 않는다)</td><td></td>
+</tr>
 </table>
 </pre>
 ```java
@@ -145,19 +148,22 @@ class B{
 - 주인은 mappedBy 속성 사용X
 - 주인이 아니면 mappedBy 속성으로 주인 지정
 
-<b>@OneToMany(mappedBy = "team")</b>
+<b>@OneToMany</b>
 - 일대다(1:N) 관계에서 사용한다.
 
 <table>
 <th>속성</th><th>기능</th><th>기본값</th>
 <tr>
-    <td>optional</td><td>false로 설정하면 연관된 엔티티가 항상 있어야 한다.</td><td>true</td>
+    <td>mappedBy</td><td>연관관계의 주인 필드를 선택한다.</td><td></td>
 </tr>
 <tr>
     <td>fetch</td><td>글로벌 페치전략</td><td>@ManyToOne = fetchType.EAGER</br>@OneToMany = fetchType.LAZY</td>
 </tr>
 <tr>
     <td>cascade</td><td>연속성 전이 기능</td><td></td>
+</tr>
+<tr>
+    <td>targetEntity</td><td>연관된 엔티티의 타입 정보를 설정한다.</br>(이 기능은 거의 사용하지 않는다)</td><td></td>
 </tr>
 </table>
 
