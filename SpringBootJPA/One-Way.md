@@ -18,7 +18,6 @@
 
 <b>@JoinColumn</b>
 - 외래키를 매핑할 때 사용한다.
-
 <table>
 <th>속성</th><th>기능</th><th>기본값</th>
 <tr>
@@ -31,7 +30,6 @@
 
 <b>@ManyToOne</b>
 - 다대일(N:1) 관계에서 사용한다.
-
 <table>
 <th>속성</th><th>기능</th><th>기본값</th>
 <tr>
@@ -150,7 +148,6 @@ class B{
 
 <b>@OneToMany</b>
 - 일대다(1:N) 관계에서 사용한다.
-
 <table>
 <th>속성</th><th>기능</th><th>기본값</th>
 <tr>
