@@ -134,7 +134,7 @@ class B{
 ```
 ## 양방향 연관관계
 <pre>
-<img src="ㅁ"/>
+<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/many-way.PNG"/>
 - 양방향 연관관계는 서로 다른 단방향 관계가 2개인 것이다.
 - 둘 중 하나로 외래 키를 관리해야 한다.
 
@@ -210,7 +210,7 @@ em.persist(member);
 코드 실행 시, 새 팀과 새 멤버는 생성이 되지만 멤버와 팀의 연관관계는 저장되지 않는다.
 연관관계의 주인은 Member인데, 이 연관관계를 Team에 지정해주었기 때문이다.
 
-<img src="a"/>
+<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/example1.PNG"/>
 DB에서도 null을 확인할 수 있다.
 </pre>
 ```java
@@ -235,7 +235,7 @@ em.persist(member);
 <b>순수한 객체 관계를 고려하면 항상 양쪽다 값을 입력해야 한다</b>
 - Team의 members와 Member의 team에 모두 값을 셋팅하였다.
 
-<img src="a"/>
+<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/example2.PNG"/>
 연관관계의 주인에 값을 설정함으로써 DB에는 새로운 멤버와 팀, 연관관계가 모두 정상적으로 저장된다.
 </pre>
 ### `연관관계 편의 메서드 작성`
