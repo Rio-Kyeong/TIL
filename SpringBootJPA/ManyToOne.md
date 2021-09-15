@@ -31,6 +31,7 @@
 
 <b>@ManyToOne</b>
 - 다대일(N:1) 관계에서 사용한다.
+- 속성에 mappedBy가 없다(무조건 연관관계의 주인이 된다는 뜻)
 <table>
 <th>속성</th><th>기능</th><th>기본값</th>
 <tr>
