@@ -138,7 +138,7 @@ class B{
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/many-way.PNG"/>
 - 양방향 연관관계는 서로 다른 단방향 관계가 2개인 것이다.
 - 둘 중 하나로 외래 키를 관리해야 한다.
-- 하나의 팀(Team)은 여러명의 회원(Member)을 가질 수 있다.
+- 회원과 팀은 다대일 관계(N:1)이다.
 - <b>Team객체의 필드에서는 List를 통해서 여러 명의 Member를 조회하고, Member객체의 필드에서는 참조를 통해서 하나의 Team을 조회한다.</b>
 
 <b>양방향 매핑 규칙</b>
