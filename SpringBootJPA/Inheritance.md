@@ -1,10 +1,12 @@
 # 상속 관계 매핑
 <pre>
-관계형 데이터베이스에서는 객체지향 언어에서의 상속 개념이 없다.
-대신 관계형 데이터베이스에서는 <b>슈퍼타입 서브타입 관계</b>라는 모델링 기법이 상속과 유사하다.
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/DBType.PNG"/>
-ORM에서 이야기하는 상속 관계 매핑은 <b>객체의 상속 구조와 데이터베이스의 슈퍼타입 서브타입 관계를 매핑하는 것</b>이다.
+- 관계형 데이터베이스에서는 객체지향 언어에서의 상속 개념이 없다.
+- 대신 관계형 데이터베이스에서는 <b>슈퍼타입 서브타입 관계</b>라는 모델링 기법이 상속과 유사하다.
+
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/ObjectExtends.PNG"/>
+- ORM에서 이야기하는 상속 관계 매핑은 <b>객체의 상속 구조와 데이터베이스의 슈퍼타입 서브타입 관계를 매핑하는 것</b>이다.
+
 슈퍼타입 서브타입 논리 모델을 실제 물리 모델인 테이블로 구현할 때는 3가지 방법이 있다.
 - <b>조인 전략</b> : 각각 테이블을 만들고 조회할 때 조인한다.
 - <b>단일(싱글) 테이블 전략</b> : 테이블을 하나만 사용해서 통합한다.
@@ -219,5 +221,19 @@ public abstract class BaseEntity {
 @Entity
 @Setter @Getter
 public class Member extends BaseEntity{
+    @Id @GeneratedValue
+    @Column(name = "MEMBER_ID")
+    private Long id;
+    
+    @Column(name = "USERNAME")
+    private String name;
+
+    @OneToOne
+    @JoinColumn(name = "LOCKER_ID")
+    private  Locker locker;
+
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
 }
 ```
