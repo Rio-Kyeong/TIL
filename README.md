@@ -41,7 +41,7 @@ Today I Learned :100:
 * [Persistence Context](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/PersistenceContext.md)
 * [Entity Mapping](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/EntityMapping.md)
 * [Reference Relation Mapping - N:1](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/ManyToOne.md)
-* [Reference Relation Mapping - 1:N, 1:1, N:M]()
+* [Reference Relation Mapping - 1:N, 1:1, N:M](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Multiplicity.md)
 
 
 ## Spring Boot(Spring MVC & JPA)
