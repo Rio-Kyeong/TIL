@@ -43,7 +43,8 @@ Today I Learned :100:
 * [Reference Relation Mapping - N:1](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/ManyToOne.md)
 * [Reference Relation Mapping - 1:N, 1:1, N:M](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Multiplicity.md)
 * [Inheritance Mapping](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Inheritance.md)
-* [Proxy - EAGER, LAZY]()
+* [Proxy - EAGER, LAZY](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Proxy.md)
+* [Cascade, orphanRemovel](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Cascade_OrphanRemovel.md)
 
 
 ## Spring Boot(Spring MVC & JPA)
