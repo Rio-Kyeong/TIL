@@ -45,6 +45,7 @@ Today I Learned :100:
 * [Inheritance Mapping](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Inheritance.md)
 * [Proxy - EAGER, LAZY](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Proxy.md)
 * [Cascade, orphanRemovel](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Cascade_OrphanRemovel.md)
+* [Value Type]()
 
 
 ## Spring Boot(Spring MVC & JPA)
