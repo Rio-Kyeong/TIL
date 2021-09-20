@@ -96,7 +96,7 @@ Practical Essential Optimization - OSIV
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
 * [Git Branch](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitBranch.md)
 * [Git Branch Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitBranchMechanism.md)
-* [Git Remote Repository](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitRemoteRepository.md)
+* [Git Remote Repository & SSH](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitRemoteRepository.md)
 * [Git Tags](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitTags.md)
 * [Git Pull Request](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitPullRequest.md)
 * [Git Rebase](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitRebase.md)
