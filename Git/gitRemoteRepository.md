@@ -67,6 +67,7 @@ HTTPS를 사용하여 Push나 Pull을 하려고 하는 경우에는 사용자의
 
 - id_id_ed25519 : private key(개인키), 자신의 로컬 컴퓨터에 저장
 - id_id_ed25519.pub : public key(공개키), 원격 저장소가 있는 서버에 저장
+
 - <a href = "https://github.com/RyuKyeongWoo.keys">나의 공개키 확인</a>
 </pre>
 ## 원격 저장소의 원리(Github)
