@@ -41,7 +41,7 @@ spring:
 ```
 ### h2 
 <pre>
-// http://localhost/h2-console
+// <a href="http://localhost/h2-console">http://localhost/h2-console</a>
 // mem : memory DB / 현재 어플리케이션이 기동되는 동안에만 유지되는 데이터베이스
 // 어플리케이션이 종료되도 유지되는 데이터베이스를 원한다면 TCP방식이 지원되는 드라이버 방식으로 바꿔주기
 
