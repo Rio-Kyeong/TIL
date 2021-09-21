@@ -23,6 +23,12 @@ SQL 문법은 다른 DBMS들과 마찬가지로 표준 SQL의 대부분이 지�
     <scope>runtime</scope>
 </dependency>
 ```
+### build.gradle
+```gradle
+dependencies {
+    runtimeOnly 'com.h2database:h2'
+}
+```
 ### application.yml
 ```yml
 spring:
