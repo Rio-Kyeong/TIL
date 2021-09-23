@@ -47,7 +47,7 @@ Today I Learned :100:
 * [Cascade, orphanRemovel](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Cascade_OrphanRemovel.md)
 * [Value Type]()
 
-JPQL
+JPQL(Java Persistence Query Language)
 * [Java Persistence Query Language](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JPQL.md)
 * [Paging](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Paging.md)
 * [Join](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Join.md)
