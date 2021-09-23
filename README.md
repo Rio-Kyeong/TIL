@@ -48,9 +48,9 @@ Today I Learned :100:
 * [Value Type]()
 
 JPQL
-*[Java Persistence Query Language](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JPQL.md)
-*[Paging](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Paging.md)
-*[Join](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Join.md)
+* [Java Persistence Query Language](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JPQL.md)
+* [Paging](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Paging.md)
+* [Join](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Join.md)
 
 
 ## Spring Boot(Spring MVC & JPA)
