@@ -13,37 +13,37 @@
 - 네이티브 SQL
 - JDBC API 직접 사용, MyBatis, SpringJdbcTemplate 함께 사용
 
-<b>JPQL</b>
-- JPA는 <b>SQL을 추상화한 JPQL이라는 객체 지향 쿼리 언어</b> 제공
-- SQL과 문법 유사, SELECT, FROM, WHERE, GROUP BY, HAVING, JOIN 지원
-- <b>JPQL은 엔티티 객체를 대상으로 검색하는 객체 지향 쿼리</b>
-- SQL을 추상화해서 특정 데이터베이스 SQL에 의존X
-- SQL은 데이터베이스 테이블을 대상으로 쿼리
+    <b>JPQL</b>
+    - JPA는 <b>SQL을 추상화한 JPQL이라는 객체 지향 쿼리 언어</b> 제공
+    - SQL과 문법 유사, SELECT, FROM, WHERE, GROUP BY, HAVING, JOIN 지원
+    - <b>JPQL은 엔티티 객체를 대상으로 검색하는 객체 지향 쿼리</b>
+    - SQL을 추상화해서 특정 데이터베이스 SQL에 의존X
+    - SQL은 데이터베이스 테이블을 대상으로 쿼리
 
-<b>JPA Criteria</b>
-- 문자가 아닌 자바코드로 JPQL을 작성할 수 있음
-- JPQL 빌더 역할
-- JPA 공식 기능
-- <b>단점 : 너무 복잡하고 실용성이 없다.</b>
-- Criteria 대신 QueryDSL 사용 권장
+    <b>JPA Criteria</b>
+    - 문자가 아닌 자바코드로 JPQL을 작성할 수 있음
+    - JPQL 빌더 역할
+    - JPA 공식 기능
+    - <b>단점 : 너무 복잡하고 실용성이 없다.</b>
+    - Criteria 대신 QueryDSL 사용 권장
 
-<b>QueryDSL</b>
-- 문제가 아닌 자바코드로 JPQL을 작성할 수 있음
-- JPQL 빌더 역할
-- 컴파일 시점에 문법 오류를 찾을 수 있음
-- <b>동적쿼리 작성 편리함</b>
-- <b>단순하고 쉬움(직관적)</b>
-- 실무 사용 권장
+    <b>QueryDSL</b>
+    - 문제가 아닌 자바코드로 JPQL을 작성할 수 있음
+    - JPQL 빌더 역할
+    - 컴파일 시점에 문법 오류를 찾을 수 있음
+    - <b>동적쿼리 작성 편리함</b>
+    - <b>단순하고 쉬움(직관적)</b>
+    - 실무 사용 권장
 
-<b>네이티브 SQL</b>
-- JPA가 제공하는 SQL을 직접 사용하는 기능
-- JPQL로 해결할 수 없는 특정 데이터베이스에 의존적인 기능
-- 예) 오라클 CONNECT BY, 특정 DB만 사용하는 SQL 힌트
+    <b>네이티브 SQL</b>
+    - JPA가 제공하는 SQL을 직접 사용하는 기능
+    - JPQL로 해결할 수 없는 특정 데이터베이스에 의존적인 기능
+    - 예) 오라클 CONNECT BY, 특정 DB만 사용하는 SQL 힌트
 
-<b>JDBC 직접 사용, SpringJdbcTemplate 등</b>
-- JPA를 사용하면서 JDBC 커넥션을 직접 사용하거나, 스프링 JdbcTemplate, MyBatis등을 함께 사용 가능
-- 단 영속성 컨텍스트를 적절한 시점에 강제로 플러시 필요
-  (flush는 commit 또는 query가 날라가는 시점에 자동으로 발생하는데 JDBC를 사용시 직접 수동으로 플러시를 해야한다)
+    <b>JDBC 직접 사용, SpringJdbcTemplate 등</b>
+    - JPA를 사용하면서 JDBC 커넥션을 직접 사용하거나, 스프링 JdbcTemplate, MyBatis등을 함께 사용 가능
+    - 단 영속성 컨텍스트를 적절한 시점에 강제로 플러시 필요
+      (flush는 commit 또는 query가 날라가는 시점에 자동으로 발생하는데 JDBC를 사용시 직접 수동으로 플러시를 해야한다)
 </pre>
 ## JPQL(Java Persistence Query Language)
 <pre>
