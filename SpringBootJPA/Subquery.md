@@ -91,8 +91,8 @@ em.persist(new Member("D", 40, teamB));
 // 팀A 소속인 회원
 // t.name이 temaA인 결과가 존재하므로 멤버가 출력된다.
 List<Member> resultList = 
-        em.createQuery("select m from Member m where exists (select t from m.team t where t.name = 'teamA')", Member.class)
-        .getResultList();
+      em.createQuery("select m from Member m where exists (select t from m.team t where t.name = 'teamA')", Member.class)
+      .getResultList();
 
 resultList.forEach(System.out::println);
 ```
