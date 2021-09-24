@@ -91,8 +91,8 @@ em.persist(new Member("D", 40, teamB));
 // 팀A 소속인 회원
 // t.name이 temaA인 결과가 존재하므로 멤버가 출력된다.
 List<Member> resultList = 
-      em.createQuery("select m from Member m where exists (select t from m.team t where t.name = 'teamA')", Member.class)
-      .getResultList();
+        em.createQuery("select m from Member m where exists (select t from m.team t where t.name = 'teamA')", Member.class)
+        .getResultList();
 
 resultList.forEach(System.out::println);
 ```
@@ -147,7 +147,8 @@ em.persist(new Member("D", 40, null));
 
 // 전체 상품 각각의 재고보다 주문량이 많은 주문들
 // 상품(Book)의 재고 10권보다 많은 20권과 11권의 2개의 주문건이 출력
-List<Order> allList = em.createQuery("select o from Order o where o.orderAmount > ALL (select p.stockAmount from Product p)", Order.class)
+List<Order> allList = 
+        em.createQuery("select o from Order o where o.orderAmount > ALL (select p.stockAmount from Product p)", Order.class)
         .getResultList();
 
 System.out.println("================ ALL ================");
