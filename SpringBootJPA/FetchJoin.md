@@ -43,7 +43,8 @@ SELECT M.*, T.* FROM MEMBER M INNER JOIN TEAM T ON M.TEAM_ID = T.ID
 
 <b>해결</b>
 - 중복제거를 위해 <b>DISTINCT를 사용</b>한다.
-- JPQL의 DISTINCT는 <b>SQL에 distinct를 추가</b>하고, 더해서 <b>같은 엔티티가 조회되면 애플리케이션단에서 JPA가 같은 식별자를 가진 엔티티를 제거해준다.</b>
+- JPQL의 DISTINCT는 <b>SQL에 distinct를 추가</b>하고, 더해서 <b>같은 엔티티가 조회되면 
+  애플리케이션단에서 JPA가 같은 식별자를 가진 엔티티를 제거해준다.</b>
 - 결과는 distinct으로 인해서 정상적으로 중복 데이터 없이 조회되지만, <b>실제로 DB에서는 중복제거가 안된다.</b>
 </pre>
 ```sql
