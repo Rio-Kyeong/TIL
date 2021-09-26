@@ -52,8 +52,10 @@ JPQL(Java Persistence Query Language)
 * [Paging](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Paging.md)
 * [Join](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Join.md)
 * [Subquery](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Subquery.md)
-* [JPQL Expression](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JPQLExpression.md)
-* [JPQL Function](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JPQLFunction.md)
+* [Basic Expression](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JPQLExpression.md)
+* [Function](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JPQLFunction.md)
+* [Path Expression](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/PathExpression.md)
+* [Fetch Join](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/FetchJoin.md)
 
 
 ## Spring Boot(Spring MVC & JPA)
