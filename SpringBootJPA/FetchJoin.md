@@ -83,7 +83,7 @@ SELECT T.*, M.* FROM TEAM T INNER JOIN MEMBER M ON T.ID = M.TEAM_ID WHERE T.NAME
 - 일다대에서 일(1)을 기준으로 페이징을 하는 것이 목적이다. 그런데 데이터는 다(N)를 기준으로 row가 생성된다.
 - 이 경우 하이버네이트는 경고 로그를 남기고 모든 DB 데이터를 읽어서 메모리에서 페이징을 시도한다. 최악의 경우 장애로 이어질 수 있다.
 
-<b>해결방법</b>
+<b>해결방법1</b>
 1. 먼저 <b>ToOne</b>(OneToOne, ManyToOne) 관계를 모두 페치조인 한다.
    (ToOne 관계는 row수를 증가시키지 않으므로 페이징 쿼리에 영향을 주지 않는다)
 2. 컬렉션은 지연 로딩으로 조회한다.
@@ -91,6 +91,10 @@ SELECT T.*, M.* FROM TEAM T INNER JOIN MEMBER M ON T.ID = M.TEAM_ID WHERE T.NAME
     * <b>hibernate.default_batch_fetch_size</b> : 글로벌 설정
     * <b>@BatchSize</b> : 개별 최적화
     * <b>이 옵션을 사용하면 컬렉션이나, 프록시 객체를 한꺼번에 설정한 size 만큼 IN 쿼리로 조회한다.</b>
+    
+<b>해결방법2</b>
+1. 방향을 뒤집는다.
+   EX) SELECT t FROM Team t JOIN FETCH t.members -> SELECT m FROM Member m JOIN FETCH m.team
 
 <b>장점</b>
 - <b>쿼리 호출 수가 1 + N -> 1 + 1으로 최적화 된다.</b>
