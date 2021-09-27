@@ -25,7 +25,7 @@ String qlString = "update Product p " +
                   "where p.stockAmount < :stockAmount";
 
 // Query 수행으로 자동으로 플러시가 된다.
-// 자동 플러시가 되는 시점 : Quert 수행, 강제 플러시 선언, commit
+// 자동 플러시가 되는 시점 : Query 수행, 강제 플러시 선언, commit
 int resultCount = em.createQuery(qlString)
         .setParameter("stockAmount", 10)
         .executeUpdate();
