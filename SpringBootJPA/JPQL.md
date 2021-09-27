@@ -76,6 +76,29 @@
   • 결과가 없으면: javax.persistence.NoResultException
   • 둘 이상이면: javax.persistence.NonUniqueResultException
 </pre>
+### `엔티티 직접 사용`
+<pre>
+<b>기본 키 값</b>
+- JPQL에서 엔티티를 직접 사용하면 SQL에서 <b>해당 엔티티의 기본 키 값을 사용</b>한다.
+- Where절 또는 From절에서 m(Member) 엔티티를 그대로 사용하면 SQL은 해당 엔티티의 기본 키 값 사용
+
+<b>외래 키 값</b>
+- 외래키도 마찬가지로 JPQL에서 연관관계인 외래 키 엔티티를 직접 사용하면 SQL에서 <b>해당 엔티티의 외래 키 값을 사용</b>한다.
+</pre>
+```sql
+-- JPQL
+select count(m.id) from Member m -- 엔티티의 아이디를 사용
+select count(m) from Member m -- 엔티티를 직접 사용 
+
+select count(m.team.id) from Member m -- 엔티티의 아이디를 사용
+select count(m.team) from Member m -- 엔티티를 직접 사용 
+
+-- SQL(JPQL 둘다 같은 다음 SQL 실행)
+select count(m.id) as cnt from Member m
+
+-- SQL(JPQL 둘다 같은 다음 SQL 실행)
+select count(m.team_id) as cnt from Member m
+```
 ### `파라미터 바인딩 - 이름 기준`
 <pre>
 - <b>query.setParameter("바인딩 변수", 찾을 값)</b>
