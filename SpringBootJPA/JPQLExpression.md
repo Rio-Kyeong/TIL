@@ -10,6 +10,11 @@
 <b>ENUM 표현</b> : jpabook.MemberType.Admin (패키지명 포함)
 
 <b>엔티티 표현</b> : TYPE(m) = Member (상속 관계에서 사용)
+
+<b>TREAT(JPA 2.1)</b> (상속 관계에서 사용)
+- 자바의 타입 캐스팅(casting)과 유사
+- 상속 구조에서 부모 타입을 특정 자식 타입으로 다룰 때 사용
+- FROM, WHERE, SELECT(하이버네이트 지원) 사용
 </pre>
 ```java
 // Member(회원명, 나이, 팀, 권한)
@@ -36,8 +41,13 @@ List<Member> enums = em.createQuery("select m from Member m where m.type = jpql.
 System.out.println("================ Enum ================");
 enums.forEach(System.out::println);
 
-//엔티티 표현(Item의 자식 클래스인 Book 클래스 조회(상속관계))
+// 엔티티 표현(Item의 자식 클래스인 Book 클래스 조회(상속관계))
 List<Item> type = em.createQuery("select i from Item i where type(i) = Book", Item.class)
+        .getResultList();
+        
+// TREAT
+// Book에 있는 auther를 사용할 수 있다(다운 캐스팅 개념)
+List<Item> treat = em.createQuery("select i from Item i where treat(i as Book).auther = 'kim'", Item.class)
         .getResultList();
 
 System.out.println("================ Entity Tpye ================");
