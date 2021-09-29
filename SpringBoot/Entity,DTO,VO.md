@@ -95,12 +95,14 @@ VO(Value Object)는 말 그대로 <b>값 객체라는 의미</b>를 가지고 �
 - equals : 두 객체의 내용(필드 값)이 같은지, 동등성(equivalence)를 비교하는 연산자
 - hashCode : 두 객체가 같은 객체(참조 값)인지, 동일성(identity)를 비교하는 연산자
 
-VO는 Getter와 Setter를 가질 수 있으며, VO는 테이블 내에 있는 속성 외에 추가적인 속성을 가질 수 있으며,
+VO는 Getter를 가질 수 있으며, VO는 테이블 내에 있는 속성 외에 추가적인 속성을 가질 수 있으며,
 여러 테이블(A, B, C)에 대한 공통 속성을 모아서 만든 BaseVO 클래스를 상속받아서 사용할 수도 있다.
+
+<b>불변성을 가지기 때문에 수정자(setter)가 없다.</b>
 </pre>
 ### VO Class
 ```java
-@Getter @Setter
+@Getter
 @Alias("article")
 class ArticleVO {
     private Long id;
