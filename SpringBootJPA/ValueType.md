@@ -244,7 +244,8 @@ public class Address {
     // 기본 생성자 필수
     public Address() {
     }
-
+  
+   // Use getters during code generation
    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
