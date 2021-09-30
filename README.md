@@ -12,7 +12,7 @@ Today I Learned :100:
 * [Java Separation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JavaSeparation.md)
 * [Spring Web Programming Structure](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringWebProgrammingDesignModel.md)
 * [Spring Project Structure](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringArchitecture.md)
-* [Service&Dao Implementing Objects](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Service%26Dao.md)
+* [Service & Dao Implementing Objects](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Service%26Dao.md)
 * [Controller Implementing Objects](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Controller.md)
 * [Session and Cookie](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Session%26Cookie.md)
 * [redirect and foward](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/redirect%26foward.md)
@@ -45,7 +45,7 @@ Today I Learned :100:
 * [Inheritance Mapping](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Inheritance.md)
 * [Proxy - EAGER, LAZY](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Proxy.md)
 * [Cascade, orphanRemovel](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Cascade_OrphanRemovel.md)
-* [Entity Type&Value Type - Primitive value, embedded, collection value](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/ValueType.md)
+* [Entity Type & Value Type - Primitive value, embedded, collection value](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/ValueType.md)
 
 JPQL(Java Persistence Query Language)
 * [Java Persistence Query Language](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JPQL.md)
