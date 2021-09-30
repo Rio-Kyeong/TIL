@@ -113,7 +113,7 @@ member.setHomeAddress(new Address("NewCity", address.getStreet(), address.getZip
 - 임베디드 타입도 값 타입이기 때문에 이를 만족해야 한다.
 - 객체를 따로생성하고 == 으로 비교한다면, 어김없이 False를 반환한다.
 - 따라서 임베디드 타입이라면 <b>equals() 메소드를 적절하게 재정의</b>하여 같은 값을 갖는지 확인해야 한다.
-- IDE의 Equals()와 Hashcode메소드 자동생성 기능을 활용하는게 좋다.
+- getter로 호출하는 Use getters during code generation 기능을 사용하는 것이 좋다(아니면 필드를 호출함)
 </pre>
 ## 기본값 타입
 <pre>
@@ -227,27 +227,36 @@ public class Period {
 @Getter
 public class Address {
 
+    @Column(length = 10) // 주소 글자수 제한
     private String city;
-    private String street;
-    private String zipcode;
 
+    @Column(length = 10)
+    private String street;
+
+    @Column(length = 10)
+    private String zipcode;
+    
+    // 해당 값 타입만 사용하는 의미 있는 메소드를 만들 수도 있음
+    public String fullAddress(){
+        return getCity()+" "+getStreet()+" "+getZipcode();
+    }
+    
     // 기본 생성자 필수
     public Address() {
     }
 
-    @Override
+   @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Address address = (Address) o;
-        return Objects.equals(city, address.city) && 
-               Objects.equals(street, address.street) && 
-               Objects.equals(zipcode, address.zipcode);
+        return Objects.equals(getCity(), address.getCity()) && Objects.equals(getStreet(), 
+                address.getStreet()) && Objects.equals(getZipcode(), address.getZipcode());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(city, street, zipcode);
+        return Objects.hash(getCity(), getStreet(), getZipcode());
     }
 }
 ```
