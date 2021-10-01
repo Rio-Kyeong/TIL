@@ -32,7 +32,7 @@ int resultCount = em.createQuery(qlString)
 
 em.clear();
 ```
-## Spring Data JPA - @Modifying
+## Spring Data JPA - @Modifying 
 <pre>
 - Spring Data JPA 에서는 벌크 연산 수행 후 영속성 컨텍스트 초기화(em.clear)를 위해 <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.modifying-queries">@Modifying</a>을 사용한다.
 </pre>
