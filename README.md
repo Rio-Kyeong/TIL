@@ -103,6 +103,8 @@ Collection Optimization - XToMany(OneToMany)
 Practical Essential Optimization - OSIV
 * [Open Session In View](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/OpenSessionInView.md)
 
+## HTTP
+
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
