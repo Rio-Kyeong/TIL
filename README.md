@@ -59,7 +59,6 @@ JPQL(Java Persistence Query Language)
 * [Named Query](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/NamedQuery.md)
 * [Bulk Operation - UPDATE, DELETE](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/BulkOperation.md)
 
-
 ## Spring Boot(Spring MVC & JPA)
 Project Preferences
 * [Project Preferences](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ProjectPreferences.md)
@@ -103,8 +102,6 @@ Collection Optimization - XToMany(OneToMany)
 Practical Essential Optimization - OSIV
 * [Open Session In View](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/OpenSessionInView.md)
 
-## HTTP
-
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
 * [Git Command Mechanism](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitCommandMechanism.md)
@@ -115,6 +112,9 @@ Practical Essential Optimization - OSIV
 * [Git Pull Request](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitPullRequest.md)
 * [Git Rebase](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitRebase.md)
 * [Git Flow](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitFlow.md)
+
+## HTTP
+* [Internet Network]()
 
 ## Java
 * [BOJ-java Algorithm](https://github.com/RyuKyeongWoo/BOJ-java)
