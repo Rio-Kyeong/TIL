@@ -36,6 +36,7 @@
   - <b>즉 데이터가 전송될 때 IP 패킷 안에 TCP 데이터, 그안에 전송 데이터를 포함하여 전송한다.</b>
 
   <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/TCPIP.PNG"/>
+  - 노랑색 : IP 패킷, 초록색 : TCP 세그먼트
   - TCP/IP 패킷
 
 <b>TCP</b>
