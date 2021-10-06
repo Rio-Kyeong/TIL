@@ -44,14 +44,16 @@
 - TCP를 사용하면 IP 프로토콜의 한계를 극복할 수 있다.
 
 - <b>연결 지향 : TCP 3 way handshake (가상 연결)</b>
-  연결을 해서 서버를 확인하고 데이터를 전송을 한다.
+  Server와 Client는 3-way handshaking 과정에서 SYN과 SYNACK을 주고 받으며, 양단간 세션 '상태'를 established한 '상태'로 만든다.
+  세션 '상태'가  established가 되면 client와 server는 데이터를 주고 받을 수 있다.
+  이렇게 TCP는 세션 '상태'에 따라 Server의 응답이 달라지는 Stateful 프로토콜이다.
   -> 나를 위한 전용 랜선이 보장된 것이 아닌 논리으로만 연결이 된것
 
   <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/TCP3WayHandshake.PNG"/>
   1. 클라이언트가 서버에게 연결요청(SYN)한다.
   2. 서버가 클라이언트에게 요청수락(ACK)과 동시에 연결요청(SYN)을 한다.
   3. 클라이언트가 마지막으로 요청수락(ACK)을 보낸다. -> 이때 데이터 전송을 같이 보내기도 함
-  4. 데이터 전송을 한다.
+  4. 세션 '상태'가  established가 되면 데이터 전송을 한다.
 
 - <b>데이터 전달 보증</b>
   클라이언트가 서버에게 데이터를 전송하면 서버에서 잘 받았는지 응답해준다
