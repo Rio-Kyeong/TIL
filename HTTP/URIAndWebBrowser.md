@@ -29,6 +29,7 @@
 예) 구글에서 언어를 한글로 하여 hello를 검색한다.
 
 <b>1. 웹 브라우저가 HTTP 요청 메시지 생성</b>
+
       <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/HttpRequestMessage.PNG"/>
 
 <b>2. SOCKET 라이브러리를 통해 OS TCP/IP 계층에 메시지 전달</b>
@@ -41,6 +42,7 @@
 <b>4. 서버에 TCP/IP 패킷 전송</b>
     - 가공된 TCP/IP 패킷은 여러 노드를 통해서 서버에 전달된다.
     - 서버는 받은 HTTP 메시지를 해석해서 HTTP 응답 메시지를 만들고 그 위에 TCP/IP 패킷을 씌워서 가공한다.
+    
       <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/HttpResponseMessage.PNG"/>
 
 <b>5. 웹 브라우저에 HTTP 응답 메시지를 전달</b>
