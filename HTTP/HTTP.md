@@ -71,7 +71,7 @@
 
 <b>요청 메시지</b>
 ----------------------------
-<b>start-line(시작라인)</b>        GET /search?q=hello&hl=ko HTTP/1.1 -> <b>HTTP 메서드 /요청대상(절대경로?쿼리스트링), HTTP Version</b>
+<b>start-line(시작라인)</b>         GET /search?q=hello&hl=ko HTTP/1.1 -> <b>HTTP 메서드 /요청대상(절대경로?쿼리스트링), HTTP Version</b>
 <b>header(헤더)</b>                 Host: www.google.com
 <b>CRLF(공백라인)</b>
 <b>message body</b>                 POST일 경우 body 작성, 물론 GET도 되지만 권장하지 않음
@@ -79,7 +79,7 @@
 
 <b>응답 메시지</b>
 ----------------------------
-<b>start-line(시작라인)</b>        HTTP/1.1 200 OK -> <b>HTTP Version, HTTP State Code</b>
+<b>start-line(시작라인)</b>         HTTP/1.1 200 OK -> <b>HTTP Version, HTTP State Code</b>
 <b>header(헤더)</b>                 Content-Type: text/html;charset=UTF-8 | Content-Length: 3423 | ...
 <b>CRLF(공백라인)</b>
 <b>message body</b>                 실제 전송할 데이터(HTML 문서 등)
