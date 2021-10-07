@@ -2,6 +2,7 @@
 <pre>
 <b>HTTP</b>
 - <b>HyperText Transfer Protocol</b>
+- 클라이언트와 서버가 정보를 교환할 때 사용하는 프로토콜
 - HTML, TEXT, IMAGE, 음성, 영상, 파일, JSON, XML 등등 거의 모든 형태의 바이너리(이진법) 데이터 전송 가능
 
 <b>HTTP 역사</b>
