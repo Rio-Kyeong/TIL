@@ -66,7 +66,7 @@
 ## HTTP 메시지의 구조
 <pre>
 <b>HTTP 메시지의 구조</b>
-  <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/HTTPMessage.PNG"/>
+<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/HTTPMessage.PNG"/>
 
 <b>요청 메시지</b>
 ----------------------------
