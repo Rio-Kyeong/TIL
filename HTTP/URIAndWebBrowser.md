@@ -34,10 +34,9 @@
 
 <b>2. SOCKET 라이브러리를 통해 OS TCP/IP 계층에 메시지 전달</b>
     - TCP/IP 연결(IP, PORT) -> 3 way handshake 통해서 구글서버와 가상 연결
-    - TCP/IP 계층에 데이터 전달
 
-<b>3. TCP/IP 패킷 생성, HTTP 메시지 포함</b>
-    - 출발지, 목적지 IP, PORT, 전송데이터를 포함한 TCP/IP 패킷을 생성하고 전달받은 HTTP 메시지를 포함 시킨다.
+<b>3. OS TCP/IP 계층에서 TCP/IP 패킷 생성(HTTP 요청 메시지 포함)</b>
+    - 출발지, 목적지 IP, PORT, 전송데이터를 포함한 TCP/IP 패킷을 생성하고 전달받은 HTTP 요청 메시지를 포함 시킨다.
 
 <b>4. 서버에 TCP/IP 패킷 전송</b>
     - 가공된 TCP/IP 패킷은 여러 노드를 통해서 서버에 전달된다.
@@ -45,6 +44,6 @@
     
       <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/HttpResponseMessage.PNG"/>
 
-<b>5. 웹 브라우저에 HTTP 응답 메시지를 전달</b>
-    - 웹 브라우저가 HTML로 렌더링을 하고 결과를 보여준다.
+<b>5. 웹 브라우저(클라이언트)에 HTTP 응답 메시지를 전달</b>
+    - 웹 브라우저는 HTTP 응답 메시지의 데이터에 따라서 렌더링을 하고 결과를 보여준다.
 </pre>
