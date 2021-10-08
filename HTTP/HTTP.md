@@ -9,7 +9,7 @@
 - HTTP/0.9 (GET만 지원 HTTP 헤더 X)
 - <b>HTTP/1.1 (가장 많이 사용) -> TCP기반 프로토콜</b>
 - HTTP/2 (성능 개선) -> TCP기반 프로토콜
-- HTTP/3 (진행중: TCP 대신에 UDP사용, 성능 개선) -> UDP기반 프로토콜
+- HTTP/3 (진행중: TCP 대신에 UDP사용, 성능 개선) -> UDP기반 프로토콜 
 </pre>
 ## HTTP 특징
 <pre>
