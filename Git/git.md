@@ -33,6 +33,8 @@ $ cp file1 file2
 ```text
 파일, 디렉토리 삭제
 $ rm [file name]
+하위 디렉토리까지 모두 삭제
+$ rm -r [file name]
 ```
 ```text
 현재 폴더의 하위 디렉토리의 리스트를 보여준다(-al)
