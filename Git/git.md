@@ -33,6 +33,7 @@ $ cp file1 file2
 ```text
 파일, 디렉토리 삭제
 $ rm [file name]
+
 하위 디렉토리까지 모두 삭제
 $ rm -r [file name]
 ```
