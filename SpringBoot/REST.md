@@ -43,17 +43,22 @@ Web Application : 인터넷으로 연결된 웹 환경에서 사용자들간의 
     <b>Resource(자원) - HTTP URI</b>
     서버는 Unique한 ID를 가지는 Resource를 가지고 있으며, 클라이언트는 이러한 Resource에 요청을 보낸다.
     이러한 Resource는 <b>URI</b>에 해당한다.
-    
-    좋은 URI 설계에서는 리소스(Resource) 식별이 가장 중요하다.
-    예를 들어서 회원 조회 URI 를 만들 경우 회원을 등록하고 수정하고 조회하는 과정이 리소스가 아닌 <b>회원이라는 개념 자체가 리소스</b>이다.
-    
-    GET /read-member-by-id X
-    GET /members/{id} O 
-    참고 : 계층 구조상 상위를 컬렉션으로 보고 복사단어 사용 권장(member -> members)
-    
+   
     <b>Method(행위) - HTTP Method</b>
     서버에 요청을 보내기 위한 방식으로 <b>GET, POST, PUT, PATCH, DELETE</b>가 있다.
     CRUD 연산 중에서 처리를 위한 연산에 맞는 Method를 사용하여 서버에 요청을 보내야 한다.
+    
+    <b>좋은 URI 설계에서는 리소스(Resource) 식별이 가장 중요하다.</b>
+    또 <b>리소스</b>와 해당 리소스를 대상으로 하는 <b>행위</b>를 분리해야 한다.
+    
+    예를 들어 회원 조회 URI 를 만들 경우
+    - <b>Method(GET, POST, PUT, DELETE 등) : 회원을 등록하고 수정하고 조회하는 행위(과정)</b>
+    - <b>Resource : 회원이라는 개념 자체</b>
+    
+    URI는 리소스만으로 표현한다.
+    GET /read-member-by-id X
+    GET /members/{id} O 
+    참고 : 계층 구조상 상위를 컬렉션으로 보고 복사단어 사용 권장(member -> members)
 
     Create(생성) - 데이터 생성(POST)
     Read(읽기) - 데이터 조회(GET)
