@@ -66,7 +66,6 @@
 ## HTTP Method 속성
 <pre>
 <b>HTTP 메소드의 속성</b>
-
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/HTTPMethodAttribute.PNG"/>
 
 <b>안전(Safe Methods)</b>
