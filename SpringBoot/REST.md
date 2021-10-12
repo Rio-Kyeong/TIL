@@ -48,6 +48,7 @@ Web Application : 인터넷으로 연결된 웹 환경에서 사용자들간의 
     예를 들어서 회원 조회 URI 를 만들 경우 회원을 등록하고 수정하고 조회하는 과정이 리소스가 아닌 <b>회원이라는 개념 자체가 리소스</b>이다.
     EX) GET /read-member-by-id X
         GET /members/{id} O
+        참고 : 계층 구조상 상위를 컬렉션으로 보고 복사단어 사용 권장(member -> members)
     
     <b>Method(행위) - HTTP Method</b>
     서버에 요청을 보내기 위한 방식으로 <b>GET, POST, PUT, PATCH, DELETE</b>가 있다.
