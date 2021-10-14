@@ -7,6 +7,7 @@ Today I Learned :100:
 * [URI And Web Browser](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/URIAndWebBrowser.md)
 * [HyperText Transfer Protocol](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTP.md)
 * [HTTP Method](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPMethod.md) 
+* [HTTP Method And URI design](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/UseHTTPMethod.md)
 
 ## Spring
 * [Spring Framework](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringFramework.md)
