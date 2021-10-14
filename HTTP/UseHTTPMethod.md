@@ -43,7 +43,7 @@
   - <b>Content-Type : application/json</b>을 주로 사용 (사실상 표준)
     • TEXT, XML, JSON 등등
 </pre>
-## HTTP API 설계
+## HTTP API 설계(자원 등록 방법)
 <pre>
 <b>신규 자원을 등록하는 방법, POST와 PUT</b>
 
