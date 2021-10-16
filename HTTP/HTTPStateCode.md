@@ -31,7 +31,7 @@
 <b>영구 리다이렉션</b> : 특정 리소스의 URI가 영구적으로 이동 -> EX) /event -> /new-event
 - 원래의 URL을 사용하지 않음, 검색 엔진 등에서도 변경 인지
 - <b>301 Moved Permanently</b> : 리다이렉트시 요청 메서드가 <b>GET으로 변하고 본문(Body)이 제거될 수 있음(MAY)</b>
-- <b>308 Permanent Redirect</b> : 리다이렉트시 요청 메서드와 <b>본문(Body)을 유지 ( 301이 본문을 제거하는 문제를 해결 해줌 하지만 보통 301을 쓴다)</b>
+- <b>308 Permanent Redirect</b> : 리다이렉트시 요청 메서드와 <b>본문(Body)을 유지 (301의 본문 제거 문제를 해결 함 하지만 보통 301을 쓴다)</b>
 
 
 <b>일시적인 리다이렉션</b> : 일시적인 변경 -> EX) 주문 완료 후 주문 내역화면으로 이동, <b>PRG: Post/Redirect/Get</b>
