@@ -1,15 +1,15 @@
 # HTTP Method
-## 좋은 URI 설계
 <pre>
-<b>좋은 URI(Uniform Resource Identifier)의 설계는?</b>
-- 좋은 URI는 설계는 <b>리소스(Resource) 식별 후 리소스만으로 표현</b>한다. -> 자원(Resource) = HTTP URI
+
+<b>URI(Uniform Resource Identifier)</b>
+- 좋은 URI는 설계는 <b>리소스(Resource) 식별</b>을 잘 해야 한다.
 - 좋은 URI는 <b>자원(Resource)</b>과 <b>행위(HTTP Method)</b>를 분리해야 한다.
+- <b>URI는 리소스만으로 표현한다.</b>
 
 <b>회원 조회 API를 만든다면?</b>
 - 리소스는 <b>회원(Member)이라는 개념 자체</b>가 될 것이다.
-- 행위(회원의 조회)는 HTTP Method를 통해서 나타낸다.</b>
-- 그러므로 회원을 등록하고 수정하고 조회하는 행위 자체는 모두 배제하고 회원이라는 리소스만 식별하여 URI를 설계한다.
-
+- 그러므로 회원을 등록하고 수정하고 조회하는 행위 자체는 모두 배제하고 회원이라는 리소스만 식별하면 된다.
+- <b>조회라는 행위는 HTTP Method를 통해서 나타낸다.</b>
 - 계층 구조상 상위를 컬렉션으로 보고 복사단어 사용 권장(member -> members)
 - EX) GET /read-member-by-id X
       GET /members/{id} O
@@ -66,7 +66,7 @@
 ## HTTP Method 속성
 <pre>
 <b>HTTP 메소드의 속성</b>
-<img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/HTTPMethodAttribute.PNG"/>
+   <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/HTTPMethodAttribute.PNG"/>
 
 <b>안전(Safe Methods)</b>
 - 여러 번 호출해도 리소스를 변경되지 않는다.
