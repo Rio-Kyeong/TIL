@@ -66,7 +66,7 @@
 ## HTTP Method 속성
 <pre>
 <b>HTTP 메소드의 속성</b>
-   <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/HTTPMethodAttribute.PNG"/>
+  <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/HTTPMethodAttribute.PNG"/>
 
 <b>안전(Safe Methods)</b>
 - 여러 번 호출해도 리소스를 변경되지 않는다.
