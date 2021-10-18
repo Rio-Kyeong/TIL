@@ -8,7 +8,7 @@ Today I Learned :100:
 * [HyperText Transfer Protocol](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTP.md) 
 * [HTTP Method](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPMethod.md) 
 * [HTTP Method And URI design](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/UseHTTPMethod.md)
-* [HTTP State Code](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPStateCode.md)
+* [HTTP State Code](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPStateCode.md) 
 
 ## Spring
 * [Spring Framework](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringFramework.md)
