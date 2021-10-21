@@ -162,7 +162,7 @@ Date:   Sat Jul 24 13:38:08 2021 +0900
 ### 커밋 되돌리기
 * `실수한 내용을 지우고 기록을 바꾼다`<br/>
 (공유 이후 리셋x 공유하기 전 내 컴퓨터에 있는 버전에 대해서만 리셋을 한다)
-* reset에 대한 자세한 정보는 이 곳을 <a href="https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitMechanism2.md">참고</a>
+* reset에 대한 자세한 정보는 이 곳을 <a href="https://github.com/RyuKyeongWoo/TIL/blob/main/Git/gitBranchMechanism.md#3-reset--checkout-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0">참고</a>
 ```text
 모든 변경점과 기록을 버리고 특정 커밋으로 되돌아간다.(HEAD를 적으면 특정 커밋을 가장 최신 커밋상태로 돌려준다)
 $ git reset --hard [commit]
