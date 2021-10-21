@@ -30,6 +30,7 @@
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/VerificationHeader2-1.PNG"/>
 - 만약 웹 브라우저에서 요청받은 if-modified-since(데이터 최종 수정일)가 수정된 사항이 없으면
 - 서버는 <b>상태코드 304 Not Modified + 헤더 메타 정보만 응답(바디 x)</b>
+  -> 너의 캐쉬로 리다이렉션해서 그 데이터를 사용해라!
 - 클라이언트는 서버가 보낸 응답 헤더 정보로 캐시의 메타 정보를 갱신
 - 클라이언트는 브라우저 캐시 저장소의 캐시 데이터 재활용
 - <b>수정이 있을 시 요청에 대한 모든 데이터를 응답</b>한다.
