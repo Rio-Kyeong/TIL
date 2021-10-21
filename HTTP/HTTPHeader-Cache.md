@@ -117,7 +117,7 @@
 <b>no-cache와 must-revalidate의 차이점</b>
 - <b>Cache-Control: no-cache</b>
   <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/no-cache.PNG"/>
-  • (원 서버 접근 불가 시) 데이터가 만약 업데이트 됐더라도 이전 버전의 데이터라도 보여준다.
+  • (원 서버 접근 불가 시) 데이터가 만약 업데이트 됐더라도 프록시 캐시 서버에 남아있는 이전 버전의 데이터라도 보여준다.
 
 - <b>Cache-Control: must-revalidate</b>
   <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/must-revalidate.PNG"/>
