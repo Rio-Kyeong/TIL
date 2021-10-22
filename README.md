@@ -1,16 +1,6 @@
 
 # TIL
 I am currently writing a post on my <a href="https://everlasting-cello-2b6.notion.site/KyeongWoo-blog-f76f7a2af70c4d0a895071646565b85d">blog</a>.
-## HTTP
-* [Internet Network](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/InternetNetwork.md)
-* [URI And Web Browser](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/URIAndWebBrowser.md)
-* [HyperText Transfer Protocol](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTP.md) 
-* [HTTP Method](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPMethod.md) 
-* [HTTP Method And URI design](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/UseHTTPMethod.md)
-* [HTTP Status Code](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPStateCode.md) 
-* [HTTP Header](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPHeader-Normal.md)
-* [HTTP Header Cache-Control](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPHeader-Cache.md)
-
 ## Spring
 * [Spring Framework](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringFramework.md)
 * [Dependency Injection - xml](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/DependencyInjection.md)
@@ -110,6 +100,16 @@ Collection Optimization - XToMany(OneToMany)
 
 Practical Essential Optimization - OSIV
 * [Open Session In View](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA2/OpenSessionInView.md)
+
+## HTTP
+* [Internet Network](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/InternetNetwork.md)
+* [URI And Web Browser](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/URIAndWebBrowser.md)
+* [HyperText Transfer Protocol](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTP.md) 
+* [HTTP Method](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPMethod.md) 
+* [HTTP Method And URI design](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/UseHTTPMethod.md)
+* [HTTP Status Code](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPStateCode.md) 
+* [HTTP Header](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPHeader-Normal.md)
+* [HTTP Header Cache-Control](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/HTTPHeader-Cache.md)
 
 ## Git
 * [Git Command](https://github.com/RyuKyeongWoo/TIL/blob/main/Git/git.md)
