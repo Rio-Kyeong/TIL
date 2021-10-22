@@ -2,6 +2,8 @@
 # TIL
 Today I Learned :100:
 
+현재는 <a href="https://everlasting-cello-2b6.notion.site/KyeongWoo-blog-f76f7a2af70c4d0a895071646565b85d">블로그</a>에서 포스트를 작성 중입니다.
+
 ## HTTP
 * [Internet Network](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/InternetNetwork.md)
 * [URI And Web Browser](https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/URIAndWebBrowser.md)
