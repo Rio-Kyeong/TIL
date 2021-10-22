@@ -24,7 +24,7 @@
 ## `3xx - 리다이렉션`
 <pre>
 <b>3xx (Redirection) : 요청을 완료하려면 추가 작업이 필요</b>
-- 리다이렉션이 : <b>웹 브라우저는 3xx 응답의 결과에 Location 헤더가 있으면, Location 위치로 자동 이동(리다이렉트)</b>
+- 리다이렉션 : <b>웹 브라우저는 3xx 응답의 결과에 Location 헤더가 있으면, Location 위치로 자동 이동(리다이렉트)</b>
 - 리다이렉션 이해
   <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/HTTP/img/Redirection.PNG"/>
 
