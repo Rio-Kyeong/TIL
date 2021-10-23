@@ -11,7 +11,6 @@ GET(조회)
 
 POST(생성) 
 성공 : 201 Created
-클라이언트의 요청이 허용되지 않는 메소드일 때(실패) : 405 Method Not Allowed
 
 PUT(수정)
 개체를 생성할 때 : 201 Created
