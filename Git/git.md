@@ -38,6 +38,10 @@ $ rm [file name]
 $ rm -r [file name]
 ```
 ```text
+파일 이름 변경
+$ git mv [file_from] [file_to]
+```
+```text
 현재 폴더의 하위 디렉토리의 리스트를 보여준다(-al)
 $ ls [옵션]
 eclipse/  workspace/
