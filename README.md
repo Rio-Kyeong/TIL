@@ -19,7 +19,7 @@ I am currently writing a post on my <a href="https://everlasting-cello-2b6.notio
   
 ## Spring Boot(RESTful)
 * [Spring Boot](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringBoot.md)
-* [REpresentational State Transfer](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/REST.md)
+* [REpresentational State Transfer](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/REST.md) 
 * [Entity, DTO, VO](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Entity%2CDTO%2CVO.md)
 * [RestController](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/RestController.md)
 * [HTTP Status Code Control](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/StatusCode.md)
