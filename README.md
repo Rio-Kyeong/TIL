@@ -46,7 +46,7 @@ I am currently writing a post on my <a href="https://everlasting-cello-2b6.notio
 * [Cascade, orphanRemovel](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Cascade_OrphanRemovel.md)
 * [Entity Type & Value Type - Primitive value, embedded, collection value](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/ValueType.md)
 
-JPQL(Java Persistence Query Language)
+JPQL(Java Persistence Query Language) 
 * [Java Persistence Query Language](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JPQL.md)
 * [Paging](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Paging.md)
 * [Join](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Join.md)
