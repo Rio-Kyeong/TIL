@@ -32,7 +32,7 @@ I am currently writing a post on my <a href="https://everlasting-cello-2b6.notio
 * [Overview of Connecting RESTful Service to JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/JavaPersistenceAPI.md)
 * [Use H2Database](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/H2Database.md)
 * [Creating Entity and useing Spring Data JPA](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/SpringDataJPA.md) 
-* [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md) 
+* [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md)  
 
 ## Spring Boot(JPA Programming)
 * [Java Persistence API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JavaPersistenceAPI.md)
