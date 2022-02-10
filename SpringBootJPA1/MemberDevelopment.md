@@ -1,5 +1,5 @@
 # Member Domain Development
-## EntityManger
+## EntityManager
 <pre>
 JPA는 <b>EntityManager</b>와 <b>영속성 컨텍스트</b>를 통해 데이터의 상태 변화를 감지하고 필요한 쿼리를 자동으로 수행한다.
 
