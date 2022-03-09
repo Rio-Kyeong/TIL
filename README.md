@@ -35,7 +35,7 @@ I am currently writing a post on my <a href="https://everlasting-cello-2b6.notio
 * [Restful Web Services - Best practices](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/BestPractices.md)   
 
 ## Spring Boot(JPA Programming)
-* [Java Persistence API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JavaPersistenceAPI.md)
+* [Java Persistence API](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/JavaPersistenceAPI.md) 
 * [JPA Flow](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/HelloJPA.md)
 * [Persistence Context](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/PersistenceContext.md)
 * [Entity Mapping](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/EntityMapping.md)
