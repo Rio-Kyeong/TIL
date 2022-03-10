@@ -22,7 +22,7 @@ I am currently writing a post on my <a href="https://everlasting-cello-2b6.notio
 * [REpresentational State Transfer](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/REST.md)  
 * [Entity, DTO, VO](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Entity%2CDTO%2CVO.md)
 * [RestController](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/RestController.md)
-* [HTTP Status Code Control](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/StatusCode.md) 
+* [HTTP Status Code Control](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/StatusCode.md)  
 * [Implementing Validations for RESTful Services](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Validations.md)
 * [Programming Control for Filtering](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Filtering.md)
 * [Versioning - Basic Approach with URIs](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBoot/Versioning.md)
