@@ -40,7 +40,7 @@ I am currently writing a post on my <a href="https://everlasting-cello-2b6.notio
 * [Persistence Context](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/PersistenceContext.md)
 * [Entity Mapping](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/EntityMapping.md)
 * [Reference Relation Mapping - N:1](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/ManyToOne.md)
-* [Reference Relation Mapping - 1:N, 1:1, N:M](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Multiplicity.md)
+* [Reference Relation Mapping - 1:N, 1:1, N:M](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Multiplicity.md) 
 * [Inheritance Mapping](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Inheritance.md)
 * [Proxy - EAGER, LAZY](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Proxy.md)
 * [Cascade, orphanRemovel](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/Cascade_OrphanRemovel.md)
