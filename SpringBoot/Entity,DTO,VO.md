@@ -29,33 +29,51 @@ Domain Model 객체는 Persistent(지속성)만을 위해서 사용해야한다.
 ```
 ### Entity Class
 ```java
-@Getter
-@Setter
-@ToString
-@Table(name = "user")
 @Entity
-public class User {
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "post")
+public class Post {
 
     @Id
-    @GeneratedValue
-    private int id;
+    @Column(name = "post_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long postId;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "post_mood")
+    @Enumerated(value = EnumType.STRING)
+    private PostMood mood;
 
-    @Column(name = "password", nullable = false)
-    private String password;
+    @Column(name = "post_title")
+    private String title;
+    
+    @Column(name = "post_memo")
+    private String memo;
 
-    @Column(name = "email", nullable = false, unique = true)
-    private String email;
+    @Column(name = "post_date")
+    private LocalDate postDate;
 
-    @Column(name = "phone", nullable = false, unique = true)
-    private String phone;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
-    @Column(nullable = true)
-    private LocalDateTime create_date;
+    // 글 쓰기
+    public void insertPost(User user, PostMood mood, String title, String memo){
+        this.user = user;
+        this.mood = mood;
+        this.title = title;
+        this.memo = memo;
+        this.postDate = LocalDate.now();
+    }
 
-    private LocalDateTime modify_date;
+    // 글 수정
+    public void updatePost(PostMood mood, String title, String memo){
+        this.mood = mood;
+        this.title = title;
+        this.memo = memo;
+    }
 }
 ```
 ## DTO(Data Transfer Object)
