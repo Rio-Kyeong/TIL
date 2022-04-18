@@ -49,7 +49,7 @@ public class User {
 }
 ```
 ## 프로그래밍으로 제어하는 Filtering
-### @JsomFilter
+### @JsonFilter
 `클래스 레벨`에 적용되며, 어노테이션으로 JSON 변환시 사용할 필터를 명시
 ```java
 //UserDomain.java
