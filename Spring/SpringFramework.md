@@ -41,6 +41,7 @@ Controller에서는 모든 요청 에러와 모델 에러를 처리하며 Model�
 
 
 ## 스프링 프레임워크의 구조(모듈)
+![image](https://user-images.githubusercontent.com/80517285/163792088-140b9848-be26-4158-bbca-3ca568f43023.png)
 |**스프링 모듈**|**기능**|
 |------|-----------------|
 |spring-core|스프링의 핵심인 DI(Dependency Injection)와 IOC(Inversion of Control)를 제공|
