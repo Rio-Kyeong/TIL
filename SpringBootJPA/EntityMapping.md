@@ -61,7 +61,7 @@ public class Member {
 
 <b>@Temporal</b> : 날짜 타입 매핑
 - 날짜 타입(java.util.Date, java.util.Calendar)을 매핑할 때 사용
-- 참고 : <b>LocalDate, LocalTime, LocalDateTime을 사용할 때는 생략 가능(최신 하이버네이트 지원)</b>
+- 참고 : <b>LocalDate, LocalTime, LocalDateTime을 사용할 때는 어노테이션 생략 가능(최신 하이버네이트 지원)</b>
 <table>
 <th>속성</th><th>설명</th><th>기본값</th>
 <tr>
@@ -328,7 +328,7 @@ create table MY_SEQUENCES (
 
 <b>운영 장비에는 절대 create, create-drop, update 사용하면 안된다.</b>
 - 개발 초기 단계는 create 또는 update
-- 테이트 서버는 update 또는 validate
+- 테스트 서버는 update 또는 validate
 - 스테이징과 운영 서버는 validate 또는 none
 </pre>
 ```xml
