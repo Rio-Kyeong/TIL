@@ -3,6 +3,7 @@
 <pre>
 <b>영속성 컨텍스트(Persistence Context) : 엔티티를 영구 저장하는 환경</b>
 - 영속성 컨텍스트는 논리적인 개념
+- 영속성 컨텍스트 안에는 1차 캐시가 존재
 - 엔티티 매니저를 통해서 영속성 컨텍스트에 접근
 - J2SE(Java SE) 환경은 엔티티 매니저와 영속성 컨텍스트가 1:1 관계
 - J2EE(Java EE) 환경은 엔티티 매니저와 영속성 컨텍스트가 N:1 관계
@@ -17,6 +18,7 @@
 - <b>영속(managed)</b> : 영속성 컨텍스트에 <b>관리</b>되는 상태(저장된 상태)
     * 엔티티 매니저를 통해서 엔티티를 영속성 컨텍스트에 저장한 상태
     * em.persist(member);
+    * em.find(Member.class, "member") : 최초 1회 DB 조회 후 1차 캐시에 저장 (영속)
 
 - <b>준영속(detached)</b> : 영속성 컨텍스트에 저장되었다가 <b>분리</b>된 상태
     * em.detach(entity) : 엔티티를 분리해 준영속 상태로 전환
@@ -49,7 +51,7 @@
 <pre>
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/Cache.PNG"/>
 - 영속성 컨텍스트는 내부에 캐시를 가지고 있으며, 1차 캐시는 (id, instance)의 맵 형태를 갖고 엔티티들이 저장된다.
-- 트랜잭션 단위의 짧은 메모리 공간이다(<b>데이터베이스 한 트랜잭션 안에서만 존재</b>)
+- 트랜잭션 단위의 짧은 메모리 공간이다(<b>데이터베이스 한 트랜잭션 안에서만 존재, 트랜잭션이 종료되면 삭제</b>)
 
 // 엔티티를 생성한 상태(비영속)
 Member member = new Member();
@@ -62,7 +64,9 @@ em.persist(member)
 // 1차 캐시에서 조회된다
 Member findMember = em.find(Member.class, "member1");
 
+<b>em.persist</b>
 1. 영속성 컨텍스트에 영속되면, 1차 캐시는 이를 담는다.
+<b>em.find</b>
 2. 이후 조회(find) 시, DB에 접근해서 탐색하는 것이 아닌 1차 캐시를 먼저 훝어 찾는 값이 있는지 확인 하고 캐시에 있다면 그 정보를 조회한다.
 3. 캐시에 정보가 없다면 DB에서 검색 후 해당 객체를 1차 캐시에 저장하고 반환한다. - <b>영속상태</b>
 
@@ -91,9 +95,10 @@ transaction.commit(); // [트랜잭션] 커밋
 ### `변경 감지(Dirty Checking)`
 <pre>
 - 데이터를 찾아온(find) 후에 데이터를 변경(update)을 하면 자동으로 반경을 감지하여 Update Query를 생성해준다.
+- 데이터를 찾아온(find) 후에 데이터를 삭제(delete)을 하면 자동으로 반경을 감지하여 Delete Query를 생성해준다.
 - 트랜잭션을 커밋할 때 자동으로 수정되므로 별도의 수정 메서드를 호출할 필요가 없고 그런 메서드도 없다.
 
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/DirtyChecking.PNG"/>
-- flush를 호출하게 되면 1차 캐시에서 <b>변경된 엔티티</b>와 <b>스냅샷(값을 읽어온 최초 상태)</b>을 비교한다.
-- 비교 값이 다르면 Update SQL을 생성하고 DB에 반영한다.
+- flush가 호출되면 1차 캐시에서 <b>변경된 엔티티</b>와 <b>스냅샷(값을 읽어온 최초 상태)</b>을 비교한다.
+- 비교 값이 다르면 Update, Delete SQL을 생성하고 DB에 반영한다.
 </pre>
