@@ -157,7 +157,7 @@ public class Member {
 </tr>
 </table>
 <b>권장하는 식별자 전략</b>
-- <b>기본 키 제약 조건</b> : null 아님, 유일(unique), 변하면 안된다.
+- <b>기본 키 제약 조건</b> : null 아님, 유일(unique), 불변해야 한다.
 - 미래까지 이 조건을 만족하는 자연키는 찾기 어렵다. 그 대신 <b>대리키(대체키)를 사용</b>하자.
 - 자연키(Natural Key) : 비즈니스적으로 의미가 있는 키(주민번호, 전화번호 등)
 - 대리키(대체키) : 비즈니스적으로 상관없는 키(Generate Value, 랜덤 값, 유휴 값 등)
@@ -171,6 +171,7 @@ public class Member {
 ```java
 // id 값을 null로 하면 DB가 알아서 AUTO_INCREMENT 해준다.
 // IDENTITY 전략에서만 예외적으로 entityManager.persist()가 호출되는 시점에 바로 DB에 INSERT 쿼리를 날린다.
+// 그러므로 entityManager.persist() 이 후에 AUTO_INCREMENT 로 생성된 ID 는 바로 조회하여 사용할 수 있다.
 public class Member{
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -192,11 +193,14 @@ create table Member (
 ```
 ### `SEQUENCE`
 <pre>
-<b>SEQUENCE - @SequenceGenerator</b>
+<b>@SequenceGenerator</b>
+- 테이블 별로 시퀀스를 따로 이름을 주어서 관리하고 싶을 때 사용
+- @GeneratedValue 의 generator 속성 값으로 부여하여 사용
 
 <b>Sequence를 매번 DB에서 가지고오는 과정에서 네트워크를 타기 때문에 성능 상의 저하를 가져올 수 있다.</b>
 - 이를 해결하기 위한 성능 최적화 방법으로 <b>allocationSize 속성값 (기본값: 50) 이용</b>
 - allocationSize 사용 시 next call을 할 때 미리 DB에 50개를 한 번에 올려 놓고(DB는 sequence가 51로 셋팅) 메모리 상에서 1개씩 사용
+- entityManager.persist() 이 후에 Sequence 로 생성된 ID 는 바로 조회하여 사용할 수 있다.
 <table>
 <th>속성</th><th>설명</th><th>기본값</th>
 <tr>
@@ -232,12 +236,14 @@ public class Member {
 ```
 ```console
 -- 1부터 시작해서 1씩 증가 
-create sequence MEMBER_SEQ start with 1 increment by 50
+create sequence MEMBER_SEQ start with 1 increment by 50 (Sequence Object 생성)
+call next value for hibernate_sequence
 ```
 ### `TABLE`
 <pre>
-<b>TABLE - @TableGenerator</b>
+<b>@TableGenerator</b>
 - <b>키 생성 전용 테이블을 하나 만들어서 데이터베이스 시퀀스를 흉내내는 전략</b>
+- @GeneratedValue 의 generator 속성 값으로 부여하여 사용
 - 장점 : 모든 데이터베이스에 적용 가능
 - 단점 : 최적화 되어있지 않은 테이블을 직접 사용하기 때문에 성능상의 이슈가 있음
 <table>
