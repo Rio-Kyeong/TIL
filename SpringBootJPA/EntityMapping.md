@@ -36,6 +36,7 @@ public class Member {
 ## Field and Column Mapping
 <pre>
 <b>@Column</b> : 컬럼 매핑
+- 개발자들이 엔티티를 보고 개발할 수 있도록 컬럼의 속성을 통해 제약 조건을 지정해주는 것이 좋다!
 <table>
 <th>속성</th><th>설명</th><th>기본값</th>
 <tr>
