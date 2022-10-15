@@ -145,7 +145,12 @@ class B{
 ## 양방향 연관관계
 <pre>
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/many-way.PNG"/>
-- 양방향 연관관계는 서로 다른 단방향 관계가 2개인 것이다.
+- 양방향 연관관계는 <b>서로 다른 단방향 관계가 2개</b>인 것이다.
+  - 객체 연관관계 = 2개
+    - 회원 -> 팀 연관관계 1개(단방향)
+    - 팀 -> 회원 연관관계 1개(단방향)
+  - 테이블 연관관계 = 1개
+    - 회원 <- JOIN -> 팀 연관관계 1개(양방향)
 - 둘 중 하나로 외래 키를 관리해야 한다.
 - 회원과 팀은 다대일 관계(N:1)이다.
 - <b>Team객체의 필드에서는 List를 통해서 여러 명의 Member를 조회하고, Member객체의 필드에서는 참조를 통해서 하나의 Team을 조회한다.</b>
@@ -242,13 +247,14 @@ em.persist(team);
 Member member = new Member();
 member.setName("member1");
 
-//3. 팀에 멤버
+//3. 팀에 멤버 저장(add)
 team.getMembers().add(member);
 em.persist(member);
 ```
 <pre>
-코드 실행 시, 새 팀과 새 멤버는 생성이 되지만 멤버와 팀의 연관관계는 저장되지 않는다.
-연관관계의 주인은 Member인데, 이 연관관계를 Team에 지정해주었기 때문이다.
+- 코드 실행 시, 새 팀과 새 멤버는 생성이 되지만 멤버와 팀의 연관관계는 저장되지 않는다.
+- 연관관계의 주인은 Member인데, 이 연관관계를 Team에 지정해주었기 때문이다.
+- Team 객체의 members List 는 읽기 전용이다.
 
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/example1.PNG"/>
 DB에서도 null을 확인할 수 있다.
@@ -272,11 +278,15 @@ member.setTeam(team);
 em.persist(member);
 ```
 <pre>
-<b>순수한 객체 관계를 고려하면 항상 양쪽다 값을 입력해야 한다</b>
-- Team의 members와 Member의 team에 모두 값을 셋팅하였다.
+<b>요약</b>
+<b>- 양방향 연관관계에서는 연관관계의 주인에 값을 입력해야 한다.</b>
+<b>- 순수한 객체 관계를 고려해서 항상 양쪽다 값을 설정해야 한다.</b>
+  - Team의 members와 Member의 team에 모두 값을 셋팅하였다.
+  - 만약 member.setTeam(team) 만 할 경우 flush 되기 전까지는 Team 객체에는 members List 값이 없는 상태이다.
+  - 연관관계 편의 메소드를 생성해서 한 번에 연관관계를 설정하는 것도 좋은 방법이다.
 
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/example2.PNG"/>
-연관관계의 주인에 값을 설정함으로써 DB에는 새로운 멤버와 팀, 연관관계가 모두 정상적으로 저장된다.
+- 연관관계의 주인에 값을 설정함으로써 DB에는 새로운 멤버와 팀, 연관관계가 모두 정상적으로 저장된다.
 </pre>
 ### `연관관계 편의 메서드 작성`
 <pre>
@@ -308,5 +318,6 @@ member.setName("member1");
 em.persist(member);
 
 //3. 연관관계 편의 메서드 사용
+// setter method 는 지양하는 편
 team.addMember(member);
 ```
