@@ -133,7 +133,7 @@ public class Locker {
 - <b>@ManyToMany</b> 사용, <b>@JoinTable</b>로 연결 테이블 지정
 - <b>편리해 보이지만 실무에서 사용하지 않는다.</b>
 - 연결 테이블이 단순히 연결만 하고 끝나지 않는다.
-- 주문시간, 수량 같은 데이터가 들어올 수 있다.
+- 주문시간, 수량 같은 추가 데이터를 연결 테이블에 넣어서 사용할 수 없다.
 
 <b>다대다 한계 극복</b>
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/NM2.PNG"/>
@@ -168,13 +168,19 @@ public class MemberProduct{
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-​
+
   @ManyToOne
   @JoinColumn(name = "member_id")
   private Member member;
-​
+
   @ManyToOne
   @JoinColumn(name = "product_id")
   private Product product;
+  
+  // 추가 필요 데이터
+  private int count;
+  private int price;
+  
+  privaate LocalDateTime orderDateTime;
 }
 ```
