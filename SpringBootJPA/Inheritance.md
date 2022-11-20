@@ -5,16 +5,17 @@
 - 대신 관계형 데이터베이스에서는 <b>슈퍼타입 서브타입 관계</b>라는 모델링 기법이 상속과 유사하다.
 
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/ObjectExtends.PNG"/>
-- ORM에서 이야기하는 상속 관계 매핑은 <b>객체의 상속 구조와 데이터베이스의 슈퍼타입 서브타입 관계를 매핑하는 것</b>이다.
+- ORM에서 이야기하는 상속 관계 매핑은 <b>객체의 상속 구조와 데이터베이스의 슈퍼/서브타입 관계를 매핑하는 것</b>이다.
 
 슈퍼타입 서브타입 논리 모델을 실제 물리 모델인 테이블로 구현할 때는 3가지 방법이 있다.
-- <b>조인 전략</b> : 각각 테이블을 만들고 조회할 때 조인한다.
-- <b>단일(싱글) 테이블 전략</b> : 테이블을 하나만 사용해서 통합한다.
+- <b>조인 전략</b> : 각각 테이블을 생성하고 조회할 때는 조인을 사용한다.
+- <b>단일(싱글) 테이블 전략</b> : 하나의 테이블만 사용해서 통합한다.
 - <b>구현 클래스마다 테이블 전략</b> : 서브 타입마다 하나의 테이블로 만듦
 
 <b>@Inheritance(strategy = InheritanceType.XXX)</b>
+- 조인 전략을 선택할 때 부모 엔티티에서 사용한다.
 - <b>InheritanceType.JOINED</b> : 조인 전략
-- <b>InheritanceType.SINGLE_TABLE</b> : 단일 테이블 전략(default)
+- <b>InheritanceType.SINGLE_TABLE</b> : 단일 테이블 전략 (default)
 - <b>InheritanceType.TABLE_PER_CLASS</b> : 구현 클래스마다 테이블 전략
 
 <b>@DiscriminatorColumn(name = "DTYPE")</b>
@@ -52,14 +53,14 @@
 @Entity
 @Setter @Getter
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn
-public class Item {
+@DiscriminatorColumn // 부모 클래스에 구분컬럼(DTYPE) 생성
+public abstract class Item {
 
     @Id @GeneratedValue
     private Long id;
 
-    private String name; //상품 명
-    private int price; //상품 가격
+    private String name;
+    private int price;
 }
 ```
 ```java
@@ -67,7 +68,7 @@ public class Item {
 
 @Entity
 @Setter @Getter
-@DiscriminatorValue("M")
+@DiscriminatorValue("M") // Movie 의 구분컬럼(DTYPE) 값을 "M" 으로 지정
 public class Movie extends Item{
     private String director;
     private String actor;
@@ -85,8 +86,8 @@ em.persist(movie);
 ```
 <pre>
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/JoinDB.PNG"/>
-- @DiscriminatorColumn : 부모 클래스에 구분컬럼(DTYPE) 생성
-- @DiscriminatorValue("M") : Movie의 구분컬럼(DTYPE) 값을 M으로 지정
+- 아이템 테이블(부모)의 PK 는 영화 테이블(자식)에서 FK 면서 PK 이다.
+- 그러므로 아이템 테이블과 영화 테이블의 ID 는 동일하다.
 </pre>
 ## 단일 테이블 전략
 <pre>
@@ -96,28 +97,29 @@ em.persist(movie);
 - 구분 컬럼(DTYPE)이 자동으로 생성된다.
 
 <b>장점</b>
-- 조인이 필요 없으므로 일반적으로 조회 성능이 빠름
+- 조회 시 조인이 필요 없으므로 일반적으로 조회 성능이 빠름
 - 조회 쿼리가 단순함
 
 <b>단점</b>
-- 자식 엔티티가 매핑한 컬럼은 모두 null 허용
+- 자식 엔티티가 매핑한 컬럼은 모두 null 을 허용해야 한다.
 - 단일 테이블에 모든 것을 저장하므로 테이블이 커질 수 있다.
   (상황에 따라서 조회 성능이 오히려 느려질 수 있다)
 </pre>
+
 ```java
 // 부모 클래스
 
 @Entity
 @Setter @Getter
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn
-public class Item {
+@DiscriminatorColumn // 식별을 위해 DTYPE 컬럼이 필수로 필요
+public abstract class Item {
 
     @Id @GeneratedValue
     private Long id;
 
-    private String name; //상품 명
-    private int price; //상품 가격
+    private String name;
+    private int price;
 }
 ```
 ### `싱글 테이블 전략에 데이터 저장`
@@ -133,7 +135,7 @@ em.persist(movie);
 <pre>
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/SingleTableDB.PNG"/>
 - Movie 이외에 하위 테이블 Book과 Album 테이블의 컬럼은 null로 지정된다.
-  (그러므로 부모 테이블 Item 이외에 모든 하위 테이블의 컬럼은 null을 허용해야 한다)
+- 그러므로 부모 테이블 Item 이외에 모든 하위 테이블의 컬럼은 null을 허용해야 한다.
 </pre>
 ## 구현 클래스마다 테이블 전략
 <pre>
@@ -157,14 +159,14 @@ em.persist(movie);
 @Entity
 @Setter @Getter
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@DiscriminatorColumn
+// @DiscriminatorColumn
 public abstract class Item {
 
     @Id @GeneratedValue
     private Long id;
 
-    private String name; //상품 명
-    private int price; //상품 가격
+    private String name;
+    private int price;
 }
 ```
 ### `구현 클래스마다 테이블 전략에 데이터 저장`
@@ -204,7 +206,7 @@ em.persist(movie);
 - 상속된 BaseEntity의 컬럼이 같이 나온다.
 </pre>
 ```java
-// 엔티티에서 공통으로 들어가야 하는 정보들을 모든 클래스
+// 엔티티에서 공통으로 들어가야 하는 정보들을 모아놓은 클래스
 
 @MappedSuperclass
 @Setter @Getter
@@ -216,11 +218,9 @@ public abstract class BaseEntity {
 }
 ```
 ```java
-// BaseEntity 상속
-
 @Entity
 @Setter @Getter
-public class Member extends BaseEntity{
+public class Member extends BaseEntity {
     @Id @GeneratedValue
     @Column(name = "MEMBER_ID")
     private Long id;
