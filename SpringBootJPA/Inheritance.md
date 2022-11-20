@@ -54,7 +54,7 @@
 @Setter @Getter
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn // 부모 클래스에 구분컬럼(DTYPE) 생성
-public abstract class Item {
+public abstract class Item { // 아이템 엔티티만 단독으로 사용할 일이 없다면 추상 클래스로 생성 권장
 
     @Id @GeneratedValue
     private Long id;
@@ -113,7 +113,7 @@ em.persist(movie);
 @Setter @Getter
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn // 식별을 위해 DTYPE 컬럼이 필수로 필요
-public abstract class Item {
+public abstract class Item { // 아이템 엔티티만 단독으로 사용할 일이 없다면 추상 클래스로 생성 권장
 
     @Id @GeneratedValue
     private Long id;
@@ -160,7 +160,7 @@ em.persist(movie);
 @Setter @Getter
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 // @DiscriminatorColumn
-public abstract class Item {
+public abstract class Item { // 아이템 엔티티만 단독으로 사용할 일이 없다면 추상 클래스로 생성 권장
 
     @Id @GeneratedValue
     private Long id;
