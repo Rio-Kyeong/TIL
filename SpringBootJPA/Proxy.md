@@ -4,7 +4,7 @@
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/proxyEntity.PNG"/>
 - 연관관계가 있는 경우 엔티티를 조회할 때 연관관계를 맺고있는 다른 엔티티도 같이 조회가 된다.
 - 하지만 항상 연관된 엔티티 정보가 필요한 것은 아니므로 불필요한 데이터베이스 조회가 생기는 것이다.
-- Member Entity의 정보만 필요 하여도 연관관계 때문에 불필요하게 Team Entity의 정보도 같이 조회가 된다.
+  - Member Entity의 정보만 필요 하여도 연관관계 때문에 불필요하게 Team Entity의 정보도 같이 조회가 된다.
 
 <b>해결</b>
 - 즉시로딩(EAGER)이 아닌 <b>프록시를 이용한 지연로딩(LAZY)을 사용</b>해야 한다.
@@ -25,16 +25,16 @@
 - 프록시의 참조(target)는 최초 null 값을 가진다.
 - 프록시 객체를 호출하면 프록시 객체는 실제 객체의 메소드 호출
 
-em.find() : 데이터베이스를 통해서 실제 엔티티 객체 조회
-em.getReference() : <b>데이터베이스 조회를 미루는 가짜(프록시) 엔티티 객체 조회</b>
+<b>em.find()</b> : DB를 통해서 실제 엔티티 객체 조회, 객체 조회 시점에 SELECT QUERY를 날린다.
+<b>em.getReference() : DB 조회를 미루는 가짜(프록시) 엔티티 객체 조회, 프록시 조회는 실제 사용 시점에 SELECT QUERY를 날린다.</b>
 </pre>
 ## 프록시 초기화
 <pre>
 <img src="https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/img/proxyReset.PNG"/>
 최초 em.getReference()를 통해서 프록시 객체를 가져온다.
-1. 값이 사용되는 시점에 값(getName())이 프록시 객체에 있는지 확인한다(target 확인)
-2. 없을 경우 JPA가 영속성 컨텍스트에 초기화 요청을 한다.
-3. 영속성 컨텍스트는 DB를 조회한다.
+1. 프록시가 사용되는 시점에 값(getName())이 프록시 객체에 있는지 target 을 확인한다.
+2. 없을 경우 JPA가 영속성 컨텍스트에 초기화 요청을 한다. (있을 경우 조회 없이 그대로 반환)
+3. 영속성 컨텍스트는 직접 DB를 조회한다.
 4. 조회해서 실제 엔티티를 생성한다.
 5. 생성된 실제 엔티티를 프록시 객체의 target에 연결을 시켜준다.
 
@@ -45,7 +45,9 @@ em.getReference() : <b>데이터베이스 조회를 미루는 가짜(프록시) 
 - 프록시 객체는 원본 엔티티를 상속받음, 따라서 타입 체크시 주의해야함
   (== 비교 실패, 대신 instance of 사용)
 - 영속성 컨텍스트에 찾는 엔티티가 이미 있으면 em.getReference()를 호출해도 실제 엔티티 반환
-- 영속성 컨텍스트의 도움을 받을 수 없는 준영속 상태일 때, 프록시를 초기화하면 문제 발생
+  (반대로 프록시가 이미 존재할 경우 em.find()를 호출해도 프록시가 반환)
+- 영속성 컨텍스트의 도움을 받을 수 없는 준영속 상태일 때, 프록시를 초기화하면 LazyInitializationException 발생
+  (프록시를 호출 후 em.detach() 또는 em.close() 등으로 프록시가 준영속 상태가 되었는데 프록시를 사용(초기화)하면 에러 발생)
 </pre>
 ### `영속성 컨텍스트에 찾는 엔티티가 이미 있으면 em.getReference()를 호출해도 실제 엔티티 반환`
 <pre>
@@ -105,16 +107,16 @@ String name = reference.getName();
 - 프록시 확인을 도와주는 유틸리티 메서드
 
 <b>프록시 인스턴스의 초기화 여부 확인</b>
-PersistenceUnitUtil.isLoaded(Object entity)
+PersistenceUnitUtil.isLoaded(Object proxy)
 
 <b>프록시 클래스 확인 방법</b>
-entity.getClass().getName() - 출력(..javasist.. or HibernateProxy…)
+proxy.getClass().getName() - 출력(..javasist.. or HibernateProxy…)
 
 <b>프록시 강제 초기화</b>
-org.hibernate.Hibernate.initialize(entity);
+org.hibernate.Hibernate.initialize(proxy);
 
 참고 : JPA 표준은 강제 초기화가 없기 때문에 강제 호출을 해야한다(하이버네이트만 존재)
-강제 호출 : member.getName();
+강제 호출 : member.getName(); // 강제 호출을 하려고 멤버의 이름을 호출..? 조금 이상하다.
 </pre>
 ```java
 Member member = new Member();
