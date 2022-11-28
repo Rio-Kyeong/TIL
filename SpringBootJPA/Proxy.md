@@ -151,6 +151,9 @@ Hibernate.initialize(reference);
 
 - 즉시 로딩(EAGER)은 예측이 어렵고, 어떤 SQL이 실행될지 예상하기 어렵다.
 - 즉시 로딩(EAGER)은 JPQL에서 N+1 문제가 자주 발생한다.
+  - JPQL : select m from Member m
+    - SQL : select * from MEMBER; // 1개의 쿼리 호출
+    - SQL : select * from TEAM where TEAM_ID = Xxx; // N개의 쿼리 추가 호출
 - 실무에서 <b>모든 연관관계는 지연로딩(LAZY)으로 설정</b>해야 한다.
 - 연관된 엔티티를 함께 DB에서 조회해야 하면, <b>fetch join</b> 또는 <b>엔티티 그래프 기능</b>을 사용하여 한 번에 데이터를 가져올 수 있다.
 
@@ -165,7 +168,6 @@ Hibernate.initialize(reference);
 ```java
 @Entity
 public class Member {
-
     // @XToOne으로 끝나는 관계는 모두 LAZY로 변경한다.
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TEAM_ID")
