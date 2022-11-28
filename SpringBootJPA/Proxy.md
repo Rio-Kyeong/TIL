@@ -160,6 +160,7 @@ Hibernate.initialize(reference);
 결론
 - 실무에서는 즉시 로딩(EAGER)은 피하고 지연 로딩(LAZXY)을 사용한다.
 - 한 번에 연관된 엔티티들의 데이터를 조회해야 할 때는 페치 조인(fetch join)을 이용한다.
+- 만약 MEMBER 와 TEAM 이 항상 같이 조회한다면 즉시 로딩(EAGER)이 더 효과적일 수 있다.
 </pre>
 ### `지연 로딩(LAZY)`
 ```java
@@ -178,39 +179,34 @@ public class Member {
 Team team = new Team();
 team.setName("team1");
 team.setYear(1998);
-
 em.persist(team);
 
 // 회원 생성
 Member member = new Member();
 member.setName("member1");
-
-// 연관관계 값 설정
-team.getMembers().add(member);
-member.setTeam(team);
-
 em.persist(member);
 
-// em.flush(), em.clear()를 하면 DB에 데이터를 반영하고, 영속성 컨텍스트를 지운다(실습을 위해 사용)
+// DB 에 데이터를 반영
+// 실습을 위해 영속성 컨텍스트에서 데이터 삭제
 em.flush();
 em.clear();
 
-// LAZY 설정으로 member Entity 정보만 조회된다.
+// LAZY 설정으로 Member Entity 정보만 조회
 // memberFind = hellojpa.Member
 Member memberFind = em.find(Member.class, member.getId());
 System.out.println("memberFind = "+ memberFind.getClass().getName());
 
-// 프록시 객체 생성
+// 현재 Team 객체는 LAZY 로딩으로 프록시 객체
 // team = hellojpa.Team$HibernateProxy$ZQml37oo
 Team teamRef = memberFind.getTeam();
 System.out.println("team = "+ teamRef.getClass().getName());
 
-// 프록시 초기화(최초 1회 Team 쿼리가 발생한다)
-// 실제 team을 사용하는 시점에 초기화(DB 조회)
+// 프록시 초기화(최초 1회 Team SELECT 쿼리 발생)
+// 실제 team을 사용하는 시점에 초기화 (DB 조회)
 String name = teamRef.getName();
 System.out.println("TeamName : "+ name);
 
-// 초기화된 프록시 객체에서 값을 가져온다(쿼리 발생X)
+// 이후 데이터 조회 시 초기화된 프록시 객체에서 값을 가져온다 (쿼리 발생X)
 int year = teamRef.getYear();
 System.out.println("TeamYear : "+ year);
 ```
