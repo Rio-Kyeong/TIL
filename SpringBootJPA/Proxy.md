@@ -160,7 +160,6 @@ Hibernate.initialize(reference);
 결론
 - 실무에서는 즉시 로딩(EAGER)은 피하고 지연 로딩(LAZXY)을 사용한다.
 - 한 번에 연관된 엔티티들의 데이터를 조회해야 할 때는 페치 조인(fetch join)을 이용한다.
-- 만약 MEMBER 와 TEAM 이 항상 같이 조회한다면 즉시 로딩(EAGER)이 더 효과적일 수 있다.
 </pre>
 ### `지연 로딩(LAZY)`
 ```java
