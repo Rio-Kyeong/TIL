@@ -10,7 +10,7 @@ I am currently writing a post on my <a href="https://everlasting-cello-2b6.notio
 * [Java Spring Config File](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JavaSpringConfig.md)  
 * [Java Separation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JavaSeparation.md)
 * [Spring Web Programming Structure](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringWebProgrammingDesignModel.md)
-* [Spring Project Structure](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringArchitecture.md) 
+* [Spring Project Structure](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringArchitecture.md)
 * [Service & Dao Implementing Objects](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Service%26Dao.md)
 * [Controller Implementing Objects](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Controller.md)
 * [Session and Cookie](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/Session%26Cookie.md)
