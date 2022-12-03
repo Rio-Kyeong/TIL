@@ -37,7 +37,7 @@
 ```java
 // 자바의 기본 타입(Primitive Type)은 항상 값을 복사함으로 공유가 안됨(안전)
 int a = 10;
-int b = a; //CallByValue(값 복사)
+int b = a; // 값 복사 - 
 
 a = 20;
 
@@ -48,7 +48,7 @@ System.out.println("b = "+ b); // b = 10
 // 하지만 변경할 수 있는 직접 정의한 객체(임베디드 타입)같은 경우에는 불변객체로 만들어서 변경을 못하도록 해야한다(주의)
 // 만약 데이터를 변경할 수 있다면 b변경 시 a도 동일하게 변경된다(side effect 발생)
 Integer a = Integer.valueof(10);
-Integer b = a; // CallByReference(참조 값 복사 - 공유됨)
+Integer b = a; // 참조 값 복사 - 공유됨
 
 // 래퍼 클래스(Wrapper class)는 산술 연산을 위해 정의된 클래스가 아니므로, 인스턴스에 저장된 값을 변경할 수 없습니다.
 // 단지, 값을 참조하기 위해 새로운 인스턴스를 생성하고, 생성된 인스턴스의 값만을 참조할 수 있습니다.
@@ -117,7 +117,6 @@ member.setHomeAddress(new Address("NewCity", address.getStreet(), address.getZip
 - 임베디드 타입도 값 타입이기 때문에 이를 만족해야 한다.
 - 객체를 따로생성하고 == 으로 비교한다면, 어김없이 False를 반환한다.
 - 따라서 임베디드 타입이라면 <b>equals() 메소드를 적절하게 재정의</b>하여 같은 값을 갖는지 확인해야 한다.
-- getter로 호출하는 Use getters during code generation 기능을 사용하는 것이 좋다(아니면 필드를 호출함)
 </pre>
 ## 임베디드 타입(Value Object: VO)
 <pre>
