@@ -7,29 +7,32 @@
 - 예) 회원 엔티티의 키나 나이 값을 변경해도 <b>식별자로 인식 가능</b>
 
 <b>값 타입</b>
-- int, Integer, String처럼 단순히 값으로 사용하는 자바 기본 타입이나 객체
+- int, Integer, String 처럼 단순히 값으로 사용하는 자바 기본 타입이나 객체
 - <b>식별자가 없고 값만 있으므로 변경시 추적 불가능(값 그 자체)</b>
   예) 숫자 100을 200으로 변경하면 완전히 다른 값으로 대체
-- <b>값 타입은 공유해서 사용하면 안됨</b>
+- <b>생명주기를 엔티티에 의존한다.</b>
+  예) 회원을 삭제하면 이름, 나이 필드도 함께 삭제
+- <b>값 타입은 여러 곳에서 공유하면 위험하다.</b>
   예) 회원 이름 변경시 다른 회원의 이름도 함께 변경되면 안됨
-- 값 타입은 엔티티에 의존한다.
 - 값 타입으로는 <b>기본값 타입, 임베디드 타입, 컬렉션 값 타입</b>이 있다.
-
+    
   <b>기본값 타입</b>
   - 자바 기본 타입(int, double)
-
-    <b>참고 : 자바의 기본 타입(Primitive Type)은 절대 공유되지 않는다.</b>
-    - int, double 같은 기본 타입은 공유되지 않으므로 값타입으로 썼을 때 안전하다.
-    - 기본 타입은 항상 값을 복사함(공유X)
-    - Integer같은 래퍼 클래스나 String같은 특수한 클래스는 공유 가능한 객체이지만 변경을 할 수 없다(불변 객체)
-    - 기본 타입이나 불변 객체는 복사해서 안전하게 사용가능함
-
   - 래퍼 클래스(Integer, Long)
   - String
+  
+    <b>참고 : 자바의 기본 타입(Primitive Type)은 절대 공유되지 않는다.</b>
+    - int, double 같은 기본 타입은 공유되지 않으므로 값타입으로 썼을 때 안전하다.
+    - 기본 타입(Primitive Type)은 항상 값을 복사함 (공유X)
+    - Integer 같은 래퍼 클래스나 String 같은 특수한 클래스는 공유 가능한 객체이지만 변경을 할 수 없다 (불변 객체)
+    - <b>결론 : 기본 타입이나 불변 객체는 공유 걱정 없이 복사해서 안전하게 사용 가능함</b>
 
-  <b>임베디드 타입</b>(embedded type, 복합 값 타입)
+  <b>임베디드 타입</b>(embedded type, 복합 값 타입) - Value Object (VO)
+  - 암배디드 타입 같은 값 타입을 여러 엔티티에서 공유하면 공유한 값이 참조되므로 위험하다.
+  - 그러므로 불변 객체(immutable object)로 설계해야 한다.
 
-  <b>컬렉션 값 타입</b>(collection value type)
+  <b>컬렉션 값 타입</b>(collection value type) - Java Collection Framework
+  - 컬렉션에 기본 값 타입이나 임베디드 타입을 넣어서 사용한다.
 </pre>
 ```java
 // 자바의 기본 타입(Primitive Type)은 항상 값을 복사함으로 공유가 안됨(안전)
@@ -69,12 +72,12 @@ member2.setUsername("member2");
 member2.setHomeAddress(address); // 동일한 인스턴스 공유
 em.persist(member2);
 
-// member의 city를 변경했지만 member2의 city까지 같이 변경된다(side effect 발생)
+// member의 city 만 변경하기를 원하였지만 member2의 city까지 같이 변경된다(side effect 발생)
 // 값 타입의 실제 인스턴스인 값을 공유하는 것은 위험하다.
 member.getHomeAddress().setCity("newCity");
 ```
 <pre>
-- 값 타입의 실제 인스턴스인 값을 공유하는 것은 위험함으로 <b>대신 값(인스턴스)를 복사해서 사용</b>해야한다.
+- 값 타입의 실제 인스턴스인 값을 공유하는 것은 위험함으로 <b>대신 값(인스턴스)를 깊은 복사(Deep copy)를 통해 사용</b>해야한다.
   EX) Address newAddress = new Address(address.getCity(), address.getStreet(), address.getZipcode());
 - 하지만 임베디드 타입은 객체임으로 객체의 공유참조는 피할 수 없다.
 - 그러므로 값을 생성자 이외에 변경할 수 없도록 <b>불변 객체</b>로 만들어야 한다.
@@ -86,10 +89,10 @@ member.getHomeAddress().setCity("newCity");
 
 <b>불변 객체</b>
 - 생성 시점 이후 절대 값을 변경할 수 없는 객체
-- <b>생성자로만 값을 설정하고 수정자(Setter)를 만들지 않는다(또는 private setter)</b>
-- 참고 : Integer, String은 자바가 제공하는 대표적인 불변 객체
+- <b>생성자로만 값을 설정하고 수정자(Setter)를 만들지 않는다(또는 객체 내부에서 사용한다면 private setter)</b>
+- 참고 : Integer, String 은 자바가 제공하는 대표적인 불변 객체
 </pre>
-`임베디드 타입 데이터 변경`
+`임베디드 타입의 데이터 변경 방법`
 ```java
 Address address = new Address("city", "street", "123456");
 
@@ -98,14 +101,15 @@ member.setUsername("member1");
 member.setHomeAddress(address);
 em.persist(member);
 
-// 새로운 객체를 만들고 member 객체에 저장해준다.
+// 새로운 임베디드 타입의 객체를 만들고 member 객체에 저장해준다.
+// (Shallow copy 가 아닌 Deep copy 를 이용)
 // city의 값만 바꾸더라도 모든 데이터를 새로 만들어서 넣어야한다.
 // member 테이블만 update한다. 사실 member 엔티티를 수정하는 것과 같다.
 member.setHomeAddress(new Address("NewCity", address.getStreet(), address.getZipcode()));
 ```
 ## 값 타입의 비교
 <pre>
-값 타입은 인스턴스가 달라도 그 안의 <b>값</b>이 같다면 같은 것으로 봐야 한다.
+값 타입은 인스턴스 주소가 달라도 그 안의 <b>값</b>이 같다면 같은 것으로 봐야 한다.
 - <b>동일성(identity) 비교 : 인스턴스의 참조 값을 비교, == 사용</b>
 - <b>동등성(equivalence) 비교 : 인스턴스의 값을 비교, equals(obj) 사용</b>
 
@@ -115,21 +119,12 @@ member.setHomeAddress(new Address("NewCity", address.getStreet(), address.getZip
 - 따라서 임베디드 타입이라면 <b>equals() 메소드를 적절하게 재정의</b>하여 같은 값을 갖는지 확인해야 한다.
 - getter로 호출하는 Use getters during code generation 기능을 사용하는 것이 좋다(아니면 필드를 호출함)
 </pre>
-## 기본값 타입
-<pre>
-<b>기본값 타입</b>
-- 자바 기본 타입(int, double), 래퍼 클래스(Integer, Long), String
-- String name, int age
-- 생명주기를 엔티티의 의존
-  예) 회원엔티티를 삭제하면 이름, 나이 필드도 함께 삭제
-</pre>
-## 임베디드 타입(복합 값 타입)
+## 임베디드 타입(Value Object: VO)
 <pre>
 <b>Embedded Type</b>
 - 새로운 값 타입을 직접 정의할 수 있음
 - JPA는 임베디드 타입(embedded type)이라 한다.
 - <b>주로 기본 값 타입을 모아서 만들어서 복합 값 타입이라고도 한다.</b>
-- int, String과 같은 값 타입
 
 <b>@Embeddable</b> : 값 타입을 정의하는 곳에 표시
 <b>@Embedded</b> : 값 타입을 사용하는 곳에 표시
@@ -155,7 +150,7 @@ member.setHomeAddress(new Address("NewCity", address.getStreet(), address.getZip
 - 임베디드 타입 클래스는 다른 엔티티를 가질 수 있다.
 
 <b>@AttributeOverride : 속성 재정의</b>
-- 하나의 엔티티에서 같은 값 타입을 사용하면 컬럼 명이 중복된다.
+- 하나의 엔티티에서 같은 임베디드 타입을 사용하면 컬럼 명이 중복되어 오류가 난다.
 - <b>@AttributeOverrides, @AttributeOverride</b>를 사용해서 컬럼 명 속성을 재정의
 </pre>
 ```java
@@ -169,7 +164,7 @@ public class Member {
 
     private String name;
 
-    //기간 Period (임베디드 타입)
+    // 기간 Period (임베디드 타입)
     @Embedded
     private Period period;
 
