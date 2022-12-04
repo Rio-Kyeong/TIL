@@ -83,7 +83,7 @@ member.getHomeAddress().setCity("newCity");
 - 그러므로 값을 생성자 이외에 변경할 수 없도록 <b>불변 객체</b>로 만들어야 한다.
 
 <b>값 타입은 불변 객체(immutable object)로 설계해야한다.</b>
-- 임베디드 타입 같은 객체 타입은 <b>기본 값 타입의 값 복사(Call By Value)</b>와 다르게 <b>참조 값을 복사(Call By Reference)</b> 하기 때문에,
+- 임베디드 타입 같은 객체 타입은 <b>기본 값 타입의 값 복사</b>와 다르게 <b>참조 값을 복사</b> 하기 때문에,
   어느 한쪽이 변경되면, 참조 주소가 변경되어 복사된 모든 객체에 영향을 미친다.
 - 그러므로 객체 타입을 수정할 수 없게 불변 객체를 만들어서 부작용(side effect)을 원천 차단해야한다.
 
@@ -268,6 +268,7 @@ public class Address {
 </pre>
 ```java
 @Entity
+@Getter
 public class Member {
 
     @Id @GeneratedValue
@@ -288,23 +289,11 @@ public class Member {
         name = "ADDRESS", 
         joinColumns = @JoinColumn(name = "MEMBER_ID")
     )
-    private List<Address> addressList = new ArrayList<>();
-
-    public Member(String name) {
-        this.name = name;
-    }
-
-    public Set<String> getFavoriteFoods() {
-        return favoriteFoods;
-    }
-
-    public List<Address> getAddressList() {
-        return addressList;
-    }
+    private List<Address> addressHistory = new ArrayList<>();
 }
 ```
 <pre>
-- 데이터베이스는 컬렉션을 저장할 수 없기 때문에 <b>별도의 테이블을 만들어 일대다 관계로 풀어서 컬렉션을 저장</b>해야 한다.
+- 데이터베이스는 컬렉션을 하나의 테이블 내에 저장할 수 없기 때문에 <b>별도의 테이블을 만들어 일대다 관계로 풀어서 컬렉션을 저장</b>해야 한다.
   그렇기 때문에 별도로 만들어질 테이블의 이름과 외래 키를 지정해준다.
 - 값타입 컬렉션도 값 타입이기 때문에 따로 생명주기를 가지지 않고, <b>엔티티와 같은 생명주기를 따라간다.</b>
   이것은 <b>cascadeType.ALL + orphanRemoval = true</b>와 같다(값 타입은 이 기능을 항상 필수로 가지게 된다)
@@ -312,7 +301,7 @@ public class Member {
 </pre>
 ### `값 타입 컬렉션의 제약 사항`
 <pre>
-- 값 타입은 <b>식별자</b>가 없기 때문에, 값을 변경할 때 추적할 수 없다.
+- 값 타입은 <b>식별자</b>가 없기 때문에, 값이 변경되면 추적할 수 없다.
 - 값 타입 컬렉션의 변경사항이 발생하면, 주인 엔티티와 연관된 모든 데이터를 삭제하고, 현재 컬렉션에 있는 모든 데이터를 다시 저장한다.
 - 값 타입 컬렉션을 매핑하는 테이블은 모든 컬럼을 하나로 묶어서 기본키를 구성해야 함(<b>null 입력X, 중복 저장X</b>)
 </pre>
@@ -330,7 +319,7 @@ findMember.getAddressHistory().add(new Address("newCtiy","street","123456")); //
 ```
 ### `값 타입 컬렉션의 대안(실무)`
 <pre>
-- 값 타입 컬렉션을 일대다 관계를 가진 <b>엔티티로 승격</b>시킨다.
+- 일대다 관계를 가진 값 타입 컬렉션을 <b>엔티티로 승격</b>시킨다.
 - 영속성 전이(Cascade) + 고아 객체 제거를 사용해서 엔티티를 값 타입 컬렉션 처럼 사용
 - 기존의 값타입 컬렉션은 양방향을 설계 할 수 없었는데, 엔티티로 승격함으로써 양방향 매핑이 가능
 - <b>식별자</b> 개념이 추가 되면서, 추적 할 수 없었던 문제 해결
@@ -389,8 +378,8 @@ em.persist(member);
 ```
 ### `값 타입 컬렉션은 언제 사용하는가?`
 <pre>
-- 정말 단순한 select Box[ ()치킨, ()피자 ] 같은 것을 구현할 때 사용한다.
-- 값을 추적할 필요가 없거나 업데이트가 필요 없을 때 사용
+- <b>값을 추적할 필요가 없거나 업데이트가 필요 없을 때 사용한다.</b>
+- ex) 정말 단순한 select Box[ 치킨( ), 피자( ) ] 같은 것을 구현할 때 사용한다.
 </pre>
 ## 정리
 <pre>
@@ -404,4 +393,9 @@ em.persist(member);
 - 생명 주기를 엔티티에 의존
 - 공유하지 않는 것이 안전(복사해서 사용)
 - 불변 객체로 만드는 것이 안전
+
+<b>주의사항</b>
+- 값 타입은 정말 값 타입이라 판단될 때만 사용
+- 엔티티와 값 타입을 혼동해서 엔티티를 값 타입으로 만들면 안됨
+- 식별자가 필요하고, 지속해서 값을 추적, 변경해야 한다면 그것은 값 타입이 아닌 엔티티이다.
 </pre>
