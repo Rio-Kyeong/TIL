@@ -374,7 +374,6 @@ public class Member {
 ```java
 Member member = new Member();
 member.getAddressHistory().add(new AddressEntity("city", "street", "zipcode"));
-em.persist(member);
 ```
 ### `값 타입 컬렉션은 언제 사용하는가?`
 <pre>
