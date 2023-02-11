@@ -56,7 +56,7 @@ JPQL(Java Persistence Query Language)
 * [Path Expression](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/PathExpression.md)
 * [Fetch Join](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/FetchJoin.md)
 * [Named Query](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/NamedQuery.md)
-* [Bulk Operation - UPDATE, DELETE](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/BulkOperation.md) 
+* [Bulk Operation - UPDATE, DELETE](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA/BulkOperation.md)
 
 ## Spring Boot(Spring MVC & JPA)
 Project Preferences
