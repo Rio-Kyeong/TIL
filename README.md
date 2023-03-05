@@ -84,7 +84,7 @@ Order Domain Development
 Web layer Development
 * [Member Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/MemberWebDevelopment.md)
 * [Item Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/ItemWebDevelopment.md)
-* [Order Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderWebDevelopment.md) 
+* [Order Web Development](https://github.com/RyuKyeongWoo/TIL/blob/main/SpringBootJPA1/OrderWebDevelopment.md)
 
 ## Spring Boot(REST API & JPA)
 Member API Development & Sample Data Ready
