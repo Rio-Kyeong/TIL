@@ -7,7 +7,7 @@ I am currently writing a post on my <a href="https://everlasting-cello-2b6.notio
 * [XML Separation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/XMLSeparation.md)
 * [Dependency Injection - annotation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/DependencyInjection2.md)
 * [Bean Life Cycle - init, destory](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/BeanLifeCycle.md)
-* [Java Spring Config File](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JavaSpringConfig.md)  
+* [Java Spring Config File](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JavaSpringConfig.md)
 * [Java Separation](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/JavaSeparation.md)
 * [Spring Web Programming Structure](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringWebProgrammingDesignModel.md)
 * [Spring Project Structure](https://github.com/RyuKyeongWoo/TIL/blob/main/Spring/SpringArchitecture.md)
